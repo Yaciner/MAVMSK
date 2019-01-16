@@ -1,19 +1,38 @@
-var app = require('app')
-var BrowserWindow = require('browser-window')
+const electron = require('electron')
 
-var mainWindow = null
+const app = electron.app
+const BrowserWindow = electron.BrowserWindow
 
-app.on('ready', function () {
-  mainWindow = new BrowserWindow({
-    height: 505,
-    resizable: true,
-    title: '4-potentiometer',
-    width: 595
-  })
+const path = require('path')
+const url = require('url')
 
-  mainWindow.loadURL('file://' + __dirname + '/app/index.html')
+let mainWindow
 
-  mainWindow.on('closed', function () {
+const createWindow = () => {
+  mainWindow = new BrowserWindow({width: 800, height: 600})
+
+  mainWindow.loadURL(url.format({
+    pathname: path.join(__dirname, 'src/index.html'),
+    protocol: 'file:',
+    slashes: true
+  }))
+
+  mainWindow.webContents.openDevTools()
+
+  mainWindow.on('closed', () => {
     mainWindow = null
   })
+}
+app.on('ready', createWindow);
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
+})
+
+app.on('activate', () => {
+  if (mainWindow === null) {
+    createWindow();
+  }
 })

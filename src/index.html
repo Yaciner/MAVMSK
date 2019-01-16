@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>electron</title>
+  <style>
 .button {
     background-color: #e7e7e7;
     border: black;
@@ -24,9 +28,9 @@
 
 </style>
 </head>
-
 <body>
-<p>
+  <h1>start electron</h1>
+  <p>
 	<button class="button disabled" id="start-button">Start</button>
     &nbsp &nbsp
     <img src="icons/not-ready.png" alt="led" id="led-status"
@@ -36,6 +40,8 @@
     height="22" width="22" align="right">
 </p>
 
-<script src="index.js"></script>
+  <script>
+    require('./js/script.js')
+  </script>
 </body>
 </html>

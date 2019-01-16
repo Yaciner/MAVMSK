@@ -1,21 +1,28 @@
-var Readable = require('stream').Readable
 var util = require('util')
-var five = require('johnny-five')
 var line = require('lightning-line')
+const five = require('johnny-five');
+const board = new five.Board();
 
-util.inherits(MyStream, Readable)
-function MyStream(opt) {
-  Readable.call(this, opt)
+const Readable = require('stream').Readable;
+class MyStream extends Readable {
+  constructor(opts) {
+    super(opts);
+  }
+  _read() {}
 }
-MyStream.prototype._read = function() {};
-// hook in our stream
-process.__defineGetter__('stdin', function() {
-  if (process.__stdin) return process.__stdin
-  process.__stdin = new MyStream()
-  return process.__stdin
-})
 
-var board = new five.Board()
+// hook in our stream
+process.__defineGetter__('stdin', () => {
+  if (process.__stdin)
+    return process.__stdin;
+  process.__stdin = new MyStream();
+  return process.__stdin;
+}); {};
+
+
+
+
+// var board = new five.Board()
 
 var button = document.getElementById('start-button')
 var state = false

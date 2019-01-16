@@ -1,33 +1,27 @@
 {
-  "name": "",
-  "version": "0.1.0",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron --inspect=5858 .",
-    "rebuild": "electron-rebuild"
-  },
-  "devDependencies": {
-    "electron-rebuild": "^1.1.3"
-  },
-  "dependencies": {
-    "electron-prebuilt": "^0.36.7",
-    "johnny-five": "^0.9.23"
-  },
+  "name": "start",
+  "version": "1.0.0",
   "description": "",
-  "repository": {
-    "type": "git",
-    "url": ""
+  "main": "main.js",
+  "build": {
+    "appId": "start",
+    "mac": {
+      "category": "Game",
+      "icon": "./src/assets/icons/512x512.png.icns"
+    }
   },
-  "keywords": [
-    "electron",
-    "app",
-    "johnny-five",
-    "arduino"
-  ],
+  "scripts": {
+    "start": "./node_modules/.bin/electron-rebuild && electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
   "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": ""
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^4.0.1",
+    "electron-rebuild": "^1.8.2",
+    "johnny-five": "^1.0.0",
+    "url": "^0.11.0",
+    "lightning-line": "0.0.13"
+  }
 }
