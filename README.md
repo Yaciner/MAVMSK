@@ -1,2 +1,2 @@
 # MAV Museum van schone kunsten
-Bachelorproef
+Bachelorproef.
