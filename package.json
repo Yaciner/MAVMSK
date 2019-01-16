@@ -1,5 +1,5 @@
 {
-  "name": "electron-johnny-five-potentiometer-example",
+  "name": "",
   "version": "0.1.0",
   "main": "main.js",
   "scripts": {
@@ -13,10 +13,10 @@
     "electron-prebuilt": "^0.36.7",
     "johnny-five": "^0.9.23"
   },
-  "description": "An electron app using johnny-five to control a servo based on a potentiometer",
+  "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sofroniewn/electron-johnny-five-examples.git"
+    "url": ""
   },
   "keywords": [
     "electron",
@@ -24,10 +24,10 @@
     "johnny-five",
     "arduino"
   ],
-  "author": "Nicholas Sofroniew",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sofroniewn/electron-johnny-five-examples/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/sofroniewn/electron-johnny-five-examples#readme"
+  "homepage": ""
 }

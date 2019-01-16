@@ -1,14 +1,15 @@
-var Readable = require('stream').Readable  
-var util = require('util')  
+var Readable = require('stream').Readable
+var util = require('util')
 var five = require('johnny-five')
+var line = require('lightning-line')
 
-util.inherits(MyStream, Readable)  
-function MyStream(opt) {  
+util.inherits(MyStream, Readable)
+function MyStream(opt) {
   Readable.call(this, opt)
 }
-MyStream.prototype._read = function() {};  
+MyStream.prototype._read = function() {};
 // hook in our stream
-process.__defineGetter__('stdin', function() {  
+process.__defineGetter__('stdin', function() {
   if (process.__stdin) return process.__stdin
   process.__stdin = new MyStream()
   return process.__stdin
@@ -16,55 +17,90 @@ process.__defineGetter__('stdin', function() {
 
 var board = new five.Board()
 
-var input = document.getElementById('position-input')
-var position = 90 
-var str = null
+var button = document.getElementById('start-button')
 var state = false
-var canvas = document.getElementById('servo-horn')
-var ctx = canvas.getContext('2d')
-horn(position-90, '#e7e7e7')
+var thresh = 4.25
+var xCoords = new Array(300).fill(0)
+var yCoords = new Array(300).fill(0)
+var yThresh = new Array(300).fill(thresh)
+var freq = 20
+var i = 0
+
+var el = document.body.appendChild(document.createElement('div'))
+var viz = new line(el, {
+  'series': [yThresh, yCoords],
+  'index': xCoords,
+  'xaxis': 'time (s)',
+  'yaxis': 'voltage (V)',
+  'thickness': [7 ,7],
+  'color': [[200, 0, 0], [255, 100, 0]]
+}, [], {'zoom': false})
+
+var yDomain = [0, 5]
+var xDomain = [-5, 0]
+
+var ySpread = Math.abs(yDomain[1] - yDomain[0]) || 1;
+var xSpread = Math.abs(xDomain[1] - xDomain[0]) || 1;
+
+viz.x.domain([xDomain[0] - 0.05 * xSpread, xDomain[1] + 0.05 * xSpread])
+viz.y.domain([yDomain[0] - 0.05 * ySpread, yDomain[1] + 0.05 * ySpread])
+
+viz.updateAxis()
+viz.updateData({
+  'series': [yThresh, yCoords],
+  'index': xCoords,
+  'thickness': [7 ,7],
+  'color': [[200, 0, 0], [255, 100, 0]]
+})
 
 board.on('ready', function() {
   document.getElementById('board-status').src = 'icons/ready.png'
-  input.className = 'input'
-  horn(position-90, '#505050')
+  button.className = 'button'
 
-  var servo = new five.Servo({pin: 10, startAt: 90, range: [45, 135]})
   var sensor = new five.Sensor({
-      pin: 'A0', 
-      freq: 25, 
-  });
-    
-  sensor.scale(45, 135).on('data', function (){
-    position = Math.round(sensor.value)
-    input.value = String(position) + String.fromCharCode(176)
+    pin: 'A0',
+    freq: freq,
+  })
 
-    servo.to(position)
-    draw(position-90, '#505050')
+  var led = new five.Led(13)
+
+  button.addEventListener('click', function () {
+    state = !state
+    if (state) {
+      button.innerHTML = 'Stop'
+    }
+    else {
+      button.innerHTML = 'Start'
+    }
+  })
+
+  sensor.scale(0, 5).on('data', function (){
+    if (state) {
+      yCoords.push(sensor.value)
+      xCoords.push(i*freq/1000)
+      yCoords.shift()
+      xCoords.shift()
+
+      xDomain = [-5+i*freq/1000, i*freq/1000]
+      xSpread = Math.abs(xDomain[1] - xDomain[0]) || 1;
+      viz.x.domain([xDomain[0] - 0.05 * xSpread, xDomain[1] + 0.05 * xSpread])
+
+      viz.updateAxis()
+      viz.updateData({
+        'series': [yThresh, yCoords],
+        'index': xCoords,
+        'thickness': [7 ,7],
+        'color': [[200, 0, 0], [255, 100, 0]]
+      })
+
+      if (sensor.value > thresh) {
+        led.on()
+        document.getElementById('led-status').src = 'icons/on.png'
+      } else {
+        led.off()
+        document.getElementById('led-status').src = 'icons/not-ready.png'
+      }
+      i++
+    }
   })
 })
-
-function horn(angle, color) {
-  ctx.fillStyle = color
-  ctx.setTransform(1, 0, 0, 1, 0, 0);
-  ctx.clearRect(0, 0, canvas.width, canvas.height)
-  ctx.translate(65,65);
-  ctx.rotate(angle * Math.PI / 180);
-  ctx.beginPath();
-  ctx.moveTo(-12, 0);
-  ctx.lineTo(-4,-60);
-  ctx.lineTo(4,-60);
-  ctx.lineTo(12, 0);
-  ctx.closePath();
-  ctx.fill();
-  ctx.beginPath();
-  ctx.arc(0,-60,4,0,2*Math.PI);
-  ctx.fill()
-  ctx.beginPath();
-  ctx.arc(0,0,12,0,2*Math.PI);
-  ctx.fill()
-  ctx.fillStyle = 'white'
-  ctx.beginPath();
-  ctx.arc(0,0,6,0,2*Math.PI);
-  ctx.fill()
-}
