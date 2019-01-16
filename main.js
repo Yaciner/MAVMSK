@@ -6,7 +6,7 @@ var mainWindow = null
 app.on('ready', function () {
   mainWindow = new BrowserWindow({
     height: 505,
-    resizable: false,
+    resizable: true,
     title: '4-potentiometer',
     width: 595
   })
