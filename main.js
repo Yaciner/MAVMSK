@@ -1,4 +1,8 @@
-const electron = require('electron')
+const electron = require('electron');
+
+require('electron-reload')(__dirname, {
+  electron: require(`${__dirname}/node_modules/electron`)
+});
 
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
@@ -21,7 +25,7 @@ const createWindow = () => {
 
   mainWindow.on('closed', () => {
     mainWindow = null
-  })
+  });
 }
 app.on('ready', createWindow);
 

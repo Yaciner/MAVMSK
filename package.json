@@ -6,7 +6,7 @@
   "build": {
     "appId": "start",
     "mac": {
-      "category": "Game",
+      "category": "installation",
       "icon": "./src/assets/icons/512x512.png.icns"
     }
   },
@@ -21,7 +21,9 @@
     "electron": "^4.0.1",
     "electron-rebuild": "^1.8.2",
     "johnny-five": "^1.0.0",
-    "url": "^0.11.0",
-    "lightning-line": "0.0.13"
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "electron-reload": "^1.4.0"
   }
 }

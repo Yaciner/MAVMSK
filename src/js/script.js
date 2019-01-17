@@ -1,5 +1,4 @@
-var util = require('util')
-var line = require('lightning-line')
+const util = require('util');
 const five = require('johnny-five');
 const board = new five.Board();
 
@@ -35,17 +34,17 @@ board.on('ready', () => {
   let button = new five.Button(2);
 
   button.on("hold", () => {
-    console.log( "Button held" );
+    console.log("Button held");
     buttonCircle.style.fill = '#46B766';
   });
 
   button.on("press", () => {
-    console.log( "Button pressed" );
+    console.log("Button pressed");
     buttonCircle.style.fill = '#46B766';
   });
 
   button.on("release", () => {
-    console.log( "Button released" );
+    console.log("Button released");
     buttonCircle.style.fill = '#B84545';
   });
 
