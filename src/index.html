@@ -25,20 +25,38 @@
     opacity: 0.3;
     cursor: not-allowed;
 }
+	.st0 {
+    fill:none;
+    stroke:#4272B8;
+    stroke-width:6;
+    stroke-miterlimit:10;
+  }
+
+  svg {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 5rem;
+  }
 
 </style>
 </head>
 <body>
-  <h1>start electron</h1>
   <p>
-	<button class="button disabled" id="start-button">Start</button>
-    &nbsp &nbsp
-    <img src="icons/not-ready.png" alt="led" id="led-status"
-    height="22" width="22">
-
-    <img src="icons/not-ready.png" alt="board" id="board-status"
+    <img src="assets/not-ready.png" alt="board" id="board-status"
     height="22" width="22" align="right">
 </p>
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="391.6px"
+    	 height="383.6px" viewBox="0 0 391.6 383.6" style="enable-background:new 0 0 391.6 383.6;" xml:space="preserve">
+
+      <circle class="st0" cx="124.6" cy="347.6" r="33"/>
+      <circle class="st0" cx="36" cy="237.3" r="33"/>
+      <circle class="st0" cx="68.1" cy="98.5" r="33"/>
+      <circle class="st0" cx="195.5" cy="36" r="33"/>
+      <circle class="st0" cx="323.5" cy="97.6" r="33"/>
+      <circle class="st0" cx="355.6" cy="236.4" r="33"/>
+      <circle class="st0" cx="266.9" cy="347.6" r="33"/>
+    </svg>
 
   <script>
     require('./js/script.js')
