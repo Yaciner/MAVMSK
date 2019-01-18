@@ -20,10 +20,13 @@ process.__defineGetter__('stdin', () => {
 
 let freq = 20;
 let buttonCircle = document.querySelector('.button-circle');
+
 buttonCircle.style.fill = '#B84545';
+
 board.on('ready', () => {
   document.getElementById('board-status').src = './assets/ready.png';
   let circles = document.querySelectorAll('.st0');
+  let circleSelected;
 
 
   let sensor = new five.Sensor({
@@ -41,11 +44,14 @@ board.on('ready', () => {
   button.on("press", () => {
     console.log("Button pressed");
     buttonCircle.style.fill = '#46B766';
+    console.log(circleSelected);
+    circleSelected.classList.add('scale');
   });
 
   button.on("release", () => {
     console.log("Button released");
     buttonCircle.style.fill = '#B84545';
+    circleSelected.classList.remove('scale');
   });
 
 
@@ -57,6 +63,8 @@ board.on('ready', () => {
 
     if(circles[selected]) {
       circles[selected].style.fill = 'black';
+      circleSelected = circles[selected];
+      console.log('circleSelected.offestTop', circleSelected.offsetTop);
     }
     console.log(selected);
   });

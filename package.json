@@ -24,6 +24,8 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "electron-reload": "^1.4.0"
+    "electron-reload": "^1.4.0",
+    "eslint-config-devine": "^2.0.1",
+    "stylelint-config-devine": "^2.0.2"
   }
 }
