@@ -28,7 +28,7 @@
 	.st0 {
     fill:none;
     stroke:#4272B8;
-    stroke-width:6;
+    stroke-width:4;
     stroke-miterlimit:10;
   }
 
@@ -49,10 +49,59 @@
     stroke-miterlimit: 10;
   }
 
+  .artwork {
+    height: 100vh;
+    width: auto;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 2s cubic-bezier(0,.95,.51,.97);
+  }
+
+  .status {
+    position: absolute;
+  }
+
+  .normal {
+    transform: scale(0) translate(0);
+  }
+
+  .zoomed-3{
+    transform: scale(5) translate(140px, 360px);
+  }
+
+  .zoomed-7{
+    transform: scale(5) translate(-100px, 100px);
+  }
+
+  .zoomed-6{
+    transform: scale(5) translate(-200px, 250px);
+  }
+
+  .zoomed-5{
+    transform: scale(5) translate(-150px, 350px);
+  }
+
+  .zoomed-4{
+    transform: scale(5) translate(10px, 400px);
+  }
+
+  .zoomed-2{
+    transform: scale(5) translate(200px, 180px);
+  }
+
+  .zoomed-1{
+    transform: scale(5) translate(100px, 120px);
+  }
+
 </style>
 </head>
 <body>
-  <p>
+  <img class="artwork" src="assets/test.jpg" alt="test" />
+  <p class="status">
     <img src="assets/not-ready.png" alt="board" id="board-status"
     height="22" width="22" align="right">
 </p>
@@ -60,13 +109,13 @@
     <svg class="pot" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="391.6px"
     	 height="383.6px" viewBox="0 0 391.6 383.6" style="enable-background:new 0 0 391.6 383.6;" xml:space="preserve">
 
-      <circle class="st0" cx="124.6" cy="347.6" r="33"/>
-      <circle class="st0" cx="36" cy="237.3" r="33"/>
-      <circle class="st0" cx="68.1" cy="98.5" r="33"/>
-      <circle class="st0" cx="195.5" cy="36" r="33"/>
-      <circle class="st0" cx="323.5" cy="97.6" r="33"/>
-      <circle class="st0" cx="355.6" cy="236.4" r="33"/>
-      <circle class="st0" cx="266.9" cy="347.6" r="33"/>
+      <circle class="st0" cx="124.6" cy="347.6" r="10"/>
+      <circle class="st0" cx="36" cy="237.3" r="10"/>
+      <circle class="st0" cx="68.1" cy="98.5" r="10"/>
+      <circle class="st0" cx="195.5" cy="36" r="10"/>
+      <circle class="st0" cx="323.5" cy="97.6" r="10"/>
+      <circle class="st0" cx="355.6" cy="236.4" r="10"/>
+      <circle class="st0" cx="266.9" cy="347.6" r="10"/>
     </svg>
 
     <svg class="but" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="115.2px"
@@ -87,7 +136,6 @@
     	<path d="M108.3,18.2l-6.6-9.1v9.1h-5.4v-18h5.6l6.2,8.5V0.3h5.4v18H108.3z"/>
     </g>
     </svg>
-
 
   <script>
     require('./js/script.js')

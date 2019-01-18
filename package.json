@@ -21,6 +21,7 @@
     "electron": "^4.0.1",
     "electron-rebuild": "^1.8.2",
     "johnny-five": "^1.0.0",
+    "medium-zoom": "^1.0.2",
     "url": "^0.11.0"
   },
   "devDependencies": {
