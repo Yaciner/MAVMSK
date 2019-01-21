@@ -3,8 +3,34 @@ const five = require('johnny-five');
 const board = new five.Board();
 const Readable = require('stream').Readable;
 const mediumZoom = require('medium-zoom');
-
 const bodymovin = require('lottie-web');
+const server = require('express')();
+const express = require('express');
+const http = require('http').Server(server);
+const io = require('socket.io')(http);
+const path = require('path');
+
+// const file = fs.readFile(path.join(__dirname, '../..', 'client/index.html'));
+// console.log(file);
+
+server.use(express.static(path.join(__dirname, '../../client')));
+
+server.get('/', function(req, res){
+  // console.log('__dirname + /../../client/index.html', `${__dirname} + /client/index.html`);
+  // res.sendFile(__dirname + '/../../client/index.html');
+  res.sendFile('index.html');
+  // res.sendFile(file);
+});
+
+io.on('connection', function(socket){
+  socket.on('chat message', function(msg){
+    io.emit('chat message', msg);
+  });
+});
+
+http.listen(3000, function(){
+  console.log('listening on *:3000');
+});
 
 
 class MyStream extends Readable {
@@ -53,6 +79,9 @@ board.on('ready', () => {
     console.log(artwork);
     artwork.classList.add(`zoomed-${selected + 1}`);
     indicator.style.opacity = 0;
+    // socket.emit('button pressed');
+    // io.emit('button pressed', { for: 'everyone' });
+    io.emit('button pressed', 'button is pressed');
   });
 
   button.on("release", () => {
