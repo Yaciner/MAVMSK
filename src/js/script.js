@@ -101,6 +101,8 @@ board.on('ready', () => {
     if(circles[selected]) {
       circles[selected].style.fill = 'black';
     }
+
+    io.emit('potentiometer turn', 'potentiometer is turned');
   });
 })
 
