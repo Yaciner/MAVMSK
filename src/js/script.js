@@ -4,6 +4,8 @@ const board = new five.Board();
 const Readable = require('stream').Readable;
 const mediumZoom = require('medium-zoom');
 
+const bodymovin = require('lottie-web');
+
 
 class MyStream extends Readable {
   constructor(opts) {
@@ -72,3 +74,15 @@ board.on('ready', () => {
     }
   });
 })
+
+const animate = () => {
+  bodymovin.loadAnimation({
+     container: document.querySelector(`.indicator_anim`),
+     renderer: `svg`,
+     loop: true,
+     autoplay: true,
+     path: `./assets/json/indicator_anim.json`
+   });
+}
+
+animate();
