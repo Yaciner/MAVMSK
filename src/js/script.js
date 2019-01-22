@@ -79,8 +79,6 @@ board.on('ready', () => {
     console.log(artwork);
     artwork.classList.add(`zoomed-${selected + 1}`);
     indicator.style.opacity = 0;
-    // socket.emit('button pressed');
-    // io.emit('button pressed', { for: 'everyone' });
     io.emit('button pressed', 'button is pressed');
   });
 
