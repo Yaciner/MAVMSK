@@ -3,23 +3,19 @@ const five = require('johnny-five');
 const board = new five.Board();
 const Readable = require('stream').Readable;
 const mediumZoom = require('medium-zoom');
-const bodymovin = require('lottie-web');
 const server = require('express')();
 const express = require('express');
 const http = require('http').Server(server);
 const io = require('socket.io')(http);
 const path = require('path');
+const animate = require('./lib/animate');
 
-// const file = fs.readFile(path.join(__dirname, '../..', 'client/index.html'));
-// console.log(file);
+// import animate from './lib/animate';
 
 server.use(express.static(path.join(__dirname, '../../client')));
 
 server.get('/', function(req, res){
-  // console.log('__dirname + /../../client/index.html', `${__dirname} + /client/index.html`);
-  // res.sendFile(__dirname + '/../../client/index.html');
   res.sendFile('index.html');
-  // res.sendFile(file);
 });
 
 io.on('connection', function(socket){
@@ -113,15 +109,5 @@ board.on('ready', () => {
     io.emit('potentiometer turn', 'potentiometer is turned');
   });
 })
-
-const animate = () => {
-  bodymovin.loadAnimation({
-     container: document.querySelector(`.indicator_anim`),
-     renderer: `svg`,
-     loop: true,
-     autoplay: true,
-     path: `./assets/json/indicator_anim.json`
-   });
-}
 
 animate();

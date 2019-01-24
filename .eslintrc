@@ -1,5 +1,5 @@
 {
-  "extends": "devine/react",
+  # "extends": "devine/react",
   "globals": {
     "$": true
   }
