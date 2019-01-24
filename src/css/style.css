@@ -11,17 +11,20 @@
   border-radius: 12px;
 }
 
-.button:focus {outline:0;}
+.button:focus {
+  outline: 0;
+}
 
 .disabled {
-  opacity: 0.3;
+  opacity: .3;
   cursor: not-allowed;
 }
+
 .st0 {
-  fill:none;
-  stroke:#4272B8;
-  stroke-width:4;
-  stroke-miterlimit:10;
+  fill: none;
+  stroke: #4272b8;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
 }
 
 .pot {
@@ -29,6 +32,7 @@
   margin: 0 auto;
   padding-top: 5rem;
 }
+
 .but {
   width: 100%;
   margin: 0 auto;
@@ -50,7 +54,7 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  transition: all 2s cubic-bezier(0,.95,.51,.97);
+  transition: all 2s cubic-bezier(0, .95, .51, .97);
 }
 
 .status {
@@ -61,31 +65,31 @@
   transform: scale(0) translate(0);
 }
 
-.zoomed-3{
+.zoomed-3 {
   transform: scale(5) translate(140px, 360px);
 }
 
-.zoomed-7{
+.zoomed-7 {
   transform: scale(5) translate(-100px, 100px);
 }
 
-.zoomed-6{
+.zoomed-6 {
   transform: scale(5) translate(-200px, 250px);
 }
 
-.zoomed-5{
+.zoomed-5 {
   transform: scale(5) translate(-150px, 350px);
 }
 
-.zoomed-4{
+.zoomed-4 {
   transform: scale(5) translate(10px, 400px);
 }
 
-.zoomed-2{
+.zoomed-2 {
   transform: scale(5) translate(200px, 180px);
 }
 
-.zoomed-1{
+.zoomed-1 {
   transform: scale(5) translate(100px, 120px);
 }
 

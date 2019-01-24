@@ -2,5 +2,9 @@
   # "extends": "devine/react",
   "globals": {
     "$": true
+  },
+
+  "env": {
+    "es6": true
   }
 }

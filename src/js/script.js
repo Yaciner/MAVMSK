@@ -10,8 +10,6 @@ const io = require('socket.io')(http);
 const path = require('path');
 const animate = require('./lib/animate');
 
-// import animate from './lib/animate';
-
 server.use(express.static(path.join(__dirname, '../../client')));
 
 server.get('/', function(req, res){
