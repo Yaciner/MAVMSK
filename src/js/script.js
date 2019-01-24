@@ -61,6 +61,10 @@ board.on('ready', () => {
 
 
   let button = new five.Button(2);
+  let button2 = new five.Button(4);
+  let button3 = new five.Button(7);
+  let button4 = new five.Button(8);
+  let button5 = new five.Button(12);
   let isZoomedIn = false;
 
   button.on("hold", () => {
@@ -68,8 +72,24 @@ board.on('ready', () => {
     buttonCircle.style.fill = '#46B766';
   });
 
+  button2.on("press", () => {
+    console.log('button 2 pressed');
+  });
+
+  button3.on("press", () => {
+    console.log('button 3 pressed');
+  });
+
+  button4.on("press", () => {
+    console.log('button 4 pressed');
+  });
+
+  button5.on("press", () => {
+    console.log('button 5 pressed');
+  });
+
   button.on("press", () => {
-    console.log("Button pressed");
+    console.log("Button 1 pressed");
     buttonCircle.style.fill = '#46B766';
     console.log(artwork);
 
