@@ -1,0 +1,96 @@
+.button {
+    background-color: #e7e7e7;
+    border: black;
+    color: #505050;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button:focus {outline:0;}
+
+.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+	.st0 {
+    fill:none;
+    stroke:#4272B8;
+    stroke-width:4;
+    stroke-miterlimit:10;
+  }
+
+  .pot {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 5rem;
+  }
+  .but {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 4rem;
+  }
+
+  .button-circle {
+    stroke: #020202;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+  }
+
+  .artwork {
+    height: 100vh;
+    width: auto;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 2s cubic-bezier(0,.95,.51,.97);
+  }
+
+  .status {
+    position: absolute;
+  }
+
+  .normal {
+    transform: scale(0) translate(0);
+  }
+
+  .zoomed-3{
+    transform: scale(5) translate(140px, 360px);
+  }
+
+  .zoomed-7{
+    transform: scale(5) translate(-100px, 100px);
+  }
+
+  .zoomed-6{
+    transform: scale(5) translate(-200px, 250px);
+  }
+
+  .zoomed-5{
+    transform: scale(5) translate(-150px, 350px);
+  }
+
+  .zoomed-4{
+    transform: scale(5) translate(10px, 400px);
+  }
+
+  .zoomed-2{
+    transform: scale(5) translate(200px, 180px);
+  }
+
+  .zoomed-1{
+    transform: scale(5) translate(100px, 120px);
+  }
+
+  .indicator_anim {
+    margin: 0 auto;
+    width: 6rem;
+    padding-top: 20rem;
+  }

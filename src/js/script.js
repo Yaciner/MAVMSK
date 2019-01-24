@@ -67,6 +67,7 @@ board.on('ready', () => {
 
 
   let button = new five.Button(2);
+  let isZoomedIn = false;
 
   button.on("hold", () => {
     console.log("Button held");
@@ -77,7 +78,17 @@ board.on('ready', () => {
     console.log("Button pressed");
     buttonCircle.style.fill = '#46B766';
     console.log(artwork);
-    artwork.classList.add(`zoomed-${selected + 1}`);
+
+    if (!isZoomedIn) {
+      console.log('zooming in');
+      isZoomedIn = true;
+      artwork.classList.add(`zoomed-${selected + 1}`);
+    } else {
+      console.log('zooming out');
+      isZoomedIn = false;
+      artwork.classList.remove(`zoomed-${selected + 1}`);
+    }
+
     indicator.style.opacity = 0;
     io.emit('button pressed', 'button is pressed');
   });
@@ -85,7 +96,6 @@ board.on('ready', () => {
   button.on("release", () => {
     console.log("Button released");
     buttonCircle.style.fill = '#B84545';
-    artwork.classList.remove(`zoomed-${selected + 1}`);
     indicator.style.opacity = 1;
   });
 
@@ -97,7 +107,7 @@ board.on('ready', () => {
     })
 
     if(circles[selected]) {
-      circles[selected].style.fill = 'black';
+      circles[selected].style.fill = '#B84545';
     }
 
     io.emit('potentiometer turn', 'potentiometer is turned');
