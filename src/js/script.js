@@ -8,7 +8,26 @@ const express = require('express');
 const http = require('http').Server(server);
 const io = require('socket.io')(http);
 const path = require('path');
-const animate = require('./lib/animate');
+
+const animationActive = require('./lib/animate').animationActive;
+const animationIdle = require('./lib/animate').animationIdle;
+
+// animationIdle(1);
+
+const indicators = document.querySelectorAll(`.indicator`);
+// opvragen hoeveel indicators er zijn
+// dan class name = ${`indicator`i+1}
+// dan animation function maken dat die een var met het nummer binnen laat.
+// indicatorsIdle.forEach((div) => {
+//   console.log(counter);
+//   animationIdle(counter);
+//   counter++
+// });
+console.log('indicatorsIdle', indicators);
+for (i = 0; i < indicators.length; ++i) {
+  console.log('i', i);
+  animationIdle(i);
+}
 
 server.use(express.static(path.join(__dirname, '../../client')));
 
@@ -48,17 +67,17 @@ buttonCircle.style.fill = '#B84545';
 let selected;
 
 board.on('ready', () => {
+  animationActive();
   document.getElementById('board-status').src = './assets/ready.png';
   let artwork = document.querySelector('.artwork');
-  let circles = document.querySelectorAll('.st0');
+  let circles = document.querySelectorAll('.indicator');
   let indicator = document.querySelector('.pot');
 
 
   let sensor = new five.Sensor({
     pin: 'A0',
     freq: freq,
-  })
-
+  });
 
   let button = new five.Button(2);
   let button2 = new five.Button(4);
@@ -122,10 +141,23 @@ board.on('ready', () => {
 
     if(circles[selected]) {
       circles[selected].style.fill = '#B84545';
+
+      // TODO iedere change active class vervangen door idle op de niet geslsecteerde divs en animationIdle zetten
+      // op de geslecteerde div active class zetten en animationActive zetten
+
+      const activediv = document.querySelector(`.indicator_active`);
+      // animationDestroy(activediv);
+      console.log(activediv.firstChild);
+      while (activediv.firstChild) {
+        console.log('deleting');
+          activediv.removeChild(activediv.firstChild);
+          activediv.classList.remove = '.indicator_active';
+      }
+
+      circles[selected].classList.add = '.indicator_active';
+      animationActive();
     }
 
     io.emit('potentiometer turn', 'potentiometer is turned');
   });
 })
-
-animate();

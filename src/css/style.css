@@ -1,3 +1,7 @@
+body {
+  background: black;
+}
+
 .button {
   background-color: #e7e7e7;
   border: black;
@@ -93,8 +97,8 @@
   transform: scale(5) translate(100px, 120px);
 }
 
-.indicator_anim {
+.indicator {
   margin: 0 auto;
   width: 6rem;
-  padding-top: 20rem;
+  padding-top: 2rem;
 }
