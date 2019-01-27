@@ -10,6 +10,8 @@ const io = require('socket.io')(http);
 const path = require('path');
 const animate = require('./lib/animate');
 
+let activeArtwork = "GiovanniArnolfini";
+
 server.use(express.static(path.join(__dirname, '../../client')));
 
 server.get('/', (req, res) => {
@@ -22,10 +24,10 @@ io.on('connection', (socket) => {
   });
 });
 
+
 http.listen(3000, () => {
   console.log('listening on *:3000');
 });
-
 
 class MyStream extends Readable {
   constructor(opts) {
@@ -47,12 +49,14 @@ let buttonCircle = document.querySelector('.button-circle');
 buttonCircle.style.fill = '#B84545';
 let selected;
 
+
 board.on('ready', () => {
   document.getElementById('board-status').src = './assets/ready.png';
   let artwork = document.querySelector('.artwork');
   let circles = document.querySelectorAll('.st0');
   let indicator = document.querySelector('.pot');
 
+  io.emit('artwork', activeArtwork);
 
   let sensor = new five.Sensor({
     pin: 'A0',
@@ -63,27 +67,27 @@ board.on('ready', () => {
   let macroButton = new five.Button(4);
   let infraredButton = new five.Button(7);
   let xrayButton = new five.Button(8);
-  let button5 = new five.Button(12);
+  let languageButton = new five.Button(12);
   let isZoomedIn = false;
 
-  button2.on("press", () => {
+  macroButton.on("press", () => {
     console.log('button 2 pressed');
-    io.emit('button pressed', 'button is pressed');
+    io.emit('MacroButton', 'Macro pressed');
   });
 
-  button3.on("press", () => {
+  infraredButton.on("press", () => {
     console.log('button 3 pressed');
-    io.emit('button pressed', 'button is pressed');
+    io.emit('InfraredButton', 'Infrared pressed');
   });
 
-  button4.on("press", () => {
+  xrayButton.on("press", () => {
     console.log('button 4 pressed');
-    io.emit('button pressed', 'button is pressed');
+    io.emit('XrayButton', 'xRay pressed');
   });
 
-  button5.on("press", () => {
+  languageButton.on("press", () => {
     console.log('button 5 pressed');
-    io.emit('button pressed', 'button is pressed');
+    io.emit('LanguageButton', 'Language pressed');
   });
 
   confirmButton.on("press", () => {
@@ -100,10 +104,10 @@ board.on('ready', () => {
     }
 
     indicator.style.opacity = 0;
-    io.emit('button pressed', 'button is pressed');
+    io.emit('EnterButton', 'Enter pressed');
   });
 
-  button.on("release", () => {
+  confirmButton.on("release", () => {
     console.log("Button released");
     buttonCircle.style.fill = '#B84545';
     indicator.style.opacity = 1;
