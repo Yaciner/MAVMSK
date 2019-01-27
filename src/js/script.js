@@ -12,17 +12,17 @@ const animate = require('./lib/animate');
 
 server.use(express.static(path.join(__dirname, '../../client')));
 
-server.get('/', function(req, res){
+server.get('/', (req, res) => {
   res.sendFile('index.html');
 });
 
-io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
+io.on('connection', (socket) => {
+  socket.on('chat message', (msg) => {
     io.emit('chat message', msg);
   });
 });
 
-http.listen(3000, function(){
+http.listen(3000, () => {
   console.log('listening on *:3000');
 });
 
@@ -59,39 +59,35 @@ board.on('ready', () => {
     freq: freq,
   })
 
-
-  let button = new five.Button(2);
-  let button2 = new five.Button(4);
-  let button3 = new five.Button(7);
-  let button4 = new five.Button(8);
+  let confirmButton = new five.Button(2);
+  let macroButton = new five.Button(4);
+  let infraredButton = new five.Button(7);
+  let xrayButton = new five.Button(8);
   let button5 = new five.Button(12);
   let isZoomedIn = false;
 
-  button.on("hold", () => {
-    console.log("Button held");
-    buttonCircle.style.fill = '#46B766';
-  });
-
   button2.on("press", () => {
     console.log('button 2 pressed');
+    io.emit('button pressed', 'button is pressed');
   });
 
   button3.on("press", () => {
     console.log('button 3 pressed');
+    io.emit('button pressed', 'button is pressed');
   });
 
   button4.on("press", () => {
     console.log('button 4 pressed');
+    io.emit('button pressed', 'button is pressed');
   });
 
   button5.on("press", () => {
     console.log('button 5 pressed');
+    io.emit('button pressed', 'button is pressed');
   });
 
-  button.on("press", () => {
+  confirmButton.on("press", () => {
     console.log("Button 1 pressed");
-    buttonCircle.style.fill = '#46B766';
-    console.log(artwork);
 
     if (!isZoomedIn) {
       console.log('zooming in');
