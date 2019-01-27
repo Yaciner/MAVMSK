@@ -10,6 +10,8 @@ const io = require('socket.io')(http);
 const path = require('path');
 const animate = require('./lib/animate');
 
+let activeArtwork = 0;
+
 server.use(express.static(path.join(__dirname, '../../client')));
 
 server.get('/', (req, res) => {
@@ -22,9 +24,12 @@ io.on('connection', (socket) => {
   });
 });
 
+
 http.listen(3000, () => {
   console.log('listening on *:3000');
 });
+
+io.emit('artwork', activeArtwork);
 
 
 class MyStream extends Readable {
@@ -63,25 +68,25 @@ board.on('ready', () => {
   let macroButton = new five.Button(4);
   let infraredButton = new five.Button(7);
   let xrayButton = new five.Button(8);
-  let button5 = new five.Button(12);
+  let languageButton = new five.Button(12);
   let isZoomedIn = false;
 
-  button2.on("press", () => {
+  macroButton.on("press", () => {
     console.log('button 2 pressed');
     io.emit('button pressed', 'button is pressed');
   });
 
-  button3.on("press", () => {
+  infraredButton.on("press", () => {
     console.log('button 3 pressed');
     io.emit('button pressed', 'button is pressed');
   });
 
-  button4.on("press", () => {
+  xrayButton.on("press", () => {
     console.log('button 4 pressed');
     io.emit('button pressed', 'button is pressed');
   });
 
-  button5.on("press", () => {
+  languageButton.on("press", () => {
     console.log('button 5 pressed');
     io.emit('button pressed', 'button is pressed');
   });
@@ -103,7 +108,7 @@ board.on('ready', () => {
     io.emit('button pressed', 'button is pressed');
   });
 
-  button.on("release", () => {
+  confirmButton.on("release", () => {
     console.log("Button released");
     buttonCircle.style.fill = '#B84545';
     indicator.style.opacity = 1;
