@@ -1,10 +1,62 @@
 {
-    "JoosVijd": {
-        "title": "Joos Vijd",
+    "GiovanniArnolfini": {
+        "title": "The Portrait of Giovanni Arnolfini and his Wife",
         "numdetails": 4,
         "details": {
-          "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
-          "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          "english": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          },
+          "nederlands": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          },
+          "francais": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          },
+          "espanol": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          },
+          "deutsche": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          },
+          "italiano": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          }
+        }
+    },
+    "JoosVijd": {
+        "title": "The Portrait of Giovanni Arnolfini and his Wife",
+        "numdetails": 4,
+        "details": {
+          "english": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          },
+          "nederlands": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          },
+          "francais": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          },
+          "espanol": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          },
+          "deutsche": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          },
+          "italiano": {
+            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
+            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+          }
         }
     }
 }

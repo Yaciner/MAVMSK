@@ -10,7 +10,7 @@ const io = require('socket.io')(http);
 const path = require('path');
 const animate = require('./lib/animate');
 
-let activeArtwork = 0;
+let activeArtwork = "GiovanniArnolfini";
 
 server.use(express.static(path.join(__dirname, '../../client')));
 
@@ -28,9 +28,6 @@ io.on('connection', (socket) => {
 http.listen(3000, () => {
   console.log('listening on *:3000');
 });
-
-io.emit('artwork', activeArtwork);
-
 
 class MyStream extends Readable {
   constructor(opts) {
@@ -52,12 +49,14 @@ let buttonCircle = document.querySelector('.button-circle');
 buttonCircle.style.fill = '#B84545';
 let selected;
 
+
 board.on('ready', () => {
   document.getElementById('board-status').src = './assets/ready.png';
   let artwork = document.querySelector('.artwork');
   let circles = document.querySelectorAll('.st0');
   let indicator = document.querySelector('.pot');
 
+  io.emit('artwork', activeArtwork);
 
   let sensor = new five.Sensor({
     pin: 'A0',
@@ -73,22 +72,22 @@ board.on('ready', () => {
 
   macroButton.on("press", () => {
     console.log('button 2 pressed');
-    io.emit('button pressed', 'button is pressed');
+    io.emit('MacroButton', 'Macro pressed');
   });
 
   infraredButton.on("press", () => {
     console.log('button 3 pressed');
-    io.emit('button pressed', 'button is pressed');
+    io.emit('InfraredButton', 'Infrared pressed');
   });
 
   xrayButton.on("press", () => {
     console.log('button 4 pressed');
-    io.emit('button pressed', 'button is pressed');
+    io.emit('XrayButton', 'xRay pressed');
   });
 
   languageButton.on("press", () => {
     console.log('button 5 pressed');
-    io.emit('button pressed', 'button is pressed');
+    io.emit('LanguageButton', 'Language pressed');
   });
 
   confirmButton.on("press", () => {
@@ -105,7 +104,7 @@ board.on('ready', () => {
     }
 
     indicator.style.opacity = 0;
-    io.emit('button pressed', 'button is pressed');
+    io.emit('EnterButton', 'Enter pressed');
   });
 
   confirmButton.on("release", () => {
