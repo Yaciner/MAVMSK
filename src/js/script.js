@@ -8,6 +8,9 @@ const express = require('express');
 const http = require('http').Server(server);
 const io = require('socket.io')(http);
 const path = require('path');
+let allData = [];
+let activeArtwork = "GiovanniArnolfini";
+let activeLanguage = "english";
 
 // const animationActive = require('./lib/animate').animationActive;
 // const animationIdle = require('./lib/animate').animationIdle;
@@ -18,16 +21,12 @@ fetch('./assets/json/artworks.json', {
    'Accept': 'application/json'
   }
 })
-
 .then(response => response.json())
 .then(results => {
   allData = results;
   console.log(allData);
 
 }).catch((e => console.log(e)));
-
-
-let activeArtwork = "GiovanniArnolfini";
 
 server.use(express.static(path.join(__dirname, '../../client')));
 
@@ -106,7 +105,17 @@ board.on('ready', () => {
 
   languageButton.on("press", () => {
     console.log('button 5 pressed');
-    io.emit('LanguageButton', 'Language pressed');
+    const title = allData[activeArtwork]["details"][activeLanguage]["title"];
+    const info = allData[activeArtwork]["details"][activeLanguage]["info"];
+
+    // io.emit('LanguageButton', 'Language pressed');
+    io.emit('LanguageButton', title, info);
+
+    //get which artwork is displayed
+    console.log('allData[activeArtwork]', allData[activeArtwork]);
+    //change text based on language.
+    console.log(allData[activeArtwork]["details"][activeLanguage]["info"]);
+    // emit a message
   });
 
   confirmButton.on("press", () => {
@@ -125,7 +134,6 @@ board.on('ready', () => {
     // indicator.style.opacity = 0;
     io.emit('EnterButton', 'Enter pressed');
     // indicator.style.opacity = 0;
-    io.emit('button pressed', 'button is pressed');
   });
 
   confirmButton.on("release", () => {
@@ -141,14 +149,8 @@ board.on('ready', () => {
       circle.className = 'indicator indicator_idle'
     });
 
-
-
     if(circles[selected]) {
-      circles[selected].style.fill = '#B84545';
-      console.log(circles[selected]);
       circles[selected].className = 'indicator indicator_active';
     }
-
-    io.emit('potentiometer turn', 'potentiometer is turned');
   });
 })
