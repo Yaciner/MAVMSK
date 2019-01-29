@@ -63,9 +63,9 @@ process.__defineGetter__('stdin', () => {
 }); {};
 
 let freq = 20;
-let buttonCircle = document.querySelector('.button-circle');
-buttonCircle.style.fill = '#B84545';
 let selected;
+
+setInterval(() => {startAnimation()}, 4000);
 
 
 board.on('ready', () => {
@@ -128,11 +128,6 @@ board.on('ready', () => {
     io.emit('button pressed', 'button is pressed');
   });
 
-  confirmButton.on("release", () => {
-    console.log("Button released");
-    buttonCircle.style.fill = '#B84545';
-    // indicator.style.opacity = 1;
-  });
 
 
   sensor.on("change", function() {
@@ -152,3 +147,9 @@ board.on('ready', () => {
     io.emit('potentiometer turn', 'potentiometer is turned');
   });
 })
+
+const startAnimation = () => {
+  console.log('starting');
+  document.querySelector('.video--macro').style.opacity = '1';
+  document.querySelector('.video--macro').play();
+}

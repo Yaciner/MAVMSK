@@ -123,13 +123,18 @@ body {
   animation: border-animation 4s infinite ease-in-out;
 }
 
-/* .indicator_active::before {
-  border: 2px solid transparent;
+.video--macro {
+  height: 100vh;
+  width: auto;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transition: opacity 3s;
 }
-
-.indicator_active::after {
-  border: 0 solid transparent;
-} */
 
 .indicator_idle {
   animation: scale 4s infinite ease-in-out;
