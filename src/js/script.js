@@ -65,7 +65,9 @@ process.__defineGetter__('stdin', () => {
   return process.__stdin;
 }); {};
 
-let freq = 20;
+const freq = 50;
+const freqLanguage = 250;
+// let freq2 = 20;
 let buttonCircle = document.querySelector('.button-circle');
 buttonCircle.style.fill = '#B84545';
 let selectedDetail;
@@ -87,14 +89,18 @@ board.on('ready', () => {
   io.emit('artwork', activeArtwork);
 
   let detailSelector = new five.Sensor({
-    pin: 'A0',
+    pin: 'A1',
     freq: freq,
+    threshold: 5
   });
 
   let languageSelector = new five.Sensor({
-    pin: 'A1',
-    freq: freq,
+    pin: 'A2',
+    freq: freqLanguage,
+    threshold: 5
   });
+  // let detailSelector = new five.Sensor('A1');
+  // let languageSelector = new five.Sensor('A2');
 
   let confirmButton = new five.Button(2);
   let macroButton = new five.Button(4);
@@ -151,9 +157,9 @@ board.on('ready', () => {
     // indicator.style.opacity = 1;
   });
 
-
   detailSelector.on("change", function() {
     selectedDetail = this.scaleTo(0, 4);
+    console.log('detail selector');
     circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';
     });
@@ -165,6 +171,7 @@ board.on('ready', () => {
 
   languageSelector.on("change", function() {
     selectedLanguage = this.scaleTo(0, 5);
+    console.log('language selector');
 
     // array with all the languages
     // change the active language on
