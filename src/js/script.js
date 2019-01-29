@@ -68,7 +68,7 @@ process.__defineGetter__('stdin', () => {
 const freq = 50;
 const freqLanguage = 250;
 // let freq2 = 20;
-let selectedDetail;
+let selectedDetail = 0;
 let selectedLanguage;
 
 const changeLanguage = () => {
@@ -140,13 +140,13 @@ board.on('ready', () => {
     if (!isZoomedIn) {
       console.log('zooming in');
       isZoomedIn = true;
-      // artwork.classList.add(`zoomed-${selected + 1}`);
-      artwork.style.transform = `scale(${data[activeArtwork]['coordinates'][selected].s})`;
-      artwork.style.transform += `translate(${data[activeArtwork]['coordinates'][selected].x + ',' + data[activeArtwork]['coordinates'][selected].y})`;
+      artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
+      artwork.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
     } else {
       console.log('zooming out');
       isZoomedIn = false;
-      artwork.classList.remove(`zoomed-${selected + 1}`);
+      artwork.style.transform = `scale(1)`;
+      artwork.style.transform += `translate(0)`;
     }
 
     io.emit('EnterButton', 'Enter pressed');
@@ -177,10 +177,6 @@ board.on('ready', () => {
       io.emit('LanguageButton', title, info);
     }
   });
-
-  // board.repl.inject({
-  //   button: confirmButton
-  // });
 })
 
 const startAnimation = () => {
