@@ -12,6 +12,8 @@ let allData = [];
 let activeArtwork = "GiovanniArnolfini";
 const languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
 let activeLanguage = languages[0];
+let title = "";
+let info = "";
 
 // const animationActive = require('./lib/animate').animationActive;
 // const animationIdle = require('./lib/animate').animationIdle;
@@ -26,7 +28,8 @@ fetch('./assets/json/artworks.json', {
 .then(results => {
   allData = results;
   console.log(allData);
-
+  title = allData[activeArtwork]["details"][activeLanguage]["title"];
+  info = allData[activeArtwork]["details"][activeLanguage]["info"];
 }).catch((e => console.log(e)));
 
 server.use(express.static(path.join(__dirname, '../../client')));
@@ -68,11 +71,18 @@ buttonCircle.style.fill = '#B84545';
 let selectedDetail;
 let selectedLanguage;
 
+const changeLanguage = () => {
+  title = allData[activeArtwork]["details"][activeLanguage]["title"];
+  info = allData[activeArtwork]["details"][activeLanguage]["info"];
+}
+
 board.on('ready', () => {
   document.getElementById('board-status').src = './assets/ready.png';
   let artwork = document.querySelector('.artwork');
   let circles = document.querySelectorAll('.indicator');
-  // let indicator = document.querySelector('.pot');
+
+  //function to change language
+  changeLanguage();
 
   io.emit('artwork', activeArtwork);
 
@@ -160,8 +170,7 @@ board.on('ready', () => {
     // change the active language on
     if(languages[selectedLanguage]) {
       activeLanguage = languages[selectedLanguage];
-      const title = allData[activeArtwork]["details"][activeLanguage]["title"];
-      const info = allData[activeArtwork]["details"][activeLanguage]["info"];
+      changeLanguage();
 
       io.emit('LanguageButton', title, info);
     }
