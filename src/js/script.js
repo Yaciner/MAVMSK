@@ -9,8 +9,9 @@ const http = require('http').Server(server);
 const io = require('socket.io')(http);
 const path = require('path');
 let allData = [];
-let activeArtwork = "GiovanniArnolfini";
+let activeArtwork = "JoosVijd";
 let activeLanguage = "english";
+
 
 // const animationActive = require('./lib/animate').animationActive;
 // const animationIdle = require('./lib/animate').animationIdle;
@@ -24,7 +25,7 @@ fetch('./assets/json/artworks.json', {
 .then(response => response.json())
 .then(results => {
   allData = results;
-  console.log(allData);
+  startZoom(allData);
 
 }).catch((e => console.log(e)));
 
@@ -53,6 +54,8 @@ class MyStream extends Readable {
   _read() {}
 }
 
+
+
 // hook in our stream
 process.__defineGetter__('stdin', () => {
   if (process.__stdin)
@@ -62,9 +65,28 @@ process.__defineGetter__('stdin', () => {
 }); {};
 
 let freq = 20;
-let selected;
+let selected = 1;
+let isZoomedIn = false;
+let artwork = document.querySelector('.artwork');
 
-setInterval(() => {startAnimation()}, 4000);
+
+const startZoom = data => {
+  if (!isZoomedIn) {
+    console.log('zooming in');
+    isZoomedIn = true;
+    // artwork.classList.add(`${activeArtwork + '-' + selected}`);
+    artwork.style.transform = `scale(${data[activeArtwork]['coordinates'][selected].s})`;
+    artwork.style.transform += `translate(${data[activeArtwork]['coordinates'][selected].x + ',' + data[activeArtwork]['coordinates'][selected].y})`;
+    console.log(activeArtwork + '-' + selected + 1);
+  } else {
+    console.log('zooming out');
+    isZoomedIn = false;
+    artwork.classList.remove(`${activeArtwork + '-' + selected}`);
+  }
+  console.log(data[activeArtwork]['coordinates'][selected].x);
+}
+
+// setInterval(() => {startAnimation()}, 4000);
 
 
 board.on('ready', () => {
