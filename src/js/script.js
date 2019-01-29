@@ -12,6 +12,21 @@ const path = require('path');
 // const animationActive = require('./lib/animate').animationActive;
 // const animationIdle = require('./lib/animate').animationIdle;
 
+fetch('./assets/json/artworks.json', {
+  headers : {
+   'Content-Type': 'application/json',
+   'Accept': 'application/json'
+  }
+})
+
+.then(response => response.json())
+.then(results => {
+  allData = results;
+  console.log(allData);
+
+}).catch((e => console.log(e)));
+
+
 let activeArtwork = "GiovanniArnolfini";
 
 server.use(express.static(path.join(__dirname, '../../client')));
