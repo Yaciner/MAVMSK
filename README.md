@@ -1,2 +1,3 @@
 # MAV Museum van schone kunsten
-Bachelorproef.
+Opdracht voor bachelorproef.
+Installatie die het restauratie proces en de details van het werk in kaart brengt.
