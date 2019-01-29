@@ -11,6 +11,7 @@ const path = require('path');
 
 const animationActive = require('./lib/animate').animationActive;
 const animationIdle = require('./lib/animate').animationIdle;
+let allData = [];
 
 // animationIdle(1);
 
@@ -28,6 +29,21 @@ for (i = 0; i < indicators.length; ++i) {
   console.log('i', i);
   // animationIdle(i);
 }
+
+fetch('./assets/json/artworks.json', {
+  headers : {
+   'Content-Type': 'application/json',
+   'Accept': 'application/json'
+  }
+})
+
+.then(response => response.json())
+.then(results => {
+  allData = results;
+  console.log(allData);
+
+}).catch((e => console.log(e)));
+
 
 let activeArtwork = "GiovanniArnolfini";
 
@@ -152,21 +168,6 @@ board.on('ready', () => {
       circles[selected].style.fill = '#B84545';
       console.log(circles[selected]);
       circles[selected].className = 'indicator indicator_active';
-
-      // TODO iedere change active class vervangen door idle op de niet geslsecteerde divs en animationIdle zetten
-      // op de geslecteerde div active class zetten en animationActive zetten
-
-      // const activediv = document.querySelector(`.indicator_active`);
-      // // animationDestroy(activediv);
-      // console.log(activediv.firstChild);
-      // while (activediv.firstChild) {
-      //   console.log('deleting');
-      //     activediv.removeChild(activediv.firstChild);
-      //     activediv.classList.remove = '.indicator_active';
-      // }
-      //
-      // circles[selected].classList.add = '.indicator_active';
-      // animationActive();
     }
 
     io.emit('potentiometer turn', 'potentiometer is turned');

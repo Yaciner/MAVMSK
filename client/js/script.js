@@ -1,22 +1,8 @@
 const messagesID = document.querySelector('#messages');
-let allData = [];
 let currentArtwork;
 
 
 (() => {
-
-  fetch('./assets/data/Artworks.json', {
-    headers : {
-     'Content-Type': 'application/json',
-     'Accept': 'application/json'
-    }
-  })
-
-  .then(response => response.json())
-  .then(results => {
-    allData = results;
-
-  }).catch((e => console.log(e)));
 
   const socket = io();
 
@@ -48,10 +34,6 @@ let currentArtwork;
   socket.on('potentiometer turn', (msg) => {
     console.log(msg);
   });
-
-  const dataLoaded = (allData, currentArtwork) => {
-    console.log(allData[currentArtwork]);
-  }
 
 
 })();
