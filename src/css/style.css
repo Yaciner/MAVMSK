@@ -123,13 +123,13 @@ body {
   animation: border-animation 4s infinite ease-in-out;
 }
 
-.indicator_active::before {
+/* .indicator_active::before {
   border: 2px solid transparent;
 }
 
 .indicator_active::after {
   border: 0 solid transparent;
-}
+} */
 
 .indicator_idle {
   animation: scale 4s infinite ease-in-out;
