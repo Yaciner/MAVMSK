@@ -10,7 +10,8 @@ const io = require('socket.io')(http);
 const path = require('path');
 let allData = [];
 let activeArtwork = "GiovanniArnolfini";
-let activeLanguage = "english";
+const languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
+let activeLanguage = languages[0];
 
 // const animationActive = require('./lib/animate').animationActive;
 // const animationIdle = require('./lib/animate').animationIdle;
@@ -64,8 +65,8 @@ process.__defineGetter__('stdin', () => {
 let freq = 20;
 let buttonCircle = document.querySelector('.button-circle');
 buttonCircle.style.fill = '#B84545';
-let selected;
-
+let selectedDetail;
+let selectedLanguage;
 
 board.on('ready', () => {
   document.getElementById('board-status').src = './assets/ready.png';
@@ -75,10 +76,15 @@ board.on('ready', () => {
 
   io.emit('artwork', activeArtwork);
 
-  let sensor = new five.Sensor({
+  let detailSelector = new five.Sensor({
     pin: 'A0',
     freq: freq,
-  })
+  });
+
+  let languageSelector = new five.Sensor({
+    pin: 'A1',
+    freq: freq,
+  });
 
   let confirmButton = new five.Button(2);
   let macroButton = new five.Button(4);
@@ -108,14 +114,7 @@ board.on('ready', () => {
     const title = allData[activeArtwork]["details"][activeLanguage]["title"];
     const info = allData[activeArtwork]["details"][activeLanguage]["info"];
 
-    // io.emit('LanguageButton', 'Language pressed');
     io.emit('LanguageButton', title, info);
-
-    //get which artwork is displayed
-    console.log('allData[activeArtwork]', allData[activeArtwork]);
-    //change text based on language.
-    console.log(allData[activeArtwork]["details"][activeLanguage]["info"]);
-    // emit a message
   });
 
   confirmButton.on("press", () => {
@@ -143,14 +142,28 @@ board.on('ready', () => {
   });
 
 
-  sensor.on("change", function() {
-    selected = this.scaleTo(0, 4);
+  detailSelector.on("change", function() {
+    selectedDetail = this.scaleTo(0, 4);
     circles.forEach(circle => {
-      circle.className = 'indicator indicator_idle'
+      circle.className = 'indicator indicator_idle';
     });
 
-    if(circles[selected]) {
-      circles[selected].className = 'indicator indicator_active';
+    if(circles[selectedDetail]) {
+      circles[selectedDetail].className = 'indicator indicator_active';
+    }
+  });
+
+  languageSelector.on("change", function() {
+    selectedLanguage = this.scaleTo(0, 5);
+
+    // array with all the languages
+    // change the active language on
+    if(languages[selectedLanguage]) {
+      activeLanguage = languages[selectedLanguage];
+      const title = allData[activeArtwork]["details"][activeLanguage]["title"];
+      const info = allData[activeArtwork]["details"][activeLanguage]["info"];
+
+      io.emit('LanguageButton', title, info);
     }
   });
 })
