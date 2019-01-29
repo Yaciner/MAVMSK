@@ -8,13 +8,33 @@ const express = require('express');
 const http = require('http').Server(server);
 const io = require('socket.io')(http);
 const path = require('path');
-const animate = require('./lib/animate');
+
+const animationActive = require('./lib/animate').animationActive;
+const animationIdle = require('./lib/animate').animationIdle;
+
+// animationIdle(1);
+
+const indicators = document.querySelectorAll(`.indicator`);
+// opvragen hoeveel indicators er zijn
+// dan class name = ${`indicator`i+1}
+// dan animation function maken dat die een var met het nummer binnen laat.
+// indicatorsIdle.forEach((div) => {
+//   console.log(counter);
+//   animationIdle(counter);
+//   counter++
+// });
+console.log('indicatorsIdle', indicators);
+for (i = 0; i < indicators.length; ++i) {
+  console.log('i', i);
+  // animationIdle(i);
+}
 
 let activeArtwork = "GiovanniArnolfini";
 
 server.use(express.static(path.join(__dirname, '../../client')));
 
-server.get('/', (req, res) => {
+server.get('/', function(req, res) {
+  console.log('req', req);
   res.sendFile('index.html');
 });
 
@@ -51,9 +71,10 @@ let selected;
 
 
 board.on('ready', () => {
+  // animationActive();
   document.getElementById('board-status').src = './assets/ready.png';
   let artwork = document.querySelector('.artwork');
-  let circles = document.querySelectorAll('.st0');
+  let circles = document.querySelectorAll('.indicator');
   let indicator = document.querySelector('.pot');
 
   io.emit('artwork', activeArtwork);
@@ -68,6 +89,7 @@ board.on('ready', () => {
   let infraredButton = new five.Button(7);
   let xrayButton = new five.Button(8);
   let languageButton = new five.Button(12);
+
   let isZoomedIn = false;
 
   macroButton.on("press", () => {
@@ -103,29 +125,50 @@ board.on('ready', () => {
       artwork.classList.remove(`zoomed-${selected + 1}`);
     }
 
-    indicator.style.opacity = 0;
+    // indicator.style.opacity = 0;
     io.emit('EnterButton', 'Enter pressed');
+    // indicator.style.opacity = 0;
+    io.emit('button pressed', 'button is pressed');
   });
 
   confirmButton.on("release", () => {
     console.log("Button released");
     buttonCircle.style.fill = '#B84545';
-    indicator.style.opacity = 1;
+    // indicator.style.opacity = 1;
   });
 
 
   sensor.on("change", function() {
-    selected = this.scaleTo(0,6);
+    // console.log('change');
+    // console.log('circles', circles);
+    selected = this.scaleTo(0, 4);
     circles.forEach(circle => {
-      circle.style.fill = 'none';
-    })
+      circle.className = 'indicator indicator_idle'
+    });
+
+
 
     if(circles[selected]) {
       circles[selected].style.fill = '#B84545';
+      console.log(circles[selected]);
+      circles[selected].className = 'indicator indicator_active';
+
+      // TODO iedere change active class vervangen door idle op de niet geslsecteerde divs en animationIdle zetten
+      // op de geslecteerde div active class zetten en animationActive zetten
+
+      // const activediv = document.querySelector(`.indicator_active`);
+      // // animationDestroy(activediv);
+      // console.log(activediv.firstChild);
+      // while (activediv.firstChild) {
+      //   console.log('deleting');
+      //     activediv.removeChild(activediv.firstChild);
+      //     activediv.classList.remove = '.indicator_active';
+      // }
+      //
+      // circles[selected].classList.add = '.indicator_active';
+      // animationActive();
     }
 
     io.emit('potentiometer turn', 'potentiometer is turned');
   });
 })
-
-animate();

@@ -1,14 +1,30 @@
 const bodymovin = require('lottie-web');
 
-const animate = () => {
+const animationActive = () => {
   console.log('animate');
   bodymovin.loadAnimation({
-     container: document.querySelector(`.indicator_anim`),
+     container: document.querySelector(`.indicator_active`),
      renderer: `svg`,
      loop: true,
      autoplay: true,
-     path: `./assets/json/indicator_anim.json`
+     path: `./assets/json/indicator_active.json`
    });
 }
 
-module.exports = animate;
+const animationIdle = (number) => {
+  console.log(`animating ${number}`);
+  bodymovin.loadAnimation({
+     container: document.querySelector(`.indicator_idle${number}`),
+     renderer: `svg`,
+     loop: true,
+     autoplay: true,
+     path: `./assets/json/indicator_idle.json`
+   });
+}
+
+const animationDestroy = (div) => {
+  console.log(`destroy ${div}`);
+  bodymovin.destroy(div);
+}
+
+module.exports = { animationActive, animationIdle, animationDestroy };

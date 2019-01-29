@@ -1,3 +1,7 @@
+body {
+  background: black;
+}
+
 .button {
   background-color: #e7e7e7;
   border: black;
@@ -93,8 +97,65 @@
   transform: scale(5) translate(100px, 120px);
 }
 
-.indicator_anim {
+/* .indicator {
   margin: 0 auto;
   width: 6rem;
-  padding-top: 20rem;
+  padding-top: 2rem;
+} */
+
+.indicator {
+  background: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.indicator_active {
+  /* background: white; */
+  /* animation: border 4s infinite ease-in-out; */
+  border-top: 2px solid red;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  transform: rotate(270deg);
+  transition: border-left-width 0s linear .35s, -webkit-transform .4s linear 0s;
+  transition: transform .4s linear 0s, border-left-width 0s linear .35s;
+  transition: transform .4s linear 0s, border-left-width 0s linear .35s, -webkit-transform .4s linear 0s;
+  animation: border-animation 4s infinite ease-in-out;
+}
+
+/* .indicator_active::before {
+  border: 2px solid transparent;
+}
+
+.indicator_active::after {
+  border: 0 solid transparent;
+} */
+
+.indicator_idle {
+  animation: scale 4s infinite ease-in-out;
+}
+
+@keyframes border-animation {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
