@@ -57,7 +57,7 @@ board.on('ready', () => {
   document.getElementById('board-status').src = './assets/ready.png';
   let artwork = document.querySelector('.artwork');
   let circles = document.querySelectorAll('.indicator');
-  let indicator = document.querySelector('.pot');
+  // let indicator = document.querySelector('.pot');
 
   io.emit('artwork', activeArtwork);
 
