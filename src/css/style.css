@@ -97,6 +97,19 @@ body {
   transform: scale(5) translate(100px, 120px);
 }
 
+.video--macro {
+  border: 2px solid transparent;	  height: 100vh;
+  width: auto;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transition: opacity 3s;
+}	}
+
 /* .indicator {
   margin: 0 auto;
   width: 6rem;

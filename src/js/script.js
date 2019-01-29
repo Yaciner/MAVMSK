@@ -9,7 +9,7 @@ const http = require('http').Server(server);
 const io = require('socket.io')(http);
 const path = require('path');
 let allData = [];
-let activeArtwork = "GiovanniArnolfini";
+let activeArtwork = "JoosVijd";
 const languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
 let activeLanguage = languages[0];
 let title = "";
@@ -68,8 +68,6 @@ process.__defineGetter__('stdin', () => {
 const freq = 50;
 const freqLanguage = 250;
 // let freq2 = 20;
-let buttonCircle = document.querySelector('.button-circle');
-buttonCircle.style.fill = '#B84545';
 let selectedDetail;
 let selectedLanguage;
 
@@ -79,6 +77,10 @@ const changeLanguage = () => {
 }
 
 board.on('ready', () => {
+
+
+
+
   document.getElementById('board-status').src = './assets/ready.png';
   let artwork = document.querySelector('.artwork');
   let circles = document.querySelectorAll('.indicator');
@@ -99,8 +101,6 @@ board.on('ready', () => {
     freq: freqLanguage,
     threshold: 5
   });
-  // let detailSelector = new five.Sensor('A1');
-  // let languageSelector = new five.Sensor('A2');
 
   let confirmButton = new five.Button(2);
   let macroButton = new five.Button(4);
@@ -112,6 +112,7 @@ board.on('ready', () => {
 
   macroButton.on("press", () => {
     console.log('button 2 pressed');
+    startAnimation();
     io.emit('MacroButton', 'Macro pressed');
   });
 
@@ -139,22 +140,16 @@ board.on('ready', () => {
     if (!isZoomedIn) {
       console.log('zooming in');
       isZoomedIn = true;
-      artwork.classList.add(`zoomed-${selected + 1}`);
+      // artwork.classList.add(`zoomed-${selected + 1}`);
+      artwork.style.transform = `scale(${data[activeArtwork]['coordinates'][selected].s})`;
+      artwork.style.transform += `translate(${data[activeArtwork]['coordinates'][selected].x + ',' + data[activeArtwork]['coordinates'][selected].y})`;
     } else {
       console.log('zooming out');
       isZoomedIn = false;
       artwork.classList.remove(`zoomed-${selected + 1}`);
     }
 
-    // indicator.style.opacity = 0;
     io.emit('EnterButton', 'Enter pressed');
-    // indicator.style.opacity = 0;
-  });
-
-  confirmButton.on("release", () => {
-    console.log("Button released");
-    buttonCircle.style.fill = '#B84545';
-    // indicator.style.opacity = 1;
   });
 
   detailSelector.on("change", function() {
@@ -182,4 +177,14 @@ board.on('ready', () => {
       io.emit('LanguageButton', title, info);
     }
   });
+
+  // board.repl.inject({
+  //   button: confirmButton
+  // });
 })
+
+const startAnimation = () => {
+  console.log('starting');
+  document.querySelector('.video--macro').style.opacity = '1';
+  document.querySelector('.video--macro').play();
+}
