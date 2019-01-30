@@ -13,8 +13,9 @@ let currentArtwork;
   //   // dataLoaded(allData, currentArtwork);
   // })
 
-  socket.on('EnterButton', (msg) => {
-    console.log(msg);
+  socket.on('EnterButton', (activeArtworkTranslate, title, info) => {
+    //hier kunnen we de ANIMATIE triggeren --> aangezien we er van uit gaan dat deze 1 maal gebeurd (Eventueel kunnen we hier ook een timer zetten?)
+    changeDisplay(title, info, activeArtworkTranslate);
   });
 
   socket.on('InfraredButton', (msg) => {

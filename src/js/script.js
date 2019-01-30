@@ -148,7 +148,12 @@ board.on('ready', () => {
       loop: false
       });
 
-    io.emit('EnterButton', 'Enter pressed');
+      title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+      info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+      activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
+      activeLanguage = languages[selectedLanguage];
+
+      io.emit('EnterButton', title, info, activeArtworkTranslate);
   });
 
   detailSelector.on("change", function() {
