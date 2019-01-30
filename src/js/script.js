@@ -5,13 +5,15 @@ const Readable = require('stream').Readable;
 const mediumZoom = require('medium-zoom');
 const server = require('express')();
 const express = require('express');
+const Typed = require('typed.js');
 const http = require('http').Server(server);
 const io = require('socket.io')(http);
 const path = require('path');
 let allData = [];
 let activeArtwork = "JoosVijd";
+let activeArtworkTranslate = "";
 const languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
-let activeLanguage = languages[0];
+let activeLanguage = languages[1];
 let title = "";
 let info = "";
 
@@ -144,6 +146,15 @@ board.on('ready', () => {
       artwork.style.transform += `translate(0)`;
     }
 
+    new Typed('.indicator--information', {
+      strings: [`Linken we de taal aan de titel of niet?`],
+      typeSpeed: 10,
+      backSpeed: 0,
+      smartBackspace: true,
+      fadeOut: true,
+      loop: false
+      });
+
     io.emit('EnterButton', 'Enter pressed');
   });
 
@@ -163,13 +174,14 @@ board.on('ready', () => {
     selectedLanguage = this.scaleTo(0, 5);
     title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
     info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+    activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
     // array with all the languages
     // change the active language on
     if(languages[selectedLanguage]) {
       activeLanguage = languages[selectedLanguage];
       console.log(activeLanguage);
       changeLanguage();
-      io.emit('LanguageButton', title, info);
+      io.emit('LanguageButton', activeArtworkTranslate, title, info);
     }
   });
 })

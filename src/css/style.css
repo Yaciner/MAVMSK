@@ -59,6 +59,19 @@ body {
   margin-left: auto;
   margin-right: auto;
   transition: all 2s cubic-bezier(0, .95, .51, .97);
+  /* clip-path: inset(10px 20px 30px 40px); */
+  /* transform: scale(5) translate(-40px, 200px); */
+}
+
+.artwork_frame {
+  height: 100vh;
+  width: auto;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .status {
@@ -145,6 +158,16 @@ body {
 .indicator_active::after {
   border: 0 solid transparent;
 } */
+
+.indicator--information {
+  position: absolute;
+  width: 100vw;
+  bottom: 10rem;
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+  font-family: Roboto;
+}
 
 .indicator_idle {
   animation: scale 4s infinite ease-in-out;
