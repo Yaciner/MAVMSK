@@ -17,9 +17,6 @@ let activeLanguage = languages[1];
 let title = "";
 let info = "";
 
-// const animationActive = require('./lib/animate').animationActive;
-// const animationIdle = require('./lib/animate').animationIdle;
-
 fetch('./assets/json/artworks.json', {
   headers : {
    'Content-Type': 'application/json',
@@ -67,7 +64,6 @@ process.__defineGetter__('stdin', () => {
 
 const freq = 50;
 const freqLanguage = 250;
-// let freq2 = 20;
 let selectedDetail = 0;
 let selectedLanguage;
 
@@ -82,10 +78,7 @@ board.on('ready', () => {
   let artwork = document.querySelector('.artwork');
   let circles = document.querySelectorAll('.indicator');
 
-  //function to change language
   changeLanguage();
-
-  // io.emit('artwork', activeArtwork);
 
   let detailSelector = new five.Sensor({
     pin: 'A1',
@@ -175,8 +168,7 @@ board.on('ready', () => {
     title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
     info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
     activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
-    // array with all the languages
-    // change the active language on
+
     if(languages[selectedLanguage]) {
       activeLanguage = languages[selectedLanguage];
       console.log(activeLanguage);
