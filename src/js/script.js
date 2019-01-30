@@ -28,8 +28,6 @@ fetch('./assets/json/artworks.json', {
 .then(results => {
   allData = results;
   console.log(allData);
-  title = allData[activeArtwork]["details"][activeLanguage]["title"];
-  info = allData[activeArtwork]["details"][activeLanguage]["info"];
 }).catch((e => console.log(e)));
 
 server.use(express.static(path.join(__dirname, '../../client')));
@@ -72,15 +70,12 @@ let selectedDetail = 0;
 let selectedLanguage;
 
 const changeLanguage = () => {
-  title = allData[activeArtwork]["details"][activeLanguage]["title"];
-  info = allData[activeArtwork]["details"][activeLanguage]["info"];
+  console.log(activeLanguage);
+  title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+  info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
 }
 
 board.on('ready', () => {
-
-
-
-
   document.getElementById('board-status').src = './assets/ready.png';
   let artwork = document.querySelector('.artwork');
   let circles = document.querySelectorAll('.indicator');
@@ -88,7 +83,7 @@ board.on('ready', () => {
   //function to change language
   changeLanguage();
 
-  io.emit('artwork', activeArtwork);
+  // io.emit('artwork', activeArtwork);
 
   let detailSelector = new five.Sensor({
     pin: 'A1',
@@ -153,7 +148,7 @@ board.on('ready', () => {
   });
 
   detailSelector.on("change", function() {
-    selectedDetail = this.scaleTo(0, 4);
+    selectedDetail = this.scaleTo(0, allData[activeArtwork]['numdetails']);
     console.log('detail selector');
     circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';
@@ -166,14 +161,14 @@ board.on('ready', () => {
 
   languageSelector.on("change", function() {
     selectedLanguage = this.scaleTo(0, 5);
-    console.log('language selector');
-
+    title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+    info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
     // array with all the languages
     // change the active language on
     if(languages[selectedLanguage]) {
       activeLanguage = languages[selectedLanguage];
+      console.log(activeLanguage);
       changeLanguage();
-
       io.emit('LanguageButton', title, info);
     }
   });

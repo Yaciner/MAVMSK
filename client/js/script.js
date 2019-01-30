@@ -7,10 +7,10 @@ let currentArtwork;
 
   const socket = io();
 
-  socket.on('artwork', (msg) => {
-    currentArtwork = msg;
-    dataLoaded(allData, currentArtwork);
-  })
+  // socket.on('artwork', (msg) => {
+  //   currentArtwork = msg;
+  //   // dataLoaded(allData, currentArtwork);
+  // })
 
   socket.on('EnterButton', (msg) => {
     console.log(msg);
@@ -29,7 +29,7 @@ let currentArtwork;
   });
 
   socket.on('LanguageButton', (title, info) => {
-    // console.log(title);
+    console.log(title);
     changeDisplay(title, info);
   });
 

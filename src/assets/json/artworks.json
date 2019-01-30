@@ -36,38 +36,123 @@
         }
     },
     "JoosVijd": {
-        "title": "De Aanbidding van het Lam Gods (Joos Vijd)",
+        "title": {
+          "english" : "Adoration of the Mystic Lamb (Joos Vijd) EN",
+          "nederlands" : "De Aanbidding van het Lam Gods (Joos Vijd) NL",
+          "francais" : "L'Agneau Mystique (Joos Vijd) FR",
+          "espanol" : "Políptico de Gante (Joos Vijd) ES",
+          "deutsche" : "Genter Altar (Joos Vijd) DE",
+          "italiano" : "Polittico dell'Agnello Mistico (Joos Vijd) IT"
+        },
         "numdetails": 4,
         "details": {
           "english": {
-            "title": "De Aanbidding van het Lam Gods (Joos Vijd) EN",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
-            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+            "0" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "1" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "2" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "3" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            }
           },
           "nederlands": {
-            "title": "De Aanbidding van het Lam Gods (Joos Vijd) NL",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
-            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+            "0" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "1" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "2" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "3" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            }
           },
           "francais": {
-            "title": "De Aanbidding van het Lam Gods (Joos Vijd) FR",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
-            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+            "0" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "1" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "2" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "3" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            }
           },
           "espanol": {
-            "title": "De Aanbidding van het Lam Gods (Joos Vijd) ES",
-            "The convex mirror" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
-            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+            "0" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "1" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "2" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "3" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            }
           },
           "deutsche": {
-            "title": "De Aanbidding van het Lam Gods (Joos Vijd) DE",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
-            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+            "0" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "1" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "2" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "3" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            }
           },
           "italiano": {
-            "title": "De Aanbidding van het Lam Gods (Joos Vijd) IT",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date.",
-            "Johannes de Eyck fuit hic 1434": "Each detail of the ten roundels surrounding the mirror are reproduced in the most minute detail–showing scenes from the Old and New Testaments of the Bible. These details are all the more amazing when you take into account the size of the painting (it is approximately 23.5″x32″). Jan van Eyck did not depict a simple impression of a scene, instead he painted every single detail he saw. With great care and attention to detail, van Eyck created an image which fascinates its viewer to this very day."
+            "0" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "1" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "2" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            },
+            "3" : {
+              "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
+              "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+            }
           }
         },
         "coordinates": {
