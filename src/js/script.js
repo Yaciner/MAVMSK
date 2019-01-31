@@ -18,6 +18,7 @@ let title = "";
 let info = "";
 let isZoomedIn = false;
 let zoomIsActive = false;
+let artwork = document.querySelector('.artwork');
 
 fetch('./assets/json/artworks.json', {
   headers : {
