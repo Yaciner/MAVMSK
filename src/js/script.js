@@ -191,5 +191,21 @@ const startAnimation = () => {
 }
 
 const generateIndicators = allData => {
-  console.log(allData[activeArtwork]["numDetails"]);
+  const $container = document.querySelector('.indicators');
+  document.createElement('div');
+  const details = allData[activeArtwork]["numdetails"];
+
+  for(let i = 0 ; i < details; i ++) {
+    let $indicator = document.createElement('div');
+    $indicator.classList.add('indicator');
+    $container.appendChild($indicator);
+  }
+  readCoordinates();
+}
+
+const readCoordinates = () => {
+  const $indicators = document.querySelectorAll('.indicator');
+  $indicators.forEach(indicator => {
+    console.log(indicator);
+  })
 }
