@@ -1,120 +1,147 @@
 {
     "GiovanniArnolfini": {
+      "idle_text": {
+        "english": {
+          "what": "Now looking at",
+          "info": "Press the zoom button to explore a detail."
+        },
+        "nederlands": {
+          "what": "Now looking at NL",
+          "info": "Press the zoom button to explore a detail. NL"
+        },
+        "francais": {
+          "what": "Now looking at FR",
+          "info": "Press the zoom button to explore a detail. FR"
+        },
+        "espanol": {
+          "what": "Now looking at ES",
+          "info": "Press the zoom button to explore a detail. ES"
+        },
+        "deutsche": {
+          "what": "Now looking at DE",
+          "info": "Press the zoom button to explore a detail. DE"
+        },
+        "italiano": {
+          "what": "Now looking at IT",
+          "info": "Press the zoom button to explore a detail. IT"
+        },
+      },
       "title": {
-        "english" : "Gio",
-        "nederlands" : "Gio NL",
-        "francais" : "Gio FR",
-        "espanol" : "Gio ES",
-        "deutsche" : "Gio DE",
-        "italiano" : "Gio IT"
+        "english": "The Arnolfini Portrait",
+        "nederlands": "The Arnolfini Portrait NL",
+        "francais": "The Arnolfini Portrait FR",
+        "espanol": "The Arnolfini Portrait ES",
+        "deutsche": "The Arnolfini Portrait DE",
+        "italiano": "The Arnolfini Portrait IT"
       },
       "numdetails": 4,
       "details": {
+        "year": 1434,
         "english": {
           "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
+            "title": "Detail Adoration of the Mystic Lamb (Joos Vijd) EN 0",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) EN 1",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) EN 2",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) EN 3",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           }
         },
         "nederlands": {
           "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 0",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 1",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 2",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 3",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           }
         },
         "francais": {
           "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 0",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 1",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 2",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 3",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           }
         },
         "espanol": {
           "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 0",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 1",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 2",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 3",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           }
         },
         "deutsche": {
           "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 0",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 1",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 2",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 3",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           }
         },
         "italiano": {
           "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 0",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 1",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 2",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           },
           "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
+            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 3",
             "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
           }
         }
