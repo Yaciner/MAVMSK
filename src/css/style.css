@@ -121,7 +121,7 @@ body {
   text-align: center;
   color: white;
   font-size: 4rem;
-  font-family: Roboto;
+  font-family: sans-serif, Roboto;
 }
 
 .indicator_idle {
