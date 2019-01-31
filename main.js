@@ -13,8 +13,7 @@ const url = require('url')
 let mainWindow
 
 const createWindow = () => {
-  mainWindow = new BrowserWindow();
-  mainWindow.maximize();
+  mainWindow = new BrowserWindow({width: 1920, height: 1080});
 
 
 

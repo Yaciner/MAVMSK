@@ -66,7 +66,7 @@ process.__defineGetter__('stdin', () => {
 const freq = 50;
 const freqLanguage = 50;
 let selectedDetail = 0;
-let selectedLanguage;
+let selectedLanguage = 0;
 
 const changeLanguage = () => {
   console.log(activeLanguage);
@@ -127,17 +127,29 @@ board.on('ready', () => {
 
   confirmButton.on("press", () => {
     console.log("Button 1 pressed");
+    console.log(selectedDetail);
 
     if (!isZoomedIn) {
       console.log('zooming in');
       isZoomedIn = true;
-      artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
-      artwork.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
+      console.log(selectedDetail);
+      document.body.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
+      document.body.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
+
+      console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
+      title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+      info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+      activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
+      console.log(selectedLanguage);
+      activeLanguage = languages[selectedLanguage];
+
+
+      io.emit('EnterButton', title, info, activeArtworkTranslate);
     } else {
       console.log('zooming out');
       isZoomedIn = false;
-      artwork.style.transform = `scale(1)`;
-      artwork.style.transform += `translate(0)`;
+      document.body.style.transform = `scale(1)`;
+      document.body.style.transform += `translate(0)`;
     }
 
     new Typed('.indicator--information', {
@@ -148,24 +160,36 @@ board.on('ready', () => {
       fadeOut: true,
       loop: false
       });
-
-      title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-      info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
-      activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
-      activeLanguage = languages[selectedLanguage];
-
-      io.emit('EnterButton', title, info, activeArtworkTranslate);
   });
 
   detailSelector.on("change", function() {
     selectedDetail = this.scaleTo(0, allData[activeArtwork]['numdetails']);
     console.log('detail selector');
+    console.log(selectedDetail);
+    let i = 0;
     circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';
+      circle.animate([
+        { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(1)` },
+                { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(.8)` },
+        { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(1)` }
+      ], {
+        duration: 1000,
+        iterations: Infinity
+      });
+      i++
     });
 
     if(circles[selectedDetail]) {
       circles[selectedDetail].className = 'indicator indicator_active';
+      console.log(allData[activeArtwork]['coordinates'][selectedDetail].xi);
+      circles[selectedDetail].animate([
+        { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(0deg)` },
+        { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(360deg)` }
+      ], {
+        duration: 1000,
+        iterations: Infinity
+      });
     }
   });
 
@@ -199,15 +223,6 @@ const generateIndicators = allData => {
     let $indicator = document.createElement('div');
     $indicator.classList.add('indicator');
     $container.appendChild($indicator);
+    $indicator.style.transform = `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} )`;
   }
-  readCoordinates();
-}
-
-const readCoordinates = () => {
-  const $indicators = document.querySelectorAll('.indicator');
-  $indicators.forEach($indicator => {
-    console.log(allData);
-    // $indicator.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
-    $indicator.style.transform = `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
-  })
 }
