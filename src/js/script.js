@@ -16,6 +16,8 @@ const languages = ["english", "nederlands", "francais", "espanol", "deutsche", "
 let activeLanguage = languages[1];
 let title = "";
 let info = "";
+let isZoomedIn = false;
+let zoomIsActive = false;
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -99,8 +101,6 @@ board.on('ready', () => {
   let xrayButton = new five.Button(8);
   // let languageButton = new five.Button(12);
 
-  let isZoomedIn = false;
-
   macroButton.on("press", () => {
     console.log('button 2 pressed');
     startAnimation();
@@ -129,12 +129,14 @@ board.on('ready', () => {
     console.log("Button 1 pressed");
     console.log(selectedDetail);
 
-    if (!isZoomedIn) {
+    if (!isZoomedIn && !zoomIsActive) {
       console.log('zooming in');
       isZoomedIn = true;
+      zoomIsActive = true;
+
       console.log(selectedDetail);
-      document.body.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
-      document.body.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
+      artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
+      artwork.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
 
       console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
       title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
@@ -142,24 +144,30 @@ board.on('ready', () => {
       activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
       console.log(selectedLanguage);
       activeLanguage = languages[selectedLanguage];
+        document.querySelectorAll('.indicator').forEach($indicator => {
+          $indicator.style.opacity = '0';
 
-
+        })
+        new Typed('.indicator--information', {
+          strings: [`Linken we de taal aan de titel of niet?`],
+          typeSpeed: 10,
+          backSpeed: 0,
+          smartBackspace: true,
+          fadeOut: true,
+          loop: false
+          });
       io.emit('EnterButton', title, info, activeArtworkTranslate);
     } else {
+
       console.log('zooming out');
       isZoomedIn = false;
-      document.body.style.transform = `scale(1)`;
-      document.body.style.transform += `translate(0)`;
+      artwork.style.transform = `scale(1)`;
+      artwork.style.transform += `translate(0)`;
+      document.querySelectorAll('.indicator').forEach($indicator => {
+        $indicator.style.opacity = '1';
+      })
+      document.querySelector('.indicator--information').innerText = '';
     }
-
-    new Typed('.indicator--information', {
-      strings: [`Linken we de taal aan de titel of niet?`],
-      typeSpeed: 10,
-      backSpeed: 0,
-      smartBackspace: true,
-      fadeOut: true,
-      loop: false
-      });
   });
 
   detailSelector.on("change", function() {
