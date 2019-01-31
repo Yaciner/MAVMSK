@@ -45,7 +45,6 @@ io.on('connection', (socket) => {
   });
 });
 
-
 http.listen(3000, () => {
   console.log('listening on *:3000');
 });
@@ -125,6 +124,9 @@ board.on('ready', () => {
 
     if (!isZoomedIn && !zoomIsActive) {
       zoomIn();
+      setInterval(() => {
+        zoomOut();
+      }, 5000);
       // console.log('zooming in');
       // isZoomedIn = true;
       //
