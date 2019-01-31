@@ -70,12 +70,6 @@ const freqLanguage = 50;
 let selectedDetail = 0;
 let selectedLanguage = 0;
 
-const changeLanguage = () => {
-  console.log(activeLanguage);
-  title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-  info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
-}
-
 board.on('ready', () => {
   document.getElementById('board-status').src = './assets/ready.png';
   let artwork = document.querySelector('.artwork');
@@ -129,43 +123,44 @@ board.on('ready', () => {
     console.log("Button 1 pressed");
     console.log(selectedDetail);
 
-    if (!isZoomedIn) {
-      console.log('zooming in');
-      isZoomedIn = true;
-
-      console.log(selectedDetail);
-      artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
-      artwork.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
-
-      console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
-      title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-      info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
-      activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
-      console.log(selectedLanguage);
-      activeLanguage = languages[selectedLanguage];
-        document.querySelectorAll('.indicator').forEach($indicator => {
-          $indicator.style.opacity = '0';
-
-        })
-        new Typed('.indicator--information', {
-          strings: [`Linken we de taal aan de titel of niet?`],
-          typeSpeed: 10,
-          backSpeed: 0,
-          smartBackspace: true,
-          fadeOut: true,
-          loop: false
-          });
-      io.emit('EnterButton', title, info, activeArtworkTranslate);
+    if (!isZoomedIn && !zoomIsActive) {
+      zoomIn();
+      // console.log('zooming in');
+      // isZoomedIn = true;
+      //
+      // console.log(selectedDetail);
+      // artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
+      // artwork.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
+      //
+      // console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
+      // title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+      // info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+      // activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
+      // console.log(selectedLanguage);
+      // activeLanguage = languages[selectedLanguage];
+      //   document.querySelectorAll('.indicator').forEach($indicator => {
+      //     $indicator.style.opacity = '0';
+      //
+      //   })
+      //   new Typed('.indicator--information', {
+      //     strings: [`Linken we de taal aan de titel of niet?`],
+      //     typeSpeed: 10,
+      //     backSpeed: 0,
+      //     smartBackspace: true,
+      //     fadeOut: true,
+      //     loop: false
+      //     });
+      // io.emit('EnterButton', title, info, activeArtworkTranslate);
     } else {
-
-      console.log('zooming out');
-      isZoomedIn = false;
-      artwork.style.transform = `scale(1)`;
-      artwork.style.transform += `translate(0)`;
-      document.querySelectorAll('.indicator').forEach($indicator => {
-        $indicator.style.opacity = '1';
-      })
-      document.querySelector('.indicator--information').innerText = '';
+      // console.log('zooming out');
+      // isZoomedIn = false;
+      // artwork.style.transform = `scale(1)`;
+      // artwork.style.transform += `translate(0)`;
+      // document.querySelectorAll('.indicator').forEach($indicator => {
+      //   $indicator.style.opacity = '1';
+      // })
+      // document.querySelector('.indicator--information').innerText = '';
+      zoomOut();
     }
   });
 
@@ -232,4 +227,51 @@ const generateIndicators = allData => {
     $container.appendChild($indicator);
     $indicator.style.transform = `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} )`;
   }
+}
+
+const zoomIn = () => {
+  console.log('zooming in');
+  isZoomedIn = true;
+
+  console.log(selectedDetail);
+  artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
+  artwork.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
+
+  console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
+  title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+  info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+  activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
+  console.log(selectedLanguage);
+  activeLanguage = languages[selectedLanguage];
+    document.querySelectorAll('.indicator').forEach($indicator => {
+      $indicator.style.opacity = '0';
+
+    })
+    new Typed('.indicator--information', {
+      strings: [`Linken we de taal aan de titel of niet?`],
+      typeSpeed: 10,
+      backSpeed: 0,
+      smartBackspace: true,
+      fadeOut: true,
+      loop: false
+      });
+  io.emit('EnterButton', title, info, activeArtworkTranslate);
+}
+
+const zoomOut = () => {
+    console.log('zooming out');
+    isZoomedIn = false;
+    artwork.style.transform = `scale(1)`;
+    artwork.style.transform += `translate(0)`;
+    document.querySelectorAll('.indicator').forEach($indicator => {
+      $indicator.style.opacity = '1';
+    })
+    document.querySelector('.indicator--information').innerText = '';
+}
+
+
+const changeLanguage = () => {
+  console.log(activeLanguage);
+  title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+  info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
 }
