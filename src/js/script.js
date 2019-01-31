@@ -132,6 +132,7 @@ board.on('ready', () => {
     if (!isZoomedIn) {
       console.log('zooming in');
       isZoomedIn = true;
+      console.log(selectedDetail);
       document.body.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
       document.body.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
 
@@ -159,32 +160,36 @@ board.on('ready', () => {
       fadeOut: true,
       loop: false
       });
-      // console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
-
   });
 
   detailSelector.on("change", function() {
     selectedDetail = this.scaleTo(0, allData[activeArtwork]['numdetails']);
     console.log('detail selector');
     console.log(selectedDetail);
-
-
-
+    let i = 0;
     circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';
       circle.animate([
-        // keyframes
-        { transform: 'translateY(0px)' },
-        { transform: 'translateY(-300px)' }
+        { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(1)` },
+                { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(.8)` },
+        { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(1)` }
       ], {
-        // timing options
         duration: 1000,
         iterations: Infinity
       });
+      i++
     });
 
     if(circles[selectedDetail]) {
       circles[selectedDetail].className = 'indicator indicator_active';
+      console.log(allData[activeArtwork]['coordinates'][selectedDetail].xi);
+      circles[selectedDetail].animate([
+        { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(0deg)` },
+        { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(360deg)` }
+      ], {
+        duration: 1000,
+        iterations: Infinity
+      });
     }
   });
 
@@ -218,17 +223,6 @@ const generateIndicators = allData => {
     let $indicator = document.createElement('div');
     $indicator.classList.add('indicator');
     $container.appendChild($indicator);
-    $indicator.style.transform = `rotate(270deg)`;
-    $indicator.style.transform += `translate(${allData[activeArtwork]['coordinates'][i].x + ',' + allData[activeArtwork]['coordinates'][i].y})`;
+    $indicator.style.transform = `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} )`;
   }
-  readCoordinates(details);
-}
-
-const readCoordinates = details => {
-  // const $indicators = document.querySelectorAll('.indicator');
-  // $indicators.forEach($indicator => {
-  //   for(let i = 0; i < details; i ++) {
-  //     $indicator.style.transform = `translate(${allData[activeArtwork]['coordinates'][i].x + ',' + allData[activeArtwork]['coordinates'][i].y})`;
-  //   }
-  // })
 }
