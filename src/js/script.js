@@ -27,6 +27,7 @@ fetch('./assets/json/artworks.json', {
 .then(results => {
   allData = results;
   console.log(allData);
+  generateIndicators(allData);
 }).catch((e => console.log(e)));
 
 server.use(express.static(path.join(__dirname, '../../client')));
@@ -187,4 +188,8 @@ const startAnimation = () => {
   console.log('starting');
   document.querySelector('.video--macro').style.opacity = '1';
   document.querySelector('.video--macro').play();
+}
+
+const generateIndicators = allData => {
+  console.log(allData[activeArtwork]["numDetails"]);
 }
