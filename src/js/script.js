@@ -27,6 +27,7 @@ fetch('./assets/json/artworks.json', {
 .then(results => {
   allData = results;
   console.log(allData);
+  generateIndicators(allData);
 }).catch((e => console.log(e)));
 
 server.use(express.static(path.join(__dirname, '../../client')));
@@ -187,4 +188,26 @@ const startAnimation = () => {
   console.log('starting');
   document.querySelector('.video--macro').style.opacity = '1';
   document.querySelector('.video--macro').play();
+}
+
+const generateIndicators = allData => {
+  const $container = document.querySelector('.indicators');
+  document.createElement('div');
+  const details = allData[activeArtwork]["numdetails"];
+
+  for(let i = 0 ; i < details; i ++) {
+    let $indicator = document.createElement('div');
+    $indicator.classList.add('indicator');
+    $container.appendChild($indicator);
+  }
+  readCoordinates();
+}
+
+const readCoordinates = () => {
+  const $indicators = document.querySelectorAll('.indicator');
+  $indicators.forEach($indicator => {
+    console.log(allData);
+    // $indicator.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
+    $indicator.style.transform = `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
+  })
 }
