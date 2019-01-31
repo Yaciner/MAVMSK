@@ -129,10 +129,9 @@ board.on('ready', () => {
     console.log("Button 1 pressed");
     console.log(selectedDetail);
 
-    if (!isZoomedIn && !zoomIsActive) {
+    if (!isZoomedIn) {
       console.log('zooming in');
       isZoomedIn = true;
-      zoomIsActive = true;
 
       console.log(selectedDetail);
       artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
