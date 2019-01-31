@@ -30,7 +30,7 @@ let currentArtwork;
     console.log(msg);
   });
 
-  socket.on('LanguageButton', (activeArtworkTranslate, title, info) => {
+  socket.on('LanguageChange', (activeArtworkTranslate, title, info) => {
     changeDisplay(title, info, activeArtworkTranslate);
   });
 
