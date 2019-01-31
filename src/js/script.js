@@ -205,7 +205,9 @@ const generateIndicators = allData => {
 
 const readCoordinates = () => {
   const $indicators = document.querySelectorAll('.indicator');
-  $indicators.forEach(indicator => {
-    console.log(indicator);
+  $indicators.forEach($indicator => {
+    console.log(allData);
+    // $indicator.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
+    $indicator.style.transform = `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
   })
 }
