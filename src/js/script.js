@@ -66,7 +66,7 @@ process.__defineGetter__('stdin', () => {
 const freq = 50;
 const freqLanguage = 250;
 let selectedDetail = 0;
-let selectedLanguage;
+let selectedLanguage = 0;
 
 const changeLanguage = () => {
   console.log(activeLanguage);
@@ -97,7 +97,7 @@ board.on('ready', () => {
   let macroButton = new five.Button(4);
   let infraredButton = new five.Button(7);
   let xrayButton = new five.Button(8);
-  let languageButton = new five.Button(12);
+  // let languageButton = new five.Button(12);
 
   let isZoomedIn = false;
 
@@ -117,27 +117,38 @@ board.on('ready', () => {
     io.emit('XrayButton', 'xRay pressed');
   });
 
-  languageButton.on("press", () => {
-    console.log('button 5 pressed');
-    const title = allData[activeArtwork]["details"][activeLanguage]["title"];
-    const info = allData[activeArtwork]["details"][activeLanguage]["info"];
-
-    io.emit('LanguageButton', title, info);
-  });
+  // languageButton.on("press", () => {
+  //   console.log('button 5 pressed');
+  //   const title = allData[activeArtwork]["details"][activeLanguage]["title"];
+  //   const info = allData[activeArtwork]["details"][activeLanguage]["info"];
+  //
+  //   io.emit('LanguageButton', title, info);
+  // });
 
   confirmButton.on("press", () => {
     console.log("Button 1 pressed");
+    console.log(selectedDetail);
 
     if (!isZoomedIn) {
       console.log('zooming in');
       isZoomedIn = true;
-      artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
-      artwork.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
+      document.body.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
+      document.body.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
+
+      console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
+      title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+      info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+      activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
+      console.log(selectedLanguage);
+      activeLanguage = languages[selectedLanguage];
+
+
+      io.emit('EnterButton', title, info, activeArtworkTranslate);
     } else {
       console.log('zooming out');
       isZoomedIn = false;
-      artwork.style.transform = `scale(1)`;
-      artwork.style.transform += `translate(0)`;
+      document.body.style.transform = `scale(1)`;
+      document.body.style.transform += `translate(0)`;
     }
 
     new Typed('.indicator--information', {
@@ -148,20 +159,28 @@ board.on('ready', () => {
       fadeOut: true,
       loop: false
       });
+      // console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
 
-      title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-      info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
-      activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
-      activeLanguage = languages[selectedLanguage];
-
-      io.emit('EnterButton', title, info, activeArtworkTranslate);
   });
 
   detailSelector.on("change", function() {
     selectedDetail = this.scaleTo(0, allData[activeArtwork]['numdetails']);
     console.log('detail selector');
+    console.log(selectedDetail);
+
+
+
     circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';
+      circle.animate([
+        // keyframes
+        { transform: 'translateY(0px)' },
+        { transform: 'translateY(-300px)' }
+      ], {
+        // timing options
+        duration: 1000,
+        iterations: Infinity
+      });
     });
 
     if(circles[selectedDetail]) {
@@ -199,15 +218,17 @@ const generateIndicators = allData => {
     let $indicator = document.createElement('div');
     $indicator.classList.add('indicator');
     $container.appendChild($indicator);
+    $indicator.style.transform = `rotate(270deg)`;
+    $indicator.style.transform += `translate(${allData[activeArtwork]['coordinates'][i].x + ',' + allData[activeArtwork]['coordinates'][i].y})`;
   }
-  readCoordinates();
+  readCoordinates(details);
 }
 
-const readCoordinates = () => {
-  const $indicators = document.querySelectorAll('.indicator');
-  $indicators.forEach($indicator => {
-    console.log(allData);
-    // $indicator.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
-    $indicator.style.transform = `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
-  })
+const readCoordinates = details => {
+  // const $indicators = document.querySelectorAll('.indicator');
+  // $indicators.forEach($indicator => {
+  //   for(let i = 0; i < details; i ++) {
+  //     $indicator.style.transform = `translate(${allData[activeArtwork]['coordinates'][i].x + ',' + allData[activeArtwork]['coordinates'][i].y})`;
+  //   }
+  // })
 }
