@@ -99,14 +99,14 @@ body {
 
 .indicator_active {
   border-top: 2px solid red;
-  border-left-width: 2px;
+  /* border-left-width: 2px;
   border-right-width: 2px;
   transform: rotate(270deg);
   transition: border-left-width 0s linear .35s, -webkit-transform .4s linear 0s;
   transition: transform .4s linear 0s, border-left-width 0s linear .35s;
-  transition: transform .4s linear 0s, border-left-width 0s linear .35s, -webkit-transform .4s linear 0s;
+  /* transition: transform .4s linear 0s, border-left-width 0s linear .35s, -webkit-transform .4s linear 0s; */
   animation: border-animation 4s infinite ease-in-out;
-  z-index: 5;
+  /* z-index: 5; */
 }
 
 .indicator--information {

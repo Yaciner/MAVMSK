@@ -148,7 +148,8 @@ board.on('ready', () => {
       loop: false
       });
 
-      title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+      console.log('allData[activeArtwork]["details"]', allData[activeArtwork]["details"]);
+      title = allData[activeArtwork]["details"][activeLanguage][selectedDetail]["title"];
       info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
       activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
       activeLanguage = languages[selectedLanguage];
@@ -170,6 +171,7 @@ board.on('ready', () => {
 
   languageSelector.on("change", function() {
     selectedLanguage = this.scaleTo(0, 5);
+    console.log('allData[activeArtwork]["details"][activeLanguage]', allData[activeArtwork]["details"][activeLanguage]);
     title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
     info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
     activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
