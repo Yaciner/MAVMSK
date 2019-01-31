@@ -64,7 +64,7 @@ process.__defineGetter__('stdin', () => {
 }); {};
 
 const freq = 50;
-const freqLanguage = 250;
+const freqLanguage = 50;
 let selectedDetail = 0;
 let selectedLanguage;
 
@@ -97,7 +97,7 @@ board.on('ready', () => {
   let macroButton = new five.Button(4);
   let infraredButton = new five.Button(7);
   let xrayButton = new five.Button(8);
-  let languageButton = new five.Button(12);
+  // let languageButton = new five.Button(12);
 
   let isZoomedIn = false;
 
@@ -117,13 +117,13 @@ board.on('ready', () => {
     io.emit('XrayButton', 'xRay pressed');
   });
 
-  languageButton.on("press", () => {
-    console.log('button 5 pressed');
-    const title = allData[activeArtwork]["details"][activeLanguage]["title"];
-    const info = allData[activeArtwork]["details"][activeLanguage]["info"];
-
-    io.emit('LanguageButton', title, info);
-  });
+  // languageButton.on("press", () => {
+  //   console.log('button 5 pressed');
+  //   const title = allData[activeArtwork]["details"][activeLanguage]["title"];
+  //   const info = allData[activeArtwork]["details"][activeLanguage]["info"];
+  //
+  //   io.emit('LanguageButton', title, info);
+  // });
 
   confirmButton.on("press", () => {
     console.log("Button 1 pressed");
@@ -179,7 +179,7 @@ board.on('ready', () => {
       activeLanguage = languages[selectedLanguage];
       console.log(activeLanguage);
       changeLanguage();
-      io.emit('LanguageButton', activeArtworkTranslate, title, info);
+      io.emit('LanguageChange', activeArtworkTranslate, title, info);
     }
   });
 })
