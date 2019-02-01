@@ -19,6 +19,7 @@ let info = "";
 let isZoomedIn = false;
 let zoomIsActive = false;
 let artwork = document.querySelector('.artwork');
+let zoomTimer;
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -111,59 +112,16 @@ board.on('ready', () => {
     io.emit('XrayButton', 'xRay pressed');
   });
 
-  // languageButton.on("press", () => {
-  //   console.log('button 5 pressed');
-  //   const title = allData[activeArtwork]["details"][activeLanguage]["title"];
-  //   const info = allData[activeArtwork]["details"][activeLanguage]["info"];
-  //
-  //   io.emit('LanguageButton', title, info);
-  // });
-
   confirmButton.on("press", () => {
     console.log("Button 1 pressed");
-    console.log(selectedDetail);
 
     if (!isZoomedIn && !zoomIsActive) {
       zoomIn();
-      setInterval(() => {
-        zoomOut();
-      }, 5000);
-      // console.log('zooming in');
-      // isZoomedIn = true;
-      //
-      // console.log(selectedDetail);
-      // artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
-      // artwork.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
-      //
-      // console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
-      // title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-      // info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
-      // activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
-      // console.log(selectedLanguage);
-      // activeLanguage = languages[selectedLanguage];
-      //   document.querySelectorAll('.indicator').forEach($indicator => {
-      //     $indicator.style.opacity = '0';
-      //
-      //   })
-      //   new Typed('.indicator--information', {
-      //     strings: [`Linken we de taal aan de titel of niet?`],
-      //     typeSpeed: 10,
-      //     backSpeed: 0,
-      //     smartBackspace: true,
-      //     fadeOut: true,
-      //     loop: false
-      //     });
-      // io.emit('EnterButton', title, info, activeArtworkTranslate);
+      zoomTimer = setInterval(() => { zoomOut(); }, 5000);
+
     } else {
-      // console.log('zooming out');
-      // isZoomedIn = false;
-      // artwork.style.transform = `scale(1)`;
-      // artwork.style.transform += `translate(0)`;
-      // document.querySelectorAll('.indicator').forEach($indicator => {
-      //   $indicator.style.opacity = '1';
-      // })
-      // document.querySelector('.indicator--information').innerText = '';
       zoomOut();
+
     }
   });
 
@@ -262,7 +220,7 @@ const zoomIn = () => {
 }
 
 const zoomOut = () => {
-    console.log('zooming out');
+    clearInterval(zoomTimer);
     isZoomedIn = false;
     artwork.style.transform = `scale(1)`;
     artwork.style.transform += `translate(0)`;
