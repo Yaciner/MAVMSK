@@ -36,10 +36,11 @@ const animationLoader = bodymovin.loadAnimation({
 const playAnimation = () => {
   console.log('play animation');
   animationLoader.play();
+  $idle.classList.add('move-to-right-out');
   setTimeout(function(){
     $idle.style.display = 'none';
     $detailDisplay.style.display = 'block';
-  }, 500);
+  }, 450);
 }
 
 (() => {

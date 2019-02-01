@@ -3,6 +3,8 @@ body {
   display: flex;
   align-content: center;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 p {
@@ -16,7 +18,7 @@ p {
   flex-direction: column; */
   /* align-self: center; */
   /* display: flex; */
-  margin-top: 20vh;
+  /* margin-top: 20vh; */
 }
 
 h1 {
@@ -42,7 +44,9 @@ h1 {
 }
 
 #detail-display {
-  margin-top: 20vh;
+  /* margin-top: 20vh; */
+  width: 75vw;
+  animation: moveToRightIn .7s cubic-bezier(.09, 1.01, .65, .95);
 }
 
 #lottie {
@@ -52,4 +56,30 @@ h1 {
   left: 0;
   width: 100vw;
   height: 100vh;
+}
+
+.move-to-right-out {
+  animation: moveToRightOut 1s ease-in-out;
+}
+
+@keyframes moveToRightIn {
+
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveToRightOut {
+
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(100vw);
+  }
 }
