@@ -1,4 +1,5 @@
 /* // TODO font kiezen en inladen */
+
 body {
   background: black;
 }
@@ -83,7 +84,8 @@ body {
 }
 
 .video--macro {
-  border: 2px solid transparent;	  height: 100vh;
+  border: 2px solid transparent;
+  height: 100vh;
   width: auto;
   z-index: 0;
   position: absolute;
