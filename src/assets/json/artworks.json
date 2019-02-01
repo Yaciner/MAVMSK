@@ -1,308 +1,362 @@
 {
-    "GiovanniArnolfini": {
-      "title": {
-        "english" : "Gio",
-        "nederlands" : "Gio NL",
-        "francais" : "Gio FR",
-        "espanol" : "Gio ES",
-        "deutsche" : "Gio DE",
-        "italiano" : "Gio IT"
+  "GiovanniArnolfini": {
+    "idle_text": {
+      "english": {
+        "what": "Now looking at",
+        "help": "Press the zoom button to explore a detail."
       },
-      "numdetails": 4,
-      "details": {
-        "english": {
-          "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) EN",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          }
+      "nederlands": {
+        "what": "Now looking at NL",
+        "help": "Press the zoom button to explore a detail. NL"
+      },
+      "francais": {
+        "what": "Now looking at FR",
+        "help": "Press the zoom button to explore a detail. FR"
+      },
+      "espanol": {
+        "what": "Now looking at ES",
+        "help": "Press the zoom button to explore a detail. ES"
+      },
+      "deutsche": {
+        "what": "Now looking at DE",
+        "help": "Press the zoom button to explore a detail. DE"
+      },
+      "italiano": {
+        "what": "Now looking at IT",
+        "help": "Press the zoom button to explore a detail. IT"
+      }
+    },
+    "title": {
+      "english": "The Arnolfini Portrait",
+      "nederlands": "The Arnolfini Portrait NL",
+      "francais": "The Arnolfini Portrait FR",
+      "espanol": "The Arnolfini Portrait ES",
+      "deutsche": "The Arnolfini Portrait DE",
+      "italiano": "The Arnolfini Portrait IT"
+    },
+    "numdetails": 4,
+    "details": {
+      "year": 1434,
+      "english": {
+        "0" : {
+          "title": "Detail Adoration of the Mystic Lamb (Joos Vijd) EN 0",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
         },
-        "nederlands": {
-          "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) NL",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          }
+        "1" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) EN 1",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
         },
-        "francais": {
-          "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) FR",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          }
+        "2" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) EN 2",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
         },
-        "espanol": {
-          "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) ES",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          }
-        },
-        "deutsche": {
-          "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) DE",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          }
-        },
-        "italiano": {
-          "0" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "1" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "2" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          },
-          "3" : {
-            "title": "Adoration of the Mystic Lamb (Joos Vijd) IT",
-            "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
-          }
+        "3" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) EN 3",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
         }
       },
-      "coordinates": {
-        "0": {
-          "x":"100px",
-          "y":"120px",
-          "s":"5"
+      "nederlands": {
+        "0" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 0",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
         },
-        "1": {
-          "x":"100px",
-          "y":"120px",
-          "s":"5"
+        "1" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 1",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
         },
-        "2": {
-          "x":"100px",
-          "y":"120px",
-          "s":"5"
+        "2" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 2",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
         },
-        "3": {
-          "x":"100px",
-          "y":"120px",
-          "s":"5"
+        "3" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 3",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        }
+      },
+      "francais": {
+        "0" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 0",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
         },
-        "4": {
-          "x":"100px",
-          "y":"120px",
-          "s":"5"
+        "1" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 1",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        },
+        "2" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 2",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        },
+        "3" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 3",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        }
+      },
+      "espanol": {
+        "0" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 0",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        },
+        "1" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 1",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        },
+        "2" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 2",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        },
+        "3" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 3",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        }
+      },
+      "deutsche": {
+        "0" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 0",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        },
+        "1" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 1",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        },
+        "2" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 2",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        },
+        "3" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 3",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        }
+      },
+      "italiano": {
+        "0" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 0",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        },
+        "1" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 1",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        },
+        "2" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 2",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+        },
+        "3" : {
+          "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 3",
+          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
         }
       }
     },
-    "JoosVijd": {
-        "title": {
-          "english" : "Adoration of the Mystic Lamb (Joos Vijd) EN",
-          "nederlands" : "De Aanbidding van het Lam Gods (Joos Vijd) NL",
-          "francais" : "L'Agneau Mystique (Joos Vijd) FR",
-          "espanol" : "Políptico de Gante (Joos Vijd) ES",
-          "deutsche" : "Genter Altar (Joos Vijd) DE",
-          "italiano" : "Polittico dell'Agnello Mistico (Joos Vijd) IT"
-        },
-        "numdetails": 4,
-        "details": {
-          "english": {
-            "0" : {
-              "title": "His head EN",
-              "info" : "Who it is."
-            },
-            "1" : {
-              "title": "His head EN",
-              "info" : "Who it is."
-            },
-            "2" : {
-              "title": "His head EN",
-              "info" : "Who it is."
-            },
-            "3" : {
-              "title": "His head EN",
-              "info" : "Who it is."
-            }
-          },
-          "nederlands": {
-            "0" : {
-              "title": "His head NL",
-              "info" : "Who it is."
-            },
-            "1" : {
-              "title": "His head NL",
-              "info" : "Who it is."
-            },
-            "2" : {
-              "title": "His head NL",
-              "info" : "Who it is."
-            },
-            "3" : {
-              "title": "His head NL",
-              "info" : "Who it is."
-            }
-          },
-          "francais": {
-            "0" : {
-              "title": "His head FR",
-              "info" : "Who it is."
-            },
-            "1" : {
-              "title": "His head FR",
-              "info" : "Who it is."
-            },
-            "2" : {
-              "title": "His head FR",
-              "info" : "Who it is."
-            },
-            "3" : {
-              "title": "His head FR",
-              "info" : "Who it is."
-            }
-          },
-          "espanol": {
-            "0" : {
-              "title": "His head Es",
-              "info" : "Who it is."
-            },
-            "1" : {
-              "title": "His head Es",
-              "info" : "Who it is."
-            },
-            "2" : {
-              "title": "His head ES",
-              "info" : "Who it is."
-            },
-            "3" : {
-              "title": "His head Es",
-              "info" : "Who it is."
-            }
-          },
-          "deutsche": {
-            "0" : {
-              "title": "His head DE",
-              "info" : "Who it is."
-            },
-            "1" : {
-              "title": "His head DE",
-              "info" : "Who it is."
-            },
-            "2" : {
-              "title": "His head DE",
-              "info" : "Who it is."
-            },
-            "3" : {
-              "title": "His head DE",
-              "info" : "Who it is."
-            }
-          },
-          "italiano": {
-            "0" : {
-              "title": "His head IT",
-              "info" : "Who it is."
-            },
-            "1" : {
-              "title": "His head IT",
-              "info" : "Who it is."
-            },
-            "2" : {
-              "title": "His head IT",
-              "info" : "Who it is."
-            },
-            "3" : {
-              "title": "His head IT",
-              "info" : "Who it is."
-            }
-          }
-        },
-        "coordinates": {
-          "0": {
-            "x":"-40px",
-            "xi":"52vw",
-            "y":"200px",
-            "yi": "30vh",
-            "s":"5"
-          },
-          "1": {
-            "x":"-40px",
-            "xi":"52vw",
-            "y":"100px",
-            "yi": "40vh",
-            "s":"5"
-          },
-          "2": {
-            "x":"-40px",
-            "xi":"52vw",
-            "y":"0px",
-            "yi": "50vh",
-            "s":"5"
-          },
-          "3": {
-            "x":"-40px",
-            "xi":"52vw",
-            "y":"-100px",
-            "yi": "60vh",
-            "s":"5"
-          },
-          "4": {
-            "x":"-40px",
-            "xi":"52vw",
-            "y":"-200px",
-            "yi": "70vh",
-            "s":"5"
-          }
-        }
+    "coordinates": {
+      "0": {
+        "x":"100px",
+        "y":"120px",
+        "s":"5"
+      },
+      "1": {
+        "x":"100px",
+        "y":"120px",
+        "s":"5"
+      },
+      "2": {
+        "x":"100px",
+        "y":"120px",
+        "s":"5"
+      },
+      "3": {
+        "x":"100px",
+        "y":"120px",
+        "s":"5"
+      },
+      "4": {
+        "x":"100px",
+        "y":"120px",
+        "s":"5"
+      }
     }
+  },
+  "JoosVijd": {
+    "idle_text": {
+      "english": {
+        "what": "Now looking at",
+        "help": "Press the zoom button to explore a detail."
+      },
+      "nederlands": {
+        "what": "Now looking at NL",
+        "help": "Press the zoom button to explore a detail. NL"
+      },
+      "francais": {
+        "what": "Now looking at FR",
+        "help": "Press the zoom button to explore a detail. FR"
+      },
+      "espanol": {
+        "what": "Now looking at ES",
+        "help": "Press the zoom button to explore a detail. ES"
+      },
+      "deutsche": {
+        "what": "Now looking at DE",
+        "help": "Press the zoom button to explore a detail. DE"
+      },
+      "italiano": {
+        "what": "Now looking at IT",
+        "help": "Press the zoom button to explore a detail. IT"
+      }
+    },
+    "title": {
+      "english" : "Adoration of the Mystic Lamb (Joos Vijd) EN",
+      "nederlands" : "De Aanbidding van het Lam Gods (Joos Vijd) NL",
+      "francais" : "L'Agneau Mystique (Joos Vijd) FR",
+      "espanol" : "Políptico de Gante (Joos Vijd) ES",
+      "deutsche" : "Genter Altar (Joos Vijd) DE",
+      "italiano" : "Polittico dell'Agnello Mistico (Joos Vijd) IT"
+    },
+    "numdetails": 4,
+    "details": {
+      "year": 1432,
+      "english": {
+        "0" : {
+          "title": "His head EN",
+          "info" : "Who it is."
+        },
+        "1" : {
+          "title": "His head EN",
+          "info" : "Who it is."
+        },
+        "2" : {
+          "title": "His head EN",
+          "info" : "Who it is."
+        },
+        "3" : {
+          "title": "His head EN",
+          "info" : "Who it is."
+        }
+      },
+      "nederlands": {
+        "0" : {
+          "title": "His head NL",
+          "info" : "Who it is."
+        },
+        "1" : {
+          "title": "His head NL",
+          "info" : "Who it is."
+        },
+        "2" : {
+          "title": "His head NL",
+          "info" : "Who it is."
+        },
+        "3" : {
+          "title": "His head NL",
+          "info" : "Who it is."
+        }
+      },
+      "francais": {
+        "0" : {
+          "title": "His head FR",
+          "info" : "Who it is."
+        },
+        "1" : {
+          "title": "His head FR",
+          "info" : "Who it is."
+        },
+        "2" : {
+          "title": "His head FR",
+          "info" : "Who it is."
+        },
+        "3" : {
+          "title": "His head FR",
+          "info" : "Who it is."
+        }
+      },
+      "espanol": {
+        "0" : {
+          "title": "His head Es",
+          "info" : "Who it is."
+        },
+        "1" : {
+          "title": "His head Es",
+          "info" : "Who it is."
+        },
+        "2" : {
+          "title": "His head ES",
+          "info" : "Who it is."
+        },
+        "3" : {
+          "title": "His head Es",
+          "info" : "Who it is."
+        }
+      },
+      "deutsche": {
+        "0" : {
+          "title": "His head DE",
+          "info" : "Who it is."
+        },
+        "1" : {
+          "title": "His head DE",
+          "info" : "Who it is."
+        },
+        "2" : {
+          "title": "His head DE",
+          "info" : "Who it is."
+        },
+        "3" : {
+          "title": "His head DE",
+          "info" : "Who it is."
+        }
+      },
+      "italiano": {
+        "0" : {
+          "title": "His head IT",
+          "info" : "Who it is."
+        },
+        "1" : {
+          "title": "His head IT",
+          "info" : "Who it is."
+        },
+        "2" : {
+          "title": "His head IT",
+          "info" : "Who it is."
+        },
+        "3" : {
+          "title": "His head IT",
+          "info" : "Who it is."
+        }
+      }
+    },
+    "coordinates": {
+      "0": {
+        "x":"-40px",
+        "xi":"52vw",
+        "y":"200px",
+        "yi": "30vh",
+        "s":"5"
+      },
+      "1": {
+        "x":"-40px",
+        "xi":"52vw",
+        "y":"100px",
+        "yi": "40vh",
+        "s":"5"
+      },
+      "2": {
+        "x":"-40px",
+        "xi":"52vw",
+        "y":"0px",
+        "yi": "50vh",
+        "s":"5"
+      },
+      "3": {
+        "x":"-40px",
+        "xi":"52vw",
+        "y":"-100px",
+        "yi": "60vh",
+        "s":"5"
+      },
+      "4": {
+        "x":"-40px",
+        "xi":"52vw",
+        "y":"-200px",
+        "yi": "70vh",
+        "s":"5"
+      }
+    }
+  }
 }
