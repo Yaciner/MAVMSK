@@ -153,7 +153,7 @@ board.on('ready', () => {
       activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
       activeLanguage = languages[selectedLanguage];
 
-      io.emit('EnterButton', detailTitle, info, activeArtworkTranslate);
+      io.emit('Zoom', detailTitle, info, activeArtworkTranslate);
   });
 
   detailSelector.on("change", function() {
@@ -247,7 +247,7 @@ const zoomIn = () => {
       fadeOut: true,
       loop: false
       });
-  io.emit('EnterButton', title, info, activeArtworkTranslate);
+  io.emit('Zoom', title, info, activeArtworkTranslate);
 }
 
 const zoomOut = () => {

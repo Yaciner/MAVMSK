@@ -47,9 +47,10 @@ const playAnimation = () => {
 
   const socket = io();
 
-  socket.on('EnterButton', (activeArtworkTranslate, detailTitle, detailInfo) => {
+  socket.on('Zoom', (activeArtworkTranslate, detailTitle, detailInfo) => {
     //hier kunnen we de ANIMATIE triggeren --> aangezien we er van uit gaan dat deze 1 maal gebeurd (Eventueel kunnen we hier ook een timer zetten?)
     changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate);
+    playAnimation();
   });
 
   socket.on('InfraredButton', (msg) => {

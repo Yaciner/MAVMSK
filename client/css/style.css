@@ -11,7 +11,7 @@ p {
   margin-bottom: 2rem;
 }
 
-#idle {
+.idle {
   /* display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -27,29 +27,29 @@ h1 {
   font-weight: bold;
 }
 
-#artwork-year {
+.artwork-year {
   display: inline-block;
   font-size: 5rem;
   margin-left: 2rem;
   font-weight: 200;
 }
 
-#help {
+.help {
   color: #d0523e;
   font-size: 3rem;
 }
 
-#what {
+.what {
   font-size: 3.5rem;
 }
 
-#detail-display {
+.detail-display {
   /* margin-top: 20vh; */
   width: 75vw;
   animation: moveToRightIn .7s cubic-bezier(.09, 1.01, .65, .95);
 }
 
-#lottie {
+.lottie {
   position: absolute;
   z-index: 10;
   top: 0;
