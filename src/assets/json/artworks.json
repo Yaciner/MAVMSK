@@ -3,27 +3,27 @@
     "idle_text": {
       "english": {
         "what": "Now looking at",
-        "info": "Press the zoom button to explore a detail."
+        "help": "Press the zoom button to explore a detail."
       },
       "nederlands": {
         "what": "Now looking at NL",
-        "info": "Press the zoom button to explore a detail. NL"
+        "help": "Press the zoom button to explore a detail. NL"
       },
       "francais": {
         "what": "Now looking at FR",
-        "info": "Press the zoom button to explore a detail. FR"
+        "help": "Press the zoom button to explore a detail. FR"
       },
       "espanol": {
         "what": "Now looking at ES",
-        "info": "Press the zoom button to explore a detail. ES"
+        "help": "Press the zoom button to explore a detail. ES"
       },
       "deutsche": {
         "what": "Now looking at DE",
-        "info": "Press the zoom button to explore a detail. DE"
+        "help": "Press the zoom button to explore a detail. DE"
       },
       "italiano": {
         "what": "Now looking at IT",
-        "info": "Press the zoom button to explore a detail. IT"
+        "help": "Press the zoom button to explore a detail. IT"
       }
     },
     "title": {
@@ -175,6 +175,32 @@
     }
   },
   "JoosVijd": {
+    "idle_text": {
+      "english": {
+        "what": "Now looking at",
+        "help": "Press the zoom button to explore a detail."
+      },
+      "nederlands": {
+        "what": "Now looking at NL",
+        "help": "Press the zoom button to explore a detail. NL"
+      },
+      "francais": {
+        "what": "Now looking at FR",
+        "help": "Press the zoom button to explore a detail. FR"
+      },
+      "espanol": {
+        "what": "Now looking at ES",
+        "help": "Press the zoom button to explore a detail. ES"
+      },
+      "deutsche": {
+        "what": "Now looking at DE",
+        "help": "Press the zoom button to explore a detail. DE"
+      },
+      "italiano": {
+        "what": "Now looking at IT",
+        "help": "Press the zoom button to explore a detail. IT"
+      }
+    },
     "title": {
       "english" : "Adoration of the Mystic Lamb (Joos Vijd) EN",
       "nederlands" : "De Aanbidding van het Lam Gods (Joos Vijd) NL",
@@ -185,6 +211,7 @@
     },
     "numdetails": 4,
     "details": {
+      "year": 1432,
       "english": {
         "0" : {
           "title": "His head EN",

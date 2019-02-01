@@ -11,11 +11,11 @@ const io = require('socket.io')(http);
 const path = require('path');
 let allData = [];
 let activeArtwork = "JoosVijd";
-let activeArtworkTranslate = "";
+let artworkTitle = "";
 const languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
 let activeLanguage = languages[1];
-let title = "";
-let info = "";
+let detailTitle = "";
+let detailInfo = "";
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -48,6 +48,11 @@ http.listen(3000, () => {
   console.log('listening on *:3000');
 });
 
+// TODO uncomment to access from tablet
+// http.listen(3000, '192.168.2.14', () => {
+//   console.log('listening on *:3000 local ip');
+// });
+
 class MyStream extends Readable {
   constructor(opts) {
     super(opts);
@@ -70,16 +75,28 @@ let selectedLanguage;
 
 const changeLanguage = () => {
   console.log(activeLanguage);
-  title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-  info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+  detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+  detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+}
+
+const showDisplayIdle = () => {
+  console.log(activeLanguage);
+  console.log(allData[activeArtwork]["idle_text"]);
+  const what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
+  artworkTitle = allData[activeArtwork]["title"][activeLanguage];
+  const artworkYear = allData[activeArtwork]["details"]["year"];
+  const help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
+  io.emit('Idle', what, artworkTitle, artworkYear, help);
 }
 
 board.on('ready', () => {
+  io.emit('Refresh', 'reload');
+
   document.getElementById('board-status').src = './assets/ready.png';
   let artwork = document.querySelector('.artwork');
   let circles = document.querySelectorAll('.indicator');
 
-  changeLanguage();
+  showDisplayIdle();
 
   let detailSelector = new five.Sensor({
     pin: 'A1',
@@ -149,12 +166,12 @@ board.on('ready', () => {
       loop: false
       });
 
-      title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-      info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+      detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+      detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
       activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
       activeLanguage = languages[selectedLanguage];
 
-      io.emit('EnterButton', title, info, activeArtworkTranslate);
+      io.emit('EnterButton', detailTitle, info, activeArtworkTranslate);
   });
 
   detailSelector.on("change", function() {
@@ -169,19 +186,19 @@ board.on('ready', () => {
     }
   });
 
-  languageSelector.on("change", function() {
-    selectedLanguage = this.scaleTo(0, 5);
-    title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-    info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
-    activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
-
-    if(languages[selectedLanguage]) {
-      activeLanguage = languages[selectedLanguage];
-      console.log(activeLanguage);
-      changeLanguage();
-      io.emit('LanguageChange', activeArtworkTranslate, title, info);
-    }
-  });
+  // languageSelector.on("change", function() {
+  //   selectedLanguage = this.scaleTo(0, 5);
+  //   detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+  //   detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+  //   artworkTitle = allData[activeArtwork]['title'][activeLanguage];
+  //
+  //   if(languages[selectedLanguage]) {
+  //     activeLanguage = languages[selectedLanguage];
+  //     console.log(activeLanguage);
+  //     changeLanguage();
+  //     io.emit('LanguageChange', artworkTitle, detailTitle, detailInfo);
+  //   }
+  // });
 })
 
 const startAnimation = () => {
