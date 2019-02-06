@@ -17,7 +17,6 @@ p {
   align-items: flex-start;
   flex-direction: column;
   align-self: center;
-  /* margin-top: 20vh; */
 }
 
 h1 {
