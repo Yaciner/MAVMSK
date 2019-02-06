@@ -11,18 +11,24 @@ const changeDisplayDetail = (detailTitle, detailInfo, artwork) => {
   console.log(detailTitle, detailInfo, artwork);
   $detailTitle.textContent = detailTitle;
   $detailInfo.textContent = detailInfo;
-  // $artworkTitle.textContent = artwork;
-  console.log('detail');
-  $idle.style.display = 'none';
 }
 
 const changeDisplayIdle = (what, artworkTitle, artworkYear, help) => {
+  console.log('changeDisplayIdle');
   $what.textContent = what;
   $artworkTitle.textContent = artworkTitle;
   $artworkYear.textContent = artworkYear;
   $help.textContent = help;
-  console.log('idle');
-  $detailDisplay.style.display = 'none';
+  animationLoader.goToAndPlay(0);
+  $idle.classList.remove('move-to-right-out');
+  $idle.classList.add('move-to-right-in');
+  $detailDisplay.classList.remove('move-to-right-in');
+  $detailDisplay.classList.add('move-to-right-out');
+
+  setTimeout(function(){
+    $detailDisplay.style.display = 'none';
+    $idle.style.display = 'flex';
+  }, 450);
 }
 
 const animationLoader = bodymovin.loadAnimation({
@@ -33,10 +39,14 @@ const animationLoader = bodymovin.loadAnimation({
   autoplay: false, // Optional
 });
 
-const playAnimation = () => {
+const playAnimationDetail = () => {
   console.log('play animation');
-  animationLoader.play();
+  // animationLoader.play();
+  animationLoader.goToAndPlay(0);
+  $idle.classList.remove('move-to-right-in');
   $idle.classList.add('move-to-right-out');
+  $detailDisplay.classList.add('move-to-right-in');
+  $detailDisplay.classList.remove('move-to-right-out');
   setTimeout(function(){
     $idle.style.display = 'none';
     $detailDisplay.style.display = 'block';
@@ -49,8 +59,9 @@ const playAnimation = () => {
 
   socket.on('Zoom', (activeArtworkTranslate, detailTitle, detailInfo) => {
     //hier kunnen we de ANIMATIE triggeren --> aangezien we er van uit gaan dat deze 1 maal gebeurd (Eventueel kunnen we hier ook een timer zetten?)
+    console.log('zoom');
     changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate);
-    playAnimation();
+    playAnimationDetail();
   });
 
   socket.on('InfraredButton', (msg) => {
@@ -74,6 +85,7 @@ const playAnimation = () => {
   });
 
   socket.on('Idle', (what, artworkTitle, artworkYear, help) => {
+    console.log('idle');
     changeDisplayIdle(what, artworkTitle, artworkYear, help);
   });
 
@@ -82,6 +94,5 @@ const playAnimation = () => {
     location.reload();
   });
 
-  playAnimation();
 })();
 // TODO show idle text on window load.

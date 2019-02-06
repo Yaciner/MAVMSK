@@ -22,6 +22,9 @@ let artwork = document.querySelector('.artwork');
 let zoomTimer;
 let detailTitle = "";
 let detailInfo = "";
+let artworkYear = 1302;
+let help = "Press the button";
+let what = "what what what?¿"
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -44,9 +47,12 @@ server.get('/', function(req, res) {
 });
 
 io.on('connection', (socket) => {
-  socket.on('chat message', (msg) => {
-    io.emit('chat message', msg);
-  });
+  what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
+  artworkTitle = allData[activeArtwork]["title"][activeLanguage];
+  console.log('artworkTitle', artworkTitle);
+  artworkYear = allData[activeArtwork]["details"]["year"];
+  help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
+  io.emit('Idle', what, artworkTitle, artworkYear, help);
 });
 
 http.listen(3000, () => {
@@ -88,10 +94,10 @@ const showDisplayIdle = () => {
   console.log(activeLanguage);
   console.log(activeArtwork);
   console.log(allData[activeArtwork]["idle_text"]);
-  const what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
+  what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
   artworkTitle = allData[activeArtwork]["title"][activeLanguage];
-  const artworkYear = allData[activeArtwork]["details"]["year"];
-  const help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
+  artworkYear = allData[activeArtwork]["details"]["year"];
+  help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
   io.emit('Idle', what, artworkTitle, artworkYear, help);
 }
 
@@ -143,7 +149,8 @@ board.on('ready', () => {
 
     if (!isZoomedIn && !zoomIsActive) {
       zoomIn();
-      zoomTimer = setInterval(() => { zoomOut(); }, 5000);
+      zoomTimer = setInterval(() => { zoomOut(); }, 30000);
+      // io.emit('Zoom', detailTitle, info, activeArtworkTranslate);
     } else {
       zoomOut();
     }
@@ -151,8 +158,6 @@ board.on('ready', () => {
     detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
     activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
     activeLanguage = languages[selectedLanguage];
-
-    io.emit('Zoom', detailTitle, info, activeArtworkTranslate);
   });
 
   detailSelector.on("change", function() {
@@ -167,7 +172,7 @@ board.on('ready', () => {
                 { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(.8)` },
         { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(1)` }
       ], {
-        duration: 1000,
+        duration: 5000,
         iterations: Infinity
       });
       i++
@@ -236,12 +241,19 @@ const zoomIn = () => {
 }
 
 const zoomOut = () => {
-    clearInterval(zoomTimer);
-    isZoomedIn = false;
-    artwork.style.transform = `scale(1)`;
-    artwork.style.transform += `translate(0)`;
-    document.querySelectorAll('.indicator').forEach($indicator => {
-      $indicator.style.opacity = '1';
-    })
-    document.querySelector('.indicator--information').innerText = '';
+  console.log('Zoooming out');
+  clearInterval(zoomTimer);
+  isZoomedIn = false;
+  artwork.style.transform = `scale(1)`;
+  artwork.style.transform += `translate(0)`;
+  document.querySelectorAll('.indicator').forEach($indicator => {
+    $indicator.style.opacity = '1';
+  })
+  document.querySelector('.indicator--information').innerText = '';
+
+  what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
+  artworkTitle = allData[activeArtwork]["title"][activeLanguage];
+  artworkYear = allData[activeArtwork]["details"]["year"];
+  help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
+  io.emit('Idle', what, artworkTitle, artworkYear, help);
 }

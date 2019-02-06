@@ -12,12 +12,11 @@ p {
 }
 
 .idle {
-  /* display: flex;
+  display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: column; */
-  /* align-self: center; */
-  /* display: flex; */
+  flex-direction: column;
+  align-self: center;
   /* margin-top: 20vh; */
 }
 
@@ -46,7 +45,7 @@ h1 {
 .detail-display {
   /* margin-top: 20vh; */
   width: 75vw;
-  animation: moveToRightIn .7s cubic-bezier(.09, 1.01, .65, .95);
+  /* animation: moveToRightIn .7s cubic-bezier(.09, 1.01, .65, .95); */
 }
 
 .lottie {
@@ -58,8 +57,12 @@ h1 {
   height: 100vh;
 }
 
+.move-to-right-in {
+  animation: moveToRightIn .7s cubic-bezier(.09, 1.01, .65, .95);
+}
+
 .move-to-right-out {
-  animation: moveToRightOut 1s ease-in-out;
+  animation: moveToRightOut .7s cubic-bezier(.09, 1.01, .65, .95);
 }
 
 @keyframes moveToRightIn {
