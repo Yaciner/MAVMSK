@@ -2,6 +2,7 @@
 
 body {
   background: black;
+  font-family: sans-serif;
 }
 
 .button {
@@ -157,3 +158,16 @@ body {
     transform: scale(1);
   }
 } */
+
+.connect {
+  background: white;
+  background: rgba(255, 255, 255, .9);
+  border-radius: 4rem;
+  z-index: 200;
+  position: absolute;
+  bottom: 2rem;
+  font-size: 2.5rem;
+  padding: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}

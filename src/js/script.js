@@ -1,3 +1,4 @@
+const port = 3000;
 const util = require('util');
 const five = require('johnny-five');
 const board = new five.Board();
@@ -6,6 +7,8 @@ const mediumZoom = require('medium-zoom');
 const server = require('express')();
 const express = require('express');
 const Typed = require('typed.js');
+const ip = require('ip');
+const ipAddress = ip.address();
 const http = require('http').Server(server);
 const io = require('socket.io')(http);
 const path = require('path');
@@ -24,7 +27,9 @@ let detailTitle = "";
 let detailInfo = "";
 let artworkYear = 1302;
 let help = "Press the button";
-let what = "what what what?¿"
+let what = "what what what?¿";
+const connectDiv = document.querySelector('.connect');
+const connectionMessage = require('./lib/connectionMessage');
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -53,16 +58,13 @@ io.on('connection', (socket) => {
   artworkYear = allData[activeArtwork]["details"]["year"];
   help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
   io.emit('Idle', what, artworkTitle, artworkYear, help);
+  connectionMessage.hide(connectDiv);
 });
 
-http.listen(3000, () => {
-  console.log('listening on *:3000');
+http.listen(port, () => {
+  console.log(`listening on ${ipAddress}:${port}`);
+  connectionMessage.show(connectDiv, ipAddress, port);
 });
-
-// TODO uncomment to access from tablet
-// http.listen(3000, '192.168.2.14', () => {
-//   console.log('listening on *:3000 local ip');
-// });
 
 class MyStream extends Readable {
   constructor(opts) {
