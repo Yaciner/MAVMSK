@@ -146,14 +146,13 @@ board.on('ready', () => {
       zoomTimer = setInterval(() => { zoomOut(); }, 5000);
     } else {
       zoomOut();
-
     }
-      detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-      detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
-      activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
-      activeLanguage = languages[selectedLanguage];
+    detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+    detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+    activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
+    activeLanguage = languages[selectedLanguage];
 
-      io.emit('Zoom', detailTitle, info, activeArtworkTranslate);
+    io.emit('Zoom', detailTitle, info, activeArtworkTranslate);
   });
 
   detailSelector.on("change", function() {
@@ -186,20 +185,6 @@ board.on('ready', () => {
       });
     }
   });
-
-  // languageSelector.on("change", function() {
-  //   selectedLanguage = this.scaleTo(0, 5);
-  //   detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-  //   detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
-  //   artworkTitle = allData[activeArtwork]['title'][activeLanguage];
-  //
-  //   if(languages[selectedLanguage]) {
-  //     activeLanguage = languages[selectedLanguage];
-  //     console.log(activeLanguage);
-  //     changeLanguage();
-  //     io.emit('LanguageChange', artworkTitle, detailTitle, detailInfo);
-  //   }
-  // });
 })
 
 const startAnimation = () => {
