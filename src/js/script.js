@@ -180,7 +180,8 @@ board.on('ready', () => {
         { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(1)` }
       ], {
         duration: 5000,
-        iterations: Infinity
+        iterations: Infinity,
+        easing: 'ease-in-out'
       });
       i++
     });
@@ -192,8 +193,9 @@ board.on('ready', () => {
         { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(0deg)` },
         { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(360deg)` }
       ], {
-        duration: 1000,
-        iterations: Infinity
+        duration: 1400,
+        iterations: Infinity,
+        easing: 'cubic-bezier(0.42, 0, 0.58, 1)'
       });
     }
   });
