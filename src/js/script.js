@@ -59,6 +59,11 @@ io.on('connection', (socket) => {
   help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
   io.emit('Idle', what, artworkTitle, artworkYear, help);
   connectionMessage.hide(connectDiv);
+
+  socket.on('disconnect', (reason) => {
+    console.log('reason', reason);
+    connectionMessage.show(connectDiv, ipAddress, port);
+  });
 });
 
 http.listen(port, () => {
