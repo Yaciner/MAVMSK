@@ -132,27 +132,27 @@ board.on('ready', () => {
   let confirmButton = new five.Button(2);
   let macroButton = new five.Button(4);
   let infraredButton = new five.Button(7);
-  let xrayButton = new five.Button(8);
+  let xrayButton = new five.Button(12);
   // let languageButton = new five.Button(12);
 
   macroButton.on("press", () => {
-    console.log('button 2 pressed');
+    console.log('BUTTON macro pressed');
     startAnimation();
     io.emit('MacroButton', 'Macro pressed');
   });
 
   infraredButton.on("press", () => {
-    console.log('button 3 pressed');
+    console.log('BUTTON infrared pressed');
     io.emit('InfraredButton', 'Infrared pressed');
   });
 
   xrayButton.on("press", () => {
-    console.log('button 4 pressed');
+    console.log('BUTTON xray pressed');
     io.emit('XrayButton', 'xRay pressed');
   });
 
   confirmButton.on("press", () => {
-    console.log("Button 1 pressed");
+    console.log("BUTTON confirm pressed");
 
     if (!isZoomedIn && !zoomIsActive) {
       zoomIn();
