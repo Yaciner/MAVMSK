@@ -68,6 +68,12 @@ h1 {
   animation: moveToRightOut .7s cubic-bezier(.09, 1.01, .65, .95);
 }
 
+.msk-logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
 @keyframes moveToRightIn {
 
   0% {
