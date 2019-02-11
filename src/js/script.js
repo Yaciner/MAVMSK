@@ -153,11 +153,9 @@ board.on('ready', () => {
 
   confirmButton.on("press", () => {
     console.log("BUTTON confirm pressed");
-
     if (!isZoomedIn && !zoomIsActive) {
       zoomIn();
       zoomTimer = setInterval(() => { zoomOut(); }, 30000);
-      // io.emit('Zoom', detailTitle, info, activeArtworkTranslate);
     } else {
       zoomOut();
     }
@@ -168,8 +166,7 @@ board.on('ready', () => {
   });
 
   detailSelector.on("change", function() {
-    selectedDetail = this.scaleTo(0, allData[activeArtwork]['numdetails']);
-    console.log('detail selector');
+    selectedDetail = this.scaleTo(0, allData[activeArtwork]['numdetails']-1);
     console.log(selectedDetail);
     let i = 0;
     circles.forEach(circle => {
