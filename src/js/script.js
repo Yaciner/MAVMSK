@@ -30,6 +30,7 @@ let help = "Press the button";
 let what = "what what what?¿";
 const connectDiv = document.querySelector('.connect');
 const connectionMessage = require('./lib/connectionMessage');
+let previousLanguage = '';
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -92,9 +93,20 @@ let selectedDetail = 0;
 let selectedLanguage = 0;
 
 const changeLanguage = () => {
-  console.log(activeLanguage);
-  detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-  detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+
+  if(activeLanguage !== previousLanguage) {
+    previousLanguage = activeLanguage;
+    console.log(activeLanguage);
+    detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
+    detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
+    activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
+
+    what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
+    artworkTitle = allData[activeArtwork]["title"][activeLanguage];
+    artworkYear = allData[activeArtwork]["details"]["year"];
+    help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
+    io.emit('LanguageChange', activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help);
+  }
 }
 
 const showDisplayIdle = () => {
@@ -165,9 +177,17 @@ board.on('ready', () => {
     activeLanguage = languages[selectedLanguage];
   });
 
+  languageSelector.on("change", function() {
+    selectedLanguage = this.scaleTo(0, languages.length - 1);
+    console.log(languages[selectedLanguage]);
+    activeLanguage = languages[selectedLanguage];
+    console.log(activeLanguage);
+    changeLanguage();
+  });
+
   detailSelector.on("change", function() {
     selectedDetail = this.scaleTo(0, allData[activeArtwork]['numdetails']-1);
-    console.log(selectedDetail);
+    // console.log(selectedDetail);
     let i = 0;
     circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';
@@ -185,7 +205,7 @@ board.on('ready', () => {
 
     if(circles[selectedDetail]) {
       circles[selectedDetail].className = 'indicator indicator_active';
-      console.log(allData[activeArtwork]['coordinates'][selectedDetail].xi);
+      // console.log(allData[activeArtwork]['coordinates'][selectedDetail].xi);
       circles[selectedDetail].animate([
         { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(0deg)` },
         { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(360deg)` }

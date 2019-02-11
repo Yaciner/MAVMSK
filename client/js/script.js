@@ -6,6 +6,7 @@ const $detailInfo = document.querySelector('#detail-info');
 const $help = document.querySelector('#help');
 const $idle = document.querySelector('#idle');
 const $detailDisplay = document.querySelector('#detail-display');
+let idle = true;
 
 const changeDisplayDetail = (detailTitle, detailInfo, artwork) => {
   console.log(detailTitle, detailInfo, artwork);
@@ -62,6 +63,7 @@ const playAnimationDetail = () => {
     console.log('zoom');
     changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate);
     playAnimationDetail();
+    idle = false;
   });
 
   socket.on('InfraredButton', (msg) => {
@@ -76,8 +78,13 @@ const playAnimationDetail = () => {
     console.log(msg);
   });
 
-  socket.on('LanguageChange', (activeArtworkTranslate, detailTitle, detailInfo) => {
-    changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate);
+  socket.on('LanguageChange', (activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help) => {
+
+    if (idle) {
+      changeDisplayIdle(what, artworkTitle, artworkYear, help);
+    } else {
+      changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate);
+    }
   });
 
   socket.on('potentiometer turn', (msg) => {
@@ -87,6 +94,7 @@ const playAnimationDetail = () => {
   socket.on('Idle', (what, artworkTitle, artworkYear, help) => {
     console.log('idle');
     changeDisplayIdle(what, artworkTitle, artworkYear, help);
+    idle = true;
   });
 
   socket.on('Refresh', reload => {
