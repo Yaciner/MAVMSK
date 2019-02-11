@@ -1,5 +1,6 @@
 const electron = require('electron');
 
+// TODO comment before building
 require('electron-reload')(__dirname, {
   electron: require(`${__dirname}/node_modules/electron`)
 });

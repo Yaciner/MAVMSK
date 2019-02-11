@@ -51,3 +51,4 @@ css/main.css
 *-min.*
 node_modules
 *key.js
+dist

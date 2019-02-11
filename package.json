@@ -1,10 +1,10 @@
 {
-  "name": "start",
+  "name": "msk.installation",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "build": {
-    "appId": "start",
+    "appId": "msk.installation",
     "mac": {
       "category": "installation",
       "icon": "./src/assets/icons/512x512.png.icns"
@@ -12,14 +12,14 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/electron-rebuild && electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^4.0.1",
-    "electron-rebuild": "^1.8.2",
     "express": "^4.16.4",
     "ip": "^1.1.5",
     "johnny-five": "^1.0.0",
@@ -31,6 +31,9 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "electron": "^4.0.1",
+    "electron-rebuild": "^1.8.2",
+    "electron-builder": "^20.38.5",
     "electron-reload": "^1.4.0",
     "stylelint-config-standard": "^18.2.0"
   }
