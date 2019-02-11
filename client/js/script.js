@@ -18,7 +18,7 @@ const changeDisplayIdle = (what, artworkTitle, artworkYear, help) => {
   console.log('changeDisplayIdle');
   $what.textContent = what;
   $artworkTitle.textContent = artworkTitle;
-  $artworkYear.textContent = artworkYear;
+  $artworkYear.textContent = ', ' + artworkYear;
   $help.textContent = help;
   animationLoader.goToAndPlay(0);
   $idle.classList.remove('move-to-right-out');

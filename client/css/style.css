@@ -1,5 +1,5 @@
 body {
-  font: Asul, sans-serif;
+  font-family: Asul, sans-serif;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -26,10 +26,14 @@ h1 {
   font-weight: bold;
 }
 
+.artwork-info {
+  max-width: 70vw;
+  line-height: calc(1.2 * 4.5rem);
+}
+
 .artwork-year {
   display: inline-block;
-  font-size: 3rem;
-  margin-left: 2rem;
+  /* font-size: 3rem; */
   font-weight: 200;
 }
 
