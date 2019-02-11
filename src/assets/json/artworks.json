@@ -34,143 +34,209 @@
       "deutsche": "The Arnolfini Portrait DE",
       "italiano": "The Arnolfini Portrait IT"
     },
-    "numdetails": 4,
+    "numdetails": 6,
     "details": {
       "year": 1434,
       "english": {
         "0" : {
-          "title": "Detail Adoration of the Mystic Lamb (Joos Vijd) EN 0",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanni Arnolfini",
+          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
         },
         "1" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) EN 1",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The signature",
+          "info" : "Due to the artist’s inclusion, and of his large signature on the wall, the theory has been presented that the work was the equivalent of a marriage contract: the union has evidently been witnessed by the visual inclusion of a third figure, who has also helpfully signed the image in large, obvious script above the mirror to prove his presence."
         },
         "2" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) EN 2",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanna Cenami",
+          "info" : "The picture represents Giovanna Cenami, the wife of Giovanni Arnolfini."
         },
         "3" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) EN 3",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The convex mirror",
+          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+        },
+        "4" : {
+          "title": "Joining of hands",
+          "info" : "The central motif of the painting, the so-called 'joining of hands', has long been recognized as a special gesture with a specific meaning. It has been the subject of debate for decades. There are several descriptions like 'mutually clasped hands', 'the woman is holding the man's left hand', 'hands reaching out towards each other etc."
+        },
+        "5" : {
+          "title": "Sandals",
+          "info" : "The clogs and outdoor sandals which the couple have removed might be typical wedding presents, or represent the taking of shoes in a sacred precincts."
         }
       },
       "nederlands": {
         "0" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 0",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanni Arnolfini",
+          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
         },
         "1" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 1",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The signature",
+          "info" : "Due to the artist’s inclusion, and of his large signature on the wall, the theory has been presented that the work was the equivalent of a marriage contract: the union has evidently been witnessed by the visual inclusion of a third figure, who has also helpfully signed the image in large, obvious script above the mirror to prove his presence."
         },
         "2" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 2",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanna Cenami",
+          "info" : "The picture represents Giovanna Cenami, the wife of Giovanni Arnolfini."
         },
         "3" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) NL 3",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The convex mirror",
+          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+        },
+        "4" : {
+          "title": "Joining of hands",
+          "info" : "The central motif of the painting, the so-called 'joining of hands', has long been recognized as a special gesture with a specific meaning. It has been the subject of debate for decades. There are several descriptions like 'mutually clasped hands', 'the woman is holding the man's left hand', 'hands reaching out towards each other etc."
+        },
+        "5" : {
+          "title": "Sandals",
+          "info" : "The clogs and outdoor sandals which the couple have removed might be typical wedding presents, or represent the taking of shoes in a sacred precincts."
         }
       },
       "francais": {
         "0" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 0",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanni Arnolfini",
+          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
         },
         "1" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 1",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The signature",
+          "info" : "Due to the artist’s inclusion, and of his large signature on the wall, the theory has been presented that the work was the equivalent of a marriage contract: the union has evidently been witnessed by the visual inclusion of a third figure, who has also helpfully signed the image in large, obvious script above the mirror to prove his presence."
         },
         "2" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 2",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanna Cenami",
+          "info" : "The picture represents Giovanna Cenami, the wife of Giovanni Arnolfini."
         },
         "3" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) FR 3",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The convex mirror",
+          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+        },
+        "4" : {
+          "title": "Joining of hands",
+          "info" : "The central motif of the painting, the so-called 'joining of hands', has long been recognized as a special gesture with a specific meaning. It has been the subject of debate for decades. There are several descriptions like 'mutually clasped hands', 'the woman is holding the man's left hand', 'hands reaching out towards each other etc."
+        },
+        "5" : {
+          "title": "Sandals",
+          "info" : "The clogs and outdoor sandals which the couple have removed might be typical wedding presents, or represent the taking of shoes in a sacred precincts."
         }
       },
       "espanol": {
         "0" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 0",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanni Arnolfini",
+          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
         },
         "1" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 1",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The signature",
+          "info" : "Due to the artist’s inclusion, and of his large signature on the wall, the theory has been presented that the work was the equivalent of a marriage contract: the union has evidently been witnessed by the visual inclusion of a third figure, who has also helpfully signed the image in large, obvious script above the mirror to prove his presence."
         },
         "2" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 2",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanna Cenami",
+          "info" : "The picture represents Giovanna Cenami, the wife of Giovanni Arnolfini."
         },
         "3" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) ES 3",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The convex mirror",
+          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+        },
+        "4" : {
+          "title": "Joining of hands",
+          "info" : "The central motif of the painting, the so-called 'joining of hands', has long been recognized as a special gesture with a specific meaning. It has been the subject of debate for decades. There are several descriptions like 'mutually clasped hands', 'the woman is holding the man's left hand', 'hands reaching out towards each other etc."
+        },
+        "5" : {
+          "title": "Sandals",
+          "info" : "The clogs and outdoor sandals which the couple have removed might be typical wedding presents, or represent the taking of shoes in a sacred precincts."
         }
       },
       "deutsche": {
         "0" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 0",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanni Arnolfini",
+          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
         },
         "1" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 1",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The signature",
+          "info" : "Due to the artist’s inclusion, and of his large signature on the wall, the theory has been presented that the work was the equivalent of a marriage contract: the union has evidently been witnessed by the visual inclusion of a third figure, who has also helpfully signed the image in large, obvious script above the mirror to prove his presence."
         },
         "2" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 2",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanna Cenami",
+          "info" : "The picture represents Giovanna Cenami, the wife of Giovanni Arnolfini."
         },
         "3" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) DE 3",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The convex mirror",
+          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+        },
+        "4" : {
+          "title": "Joining of hands",
+          "info" : "The central motif of the painting, the so-called 'joining of hands', has long been recognized as a special gesture with a specific meaning. It has been the subject of debate for decades. There are several descriptions like 'mutually clasped hands', 'the woman is holding the man's left hand', 'hands reaching out towards each other etc."
+        },
+        "5" : {
+          "title": "Sandals",
+          "info" : "The clogs and outdoor sandals which the couple have removed might be typical wedding presents, or represent the taking of shoes in a sacred precincts."
         }
       },
       "italiano": {
         "0" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 0",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanni Arnolfini",
+          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
         },
         "1" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 1",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The signature",
+          "info" : "Due to the artist’s inclusion, and of his large signature on the wall, the theory has been presented that the work was the equivalent of a marriage contract: the union has evidently been witnessed by the visual inclusion of a third figure, who has also helpfully signed the image in large, obvious script above the mirror to prove his presence."
         },
         "2" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 2",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "Giovanna Cenami",
+          "info" : "The picture represents Giovanna Cenami, the wife of Giovanni Arnolfini."
         },
         "3" : {
-          "title": "Adoration of the Mystic Lamb (Joos Vijd) IT 3",
-          "info" : "The convex mirror at the back, in a wooden frame with scenes of The Passion painted behind glass, is shown larger than such mirrors could actually be made at this date."
+          "title": "The convex mirror",
+          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+        },
+        "4" : {
+          "title": "Joining of hands",
+          "info" : "The central motif of the painting, the so-called 'joining of hands', has long been recognized as a special gesture with a specific meaning. It has been the subject of debate for decades. There are several descriptions like 'mutually clasped hands', 'the woman is holding the man's left hand', 'hands reaching out towards each other etc."
+        },
+        "5" : {
+          "title": "Sandals",
+          "info" : "The clogs and outdoor sandals which the couple have removed might be typical wedding presents, or represent the taking of shoes in a sacred precincts."
         }
       }
     },
     "coordinates": {
       "0": {
-        "x":"100px",
-        "y":"120px",
+        "x":"165px",
+        "xi":"40vw",
+        "y":"310px",
+        "yi":"20vh",
         "s":"5"
       },
+
       "1": {
-        "x":"100px",
-        "y":"120px",
-        "s":"5"
+        "x":"10px",
+        "xi":"49.5vw",
+        "y":"300px",
+        "yi":"20.4vh",
+        "s":"8"
       },
       "2": {
-        "x":"100px",
-        "y":"120px",
-        "s":"5"
+        "x":"-200px",
+        "xi":"61vw",
+        "y":"280px",
+        "yi":"24vh",
+        "s":"8"
       },
       "3": {
-        "x":"100px",
-        "y":"120px",
+        "x":"0px",
+        "xi":"49.5vw",
+        "y":"200px",
+        "yi":"29vh",
         "s":"5"
       },
       "4": {
-        "x":"100px",
-        "y":"120px",
-        "s":"5"
+        "x":"-40px",
+        "xi":"52vw",
+        "y":"70px",
+        "yi":"41vh",
+        "s":"8"
+      },
+      "5": {
+        "x":"250px",
+        "xi":"31vw",
+        "y":"-440px",
+        "yi":"90vh",
+        "s":"7"
       }
     }
   },
