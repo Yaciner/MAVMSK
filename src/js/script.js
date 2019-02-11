@@ -13,7 +13,7 @@ const http = require('http').Server(server);
 const io = require('socket.io')(http);
 const path = require('path');
 let allData = [];
-let activeArtwork = "JoosVijd";
+let activeArtwork = "GiovanniArnolfini";
 let artworkTitle = "";
 const languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
 let activeLanguage = languages[1];
@@ -32,6 +32,7 @@ const connectDiv = document.querySelector('.connect');
 const connectionMessage = require('./lib/connectionMessage');
 let previousLanguage = '';
 let medialink = '';
+artwork.src = `assets/${activeArtwork}.jpg`;
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -252,7 +253,7 @@ const zoomIn = () => {
 
     })
     new Typed('.indicator--information', {
-      strings: [`Linken we de taal aan de titel of niet?`],
+      strings: [allData[activeArtwork]["details"][activeLanguage][selectedDetail].title],
       typeSpeed: 10,
       backSpeed: 0,
       smartBackspace: true,
