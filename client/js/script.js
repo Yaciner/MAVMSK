@@ -6,12 +6,15 @@ const $detailInfo = document.querySelector('#detail-info');
 const $help = document.querySelector('#help');
 const $idle = document.querySelector('#idle');
 const $detailDisplay = document.querySelector('#detail-display');
+const $detailImage = document.querySelector('#detail-image');
 let idle = true;
 
-const changeDisplayDetail = (detailTitle, detailInfo, artwork) => {
+const changeDisplayDetail = (detailTitle, detailInfo, artwork, medialink) => {
+  console.log('WTF');
   console.log(detailTitle, detailInfo, artwork);
   $detailTitle.textContent = detailTitle;
   $detailInfo.textContent = detailInfo;
+  $detailImage.src = medialink;
 }
 
 const changeDisplayIdle = (what, artworkTitle, artworkYear, help) => {
@@ -50,7 +53,7 @@ const playAnimationDetail = () => {
   $detailDisplay.classList.remove('move-to-right-out');
   setTimeout(function(){
     $idle.style.display = 'none';
-    $detailDisplay.style.display = 'block';
+    $detailDisplay.style.display = 'flex';
   }, 450);
 }
 
@@ -58,10 +61,10 @@ const playAnimationDetail = () => {
 
   const socket = io();
 
-  socket.on('Zoom', (activeArtworkTranslate, detailTitle, detailInfo) => {
+  socket.on('Zoom', (detailTitle, detailInfo, activeArtworkTranslate, medialink) => {
     //hier kunnen we de ANIMATIE triggeren --> aangezien we er van uit gaan dat deze 1 maal gebeurd (Eventueel kunnen we hier ook een timer zetten?)
     console.log('zoom');
-    changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate);
+    changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate, medialink);
     playAnimationDetail();
     idle = false;
   });
@@ -78,12 +81,12 @@ const playAnimationDetail = () => {
     console.log(msg);
   });
 
-  socket.on('LanguageChange', (activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help) => {
+  socket.on('LanguageChange', (activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help, medialink) => {
 
     if (idle) {
       changeDisplayIdle(what, artworkTitle, artworkYear, help);
     } else {
-      changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate);
+      changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate, medialink);
     }
   });
 

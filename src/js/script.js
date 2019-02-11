@@ -31,6 +31,7 @@ let what = "what what what?¿";
 const connectDiv = document.querySelector('.connect');
 const connectionMessage = require('./lib/connectionMessage');
 let previousLanguage = '';
+let medialink = '';
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -100,12 +101,16 @@ const changeLanguage = () => {
     detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
     detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
     activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
+    // medialink = allData[activeArtwork]["details"][activeLanguage][selectedDetail].media;
+
+    medialink = `/assets/img/${activeArtwork}_${selectedDetail}.png`;
+    console.log(selectedLanguage);
 
     what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
     artworkTitle = allData[activeArtwork]["title"][activeLanguage];
     artworkYear = allData[activeArtwork]["details"]["year"];
     help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
-    io.emit('LanguageChange', activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help);
+    io.emit('LanguageChange', activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help, medialink);
   }
 }
 
@@ -249,6 +254,8 @@ const zoomIn = () => {
   title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
   info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
   activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
+  // medialink = allData[activeArtwork]["details"][activeLanguage][selectedDetail].media;
+  medialink = `/assets/img/${activeArtwork}_${selectedDetail}.png`;
   console.log(selectedLanguage);
   activeLanguage = languages[selectedLanguage];
     document.querySelectorAll('.indicator').forEach($indicator => {
@@ -263,7 +270,8 @@ const zoomIn = () => {
       fadeOut: true,
       loop: false
       });
-  io.emit('Zoom', title, info, activeArtworkTranslate);
+  console.log(title, info, activeArtworkTranslate);
+  io.emit('Zoom', title, info, activeArtworkTranslate, medialink);
 }
 
 const zoomOut = () => {
