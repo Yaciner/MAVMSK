@@ -12,8 +12,11 @@ const ipAddress = ip.address();
 const http = require('http').Server(server);
 const io = require('socket.io')(http);
 const path = require('path');
+const connectionMessage = require('./lib/connectionMessage');
+const changeMode = require('./lib/changeMode');
+
 let allData = [];
-let activeArtwork = "virgin_annunciate";
+const activeArtwork = "virgin_annunciate";
 let artworkTitle = "";
 const languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
 let activeLanguage = languages[1];
@@ -21,7 +24,7 @@ let title = "";
 let info = "";
 let isZoomedIn = false;
 let zoomIsActive = false;
-let artwork = document.querySelector('.artwork');
+const $artwork = document.querySelector('.artwork');
 let zoomTimer;
 let detailTitle = "";
 let detailInfo = "";
@@ -29,10 +32,10 @@ let artworkYear = 1302;
 let help = "Press the button";
 let what = "what what what?¿";
 const connectDiv = document.querySelector('.connect');
-const connectionMessage = require('./lib/connectionMessage');
 let previousLanguage = '';
 let medialink = '';
-artwork.src = `assets/${activeArtwork}_macro_after.png`;
+$artwork.src = `assets/${activeArtwork}_macro_after.png`;
+changeMode.macro(activeArtwork, $artwork);
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -152,16 +155,19 @@ board.on('ready', () => {
   macroButton.on("press", () => {
     console.log('BUTTON macro pressed');
     // startAnimation();
+    changeMode.macro(activeArtwork, $artwork);
     io.emit('MacroButton', 'Macro pressed');
   });
 
   infraredButton.on("press", () => {
     console.log('BUTTON infrared pressed');
+    changeMode.infra(activeArtwork, $artwork);
     io.emit('InfraredButton', 'Infrared pressed');
   });
 
   xrayButton.on("press", () => {
     console.log('BUTTON xray pressed');
+    changeMode.xray(activeArtwork, $artwork);
     io.emit('XrayButton', 'xRay pressed');
   });
 
@@ -179,6 +185,14 @@ board.on('ready', () => {
     detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
     activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
     activeLanguage = languages[selectedLanguage];
+  });
+
+  languageSelector.on("change", function() {
+    selectedLanguage = this.scaleTo(0, languages.length - 1);
+    console.log(languages[selectedLanguage]);
+    activeLanguage = languages[selectedLanguage];
+    console.log(activeLanguage);
+    changeLanguage();
   });
 
   detailSelector.on("change", function() {
@@ -237,8 +251,8 @@ const generateIndicators = allData => {
 const zoomIn = () => {
   console.log('zooming in');
   isZoomedIn = true;
-  artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
-  artwork.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
+  $artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
+  $artwork.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
 
   console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
   title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
@@ -268,8 +282,8 @@ const zoomOut = () => {
   console.log('Zoooming out');
   clearInterval(zoomTimer);
   isZoomedIn = false;
-  artwork.style.transform = `scale(1)`;
-  artwork.style.transform += `translate(0)`;
+  $artwork.style.transform = `scale(1)`;
+  $artwork.style.transform += `translate(0)`;
   document.querySelectorAll('.indicator').forEach($indicator => {
     $indicator.style.opacity = '1';
   })
