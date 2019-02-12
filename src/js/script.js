@@ -13,7 +13,7 @@ const http = require('http').Server(server);
 const io = require('socket.io')(http);
 const path = require('path');
 let allData = [];
-let activeArtwork = "GiovanniArnolfini";
+let activeArtwork = "virgin_annunciate";
 let artworkTitle = "";
 const languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
 let activeLanguage = languages[1];
@@ -32,7 +32,7 @@ const connectDiv = document.querySelector('.connect');
 const connectionMessage = require('./lib/connectionMessage');
 let previousLanguage = '';
 let medialink = '';
-artwork.src = `assets/${activeArtwork}.jpg`;
+artwork.src = `assets/${activeArtwork}_macro_after.png`;
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -151,7 +151,7 @@ board.on('ready', () => {
 
   macroButton.on("press", () => {
     console.log('BUTTON macro pressed');
-    startAnimation();
+    // startAnimation();
     io.emit('MacroButton', 'Macro pressed');
   });
 
