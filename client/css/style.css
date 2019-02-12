@@ -38,7 +38,7 @@ h1 {
 }
 
 .help {
-  color: #d0523e;
+  color: #ec394b;
 }
 
 .what {
@@ -81,9 +81,11 @@ h1 {
 }
 
 .msk-logo {
+  width: 10rem;
+  height: auto;
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  left: -2px;
 }
 
 .detail-image {
