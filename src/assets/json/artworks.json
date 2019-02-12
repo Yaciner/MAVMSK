@@ -424,5 +424,190 @@
         "s":"5"
       }
     }
+  },
+  "virgin_annunciate": {
+    "idle_text": {
+      "english": {
+        "what": "You're now looking at the Ghent Altarpiece, Virgin Annunciate",
+        "help": "Press the zoom button to explore a detail."
+      },
+      "nederlands": {
+        "what": "U bekijkt nu Virgin Annunciate van het Lam Gods",
+        "help": "Druk op de zoomknop om een detail te verkennen."
+      },
+      "francais": {
+        "what": "Vous regardez Virgin Annunciate de L'Agneau Mystique",
+        "help": "Appuyez sur le bouton de zoom pour explorer un détail."
+      },
+      "espanol": {
+        "what": "Estás viendo la obra Virgin Annunciate de Políptico de Gante",
+        "help": "Presiona el botón de zoom para explorar un detalle."
+      },
+      "deutsche": {
+        "what": "Sie sehen jetzt das Panel Virgin Annunciate von das Genter Altar",
+        "help": "Drücken Sie die Zoomtaste, um ein Detail zu untersuchen."
+      },
+      "italiano": {
+        "what": "Stai visualizzando Virgin Annunciate da esso Polittico dell'Agnello Mistico",
+        "help": "Premi il pulsante dello zoom per esplorare un dettaglio."
+      }
+    },
+    "title": {
+      "english" : "Ghent Altarpiece (Virgin Annunciate)",
+      "nederlands" : "De Aanbidding van het Lam Gods (Virgin Annunciate)",
+      "francais" : "L'Agneau Mystique (Virgin Annunciate)",
+      "espanol" : "Políptico de Gante (Virgin Annunciate)",
+      "deutsche" : "Genter Altar (Virgin Annunciate)",
+      "italiano" : "Polittico dell'Agnello Mistico (Virgin Annunciate)"
+    },
+    "numdetails": 4,
+    "details": {
+      "year": 1432,
+      "english": {
+        "0" : {
+          "title": "The Prophet Mica",
+          "info" : "Prophets Zacharias and Michas are related to the Annunciation through their prophecies given by the text on the floating ribbons."
+        },
+        "1" : {
+          "title": "The dove",
+          "info" : "The dove hovering above her represents the purity and the Holy Spirit."
+        },
+        "2" : {
+          "title": "Virgin Mary",
+          "info" : "The Annunciation represents the biblical story in which Archangel Gabriel (other panel) announces to the Virgin Mary that she has been chosen to be the mother of Jesus."
+        },
+        "3" : {
+          "title": "Holy book",
+          "info" : "Mary holds her typical attribute which is a holy book"
+        }
+      },
+      "nederlands": {
+        "0" : {
+          "title": "De profeet Mica",
+          "info" : "De profeten Zacharias en Michas zijn gerelateerd aan de Annunciatie, hun profetieën vind je terug bovenaan het paneel."
+        },
+        "1" : {
+          "title": "De duif",
+          "info" : "De duif die boven haar zweeft, vertegenwoordigt de zuiverheid en de Heilige Geest.."
+        },
+        "2" : {
+          "title": "De heilige maagd Maria",
+          "info" : "De Annunciatie vertegenwoordigt het bijbelverhaal waarin Aartsengel Gabriël (ander paneel) de Maagd Maria aankondigt dat zij is gekozen als de moeder van Jezus."
+        },
+        "3" : {
+          "title": "Heilig boek",
+          "info" : "Maria heeft haar typische attribuut bij haar, een heilig boek."
+        }
+      },
+      "francais": {
+        "0" : {
+          "title": "Le prophète Mica",
+          "info" : "Les prophètes Zacharie et Michas sont liés à l'Annonciation à travers leurs prophéties données par le texte sur les rubans flottants"
+        },
+        "1" : {
+          "title": "Le pigeon",
+          "info" : "La pigeon qui se trouve au-dessus d'elle représente la pureté et le Saint-Esprit."
+        },
+        "2" : {
+          "title": "La Vierge Marie",
+          "info" : "L''Annonciation représente l'histoire biblique dans laquelle l'archange Gabriel (autre panneau) annonce à la Vierge Marie qu'elle a été choisie pour être la mère de Jésus."
+        },
+        "3" : {
+          "title": "Livre sacré",
+          "info" : "Mary détient son attribut typique qui est un livre saint"
+        }
+      },
+      "espanol": {
+        "0" : {
+          "title": "El profeta",
+          "info" : "Los profetas Zacarías y Michas están relacionados con la Anunciación a través de sus profecías dadas por el texto en las cintas flotantes."
+        },
+        "1" : {
+          "title": "La paloma",
+          "info" : "La paloma que se cierne sobre ella representa la pureza y el Espíritu Santo."
+        },
+        "2" : {
+          "title": "Santa virgen Maria",
+          "info" : "La Anunciación representa la historia bíblica en la que el Arcángel Gabriel (otro panel) anuncia a la Virgen María que ha sido elegida para ser la madre de Jesús."
+        },
+        "3" : {
+          "title": "Libro sagrado",
+          "info" : "María tiene su atributo típico, un libro sagrado."
+        }
+      },
+      "deutsche": {
+        "0" : {
+          "title": "Der Prophet Mica",
+          "info" : "Die Propheten Zacharias und Michas stehen in Verbindung mit der Verkündigung durch ihre Prophezeiungen, die durch den Text auf den schwebenden Bändern gegeben werden."
+        },
+        "1" : {
+          "title": "Die Taube",
+          "info" : "Die Taube, die über ihr schwebt, repräsentiert die Reinheit und den Heiligen Geist."
+        },
+        "2" : {
+          "title": "Heilige Jungfrau Maria",
+          "info" : "Die Verkündigung repräsentiert die biblische Geschichte, in der Erzengel Gabriel der Jungfrau Maria ankündigt, dass sie zur Mutter Jesu gewählt wurde.."
+        },
+        "3" : {
+          "title": "Heiliges Buch",
+          "info" : "Mary hält ihr typisches Attribut, ein heiliges Buch."
+        }
+      },
+      "italiano": {
+        "0" : {
+          "title": "Il profeta Mica",
+          "info" : "I profeti Zaccaria e Mica sono legati all'Annunciazione attraverso le loro profezie date dal testo sui nastri fluttuanti."
+        },
+        "1" : {
+          "title": "Il Piccione",
+          "info" : "La colomba che si libra sopra la purezza e lo Spirito Santo."
+        },
+        "2" : {
+          "title": "Vergine Maria",
+          "info" : "L'Annunciazione rappresenta la storia biblica in cui l'Arcangelo Gabriele (altro pannello) annuncia alla Vergine Maria che è stata scelta per essere la madre di Gesù."
+        },
+        "3" : {
+          "title": "Libro sacro",
+          "info" : "Maria ha il suo tipico attributo, un libro sacro."
+        }
+      }
+    },
+    "coordinates": {
+      "0": {
+        "x":"-40px",
+        "xi":"52vw",
+        "y":"200px",
+        "yi": "30vh",
+        "s":"5"
+      },
+      "1": {
+        "x":"-40px",
+        "xi":"52vw",
+        "y":"100px",
+        "yi": "40vh",
+        "s":"5"
+      },
+      "2": {
+        "x":"-40px",
+        "xi":"52vw",
+        "y":"0px",
+        "yi": "50vh",
+        "s":"5"
+      },
+      "3": {
+        "x":"-40px",
+        "xi":"52vw",
+        "y":"-100px",
+        "yi": "60vh",
+        "s":"5"
+      },
+      "4": {
+        "x":"-40px",
+        "xi":"52vw",
+        "y":"-200px",
+        "yi": "70vh",
+        "s":"5"
+      }
+    }
   }
 }
