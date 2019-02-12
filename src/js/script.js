@@ -14,7 +14,7 @@ const io = require('socket.io')(http);
 const path = require('path');
 const connectionMessage = require('./lib/connectionMessage');
 const changeMode = require('./lib/changeMode');
-
+let didYouKnow = [];
 let allData = [];
 const activeArtwork = "virgin_annunciate";
 let artworkTitle = "";
@@ -36,6 +36,7 @@ let previousLanguage = '';
 let medialink = '';
 $artwork.src = `assets/${activeArtwork}_macro_after.png`;
 changeMode.macro(activeArtwork, $artwork);
+let timerdidyouknow;
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -48,6 +49,17 @@ fetch('./assets/json/artworks.json', {
   allData = results;
   console.log(allData);
   generateIndicators(allData);
+}).catch((e => console.log(e)));
+
+fetch('./assets/json/didyouknows.json', {
+  headers : {
+   'Content-Type': 'application/json',
+   'Accept': 'application/json'
+  }
+})
+.then(response => response.json())
+.then(results => {
+  didYouKnow = results;
 }).catch((e => console.log(e)));
 
 server.use(express.static(path.join(__dirname, '../../client')));
@@ -133,6 +145,7 @@ board.on('ready', () => {
   let artwork = document.querySelector('.artwork');
   let circles = document.querySelectorAll('.indicator');
 
+  startDidYouKnows();
   showDisplayIdle();
 
   let detailSelector = new five.Sensor({
@@ -202,6 +215,7 @@ board.on('ready', () => {
     let i = 0;
     circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';
+      console.log('done');
       circle.animate([
         { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(1)` },
                 { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(.8)` },
@@ -294,4 +308,12 @@ const zoomOut = () => {
   artworkYear = allData[activeArtwork]["details"]["year"];
   help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
   io.emit('Idle', what, artworkTitle, artworkYear, help);
+}
+
+const startDidYouKnows = () => {
+  timerdidyouknow = setInterval(() => {
+    let randomNumber = Math.floor(Math.random() * Object.keys(didYouKnow[activeLanguage]).length+1);
+    let extrainfo = didYouKnow[activeLanguage][randomNumber];
+    io.emit('didyouknow', extrainfo);
+  }, 10000);
 }

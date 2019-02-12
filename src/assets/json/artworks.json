@@ -243,27 +243,27 @@
   "virgin_annunciate": {
     "idle_text": {
       "english": {
-        "what": "You're now looking at the Ghent Altarpiece, Virgin Annunciate",
+        "what": "You're now looking at",
         "help": "Press the zoom button to explore a detail."
       },
       "nederlands": {
-        "what": "U bekijkt nu Virgin Annunciate van het Lam Gods",
+        "what": "U bekijkt nu",
         "help": "Druk op de zoomknop om een detail te verkennen."
       },
       "francais": {
-        "what": "Vous regardez Virgin Annunciate de L 'Agneau Mystique",
+        "what": "Vous regardez",
         "help": "Appuyez sur le bouton de zoom pour explorer un détail."
       },
       "espanol": {
-        "what": "Estás viendo la obra Virgin Annunciate de Políptico de Gante",
+        "what": "Estás viendo la obra ",
         "help": "Presiona el botón de zoom para explorar un detalle."
       },
       "deutsche": {
-        "what": "Sie sehen jetzt das Panel Virgin Annunciate von das Genter Altar",
+        "what": "Sie sehen jetzt das r",
         "help": "Drücken Sie die Zoomtaste, um ein Detail zu untersuchen."
       },
       "italiano": {
-        "what": "Stai visualizzando Virgin Annunciate da esso Polittico dell'Agnello Mistico",
+        "what": "Stai visualizzando ",
         "help": "Premi il pulsante dello zoom per esplorare un dettaglio."
       }
     },

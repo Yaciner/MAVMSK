@@ -8,7 +8,6 @@ body {
 }
 
 p {
-  margin-bottom: 2rem;
   font-size: 3rem;
 }
 
@@ -17,7 +16,8 @@ p {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  align-self: center;
+  align-self: flex-start;
+  margin-top: 30vh;
 }
 
 h1 {
@@ -43,6 +43,8 @@ h1 {
 
 .what {
   font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
 }
 
 .detail-display {
@@ -91,6 +93,45 @@ h1 {
 .detail-image {
   max-height: 30rem;
   width: auto;
+}
+
+.didyouknow {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.didyouknow_container {
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  margin-top: 30vh;
+}
+
+.tip-icon {
+  margin: 3rem;
+  width: 5rem;
+  height: auto;
+  align-self: center;
+}
+
+.icon_container {
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.icon-label {
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 @keyframes moveToRightIn {

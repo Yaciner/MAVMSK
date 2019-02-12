@@ -7,6 +7,7 @@ const $help = document.querySelector('#help');
 const $idle = document.querySelector('#idle');
 const $detailDisplay = document.querySelector('#detail-display');
 const $detailImage = document.querySelector('#detail-image');
+const $didYouKnow = document.querySelector('.didyouknow');
 let idle = true;
 
 const changeDisplayDetail = (detailTitle, detailInfo, artwork, medialink) => {
@@ -15,6 +16,11 @@ const changeDisplayDetail = (detailTitle, detailInfo, artwork, medialink) => {
   $detailTitle.textContent = detailTitle;
   $detailInfo.textContent = detailInfo;
   $detailImage.src = medialink;
+}
+
+const changeDidYouKnow = extrainfo => {
+  $didYouKnow.innerText = extrainfo;
+  console.log($didYouKnow);
 }
 
 const changeDisplayIdle = (what, artworkTitle, artworkYear, help) => {
@@ -80,6 +86,11 @@ const playAnimationDetail = () => {
   socket.on('MacroButton', (msg) => {
     console.log(msg);
   });
+
+  socket.on('didyouknow', (extrainfo) => {
+    changeDidYouKnow(extrainfo);
+  });
+
 
   socket.on('LanguageChange', (activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help, medialink) => {
 
