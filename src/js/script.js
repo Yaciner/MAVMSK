@@ -66,7 +66,7 @@ fetch('./assets/json/didyouknows.json', {
 
 server.use(express.static(path.join(__dirname, '../../client')));
 
-server.get('/', function(req, res) {
+server.get('/', (req, res) => {
   console.log('req', req);
   res.sendFile('index.html');
 });
@@ -142,7 +142,7 @@ const showDisplayIdle = () => {
 }
 
 const showDidYouKnows = () => {
-  console.log('didYouKnow[activeLanguage]', didYouKnow[activeLanguage]);
+  // console.log('didYouKnow[activeLanguage]', didYouKnow[activeLanguage]);
   const randomNumber = Math.floor(Math.random() * Object.keys(didYouKnow[activeLanguage]).length+1);
   const extrainfo = didYouKnow[activeLanguage][randomNumber];
   io.emit('didyouknow', extrainfo);
@@ -286,14 +286,14 @@ const zoomIn = () => {
       $indicator.style.opacity = '0';
 
     })
-    new Typed('.indicator--information', {
-      strings: [allData[activeArtwork]["details"][activeLanguage][selectedDetail].title],
-      typeSpeed: 10,
-      backSpeed: 0,
-      smartBackspace: true,
-      fadeOut: true,
-      loop: false
-      });
+    // new Typed('.indicator--information', {
+    //   strings: [allData[activeArtwork]["details"][activeLanguage][selectedDetail].title],
+    //   typeSpeed: 10,
+    //   backSpeed: 0,
+    //   smartBackspace: true,
+    //   fadeOut: true,
+    //   loop: false
+    //   });
   console.log(title, info, activeArtworkTranslate);
   io.emit('Zoom', title, info, activeArtworkTranslate, medialink);
 }
