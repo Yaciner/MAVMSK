@@ -29,7 +29,6 @@ const into = ($artwork, io) => {
 }
 
 const out = ($artwork, io) => {
-  console.log('Zoooming out');
   clearInterval(zoomTimer);
   isZoomedIn = false;
   clear($artwork);

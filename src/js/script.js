@@ -183,8 +183,6 @@ board.on('ready', () => {
 
   detailSelector.on("change", function() {
     selectedDetail = this.scaleTo(0, allData[activeArtwork]['numdetails']);
-    console.log('detail selector');
-    console.log(selectedDetail);
     let i = 0;
     $circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';
