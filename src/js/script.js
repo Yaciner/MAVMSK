@@ -1,9 +1,9 @@
 const port = 3000;
-const util = require('util');
+// const util = require('util');
 const five = require('johnny-five');
 const board = new five.Board();
 const Readable = require('stream').Readable;
-const mediumZoom = require('medium-zoom');
+// const mediumZoom = require('medium-zoom');
 const server = require('express')();
 const express = require('express');
 const Typed = require('typed.js');
@@ -36,7 +36,9 @@ let previousLanguage = '';
 let medialink = '';
 $artwork.src = `assets/${activeArtwork}_macro_after.png`;
 changeMode.macro(activeArtwork, $artwork);
-let timerdidyouknow;
+// let timerdidyouknow;
+
+// TODO MOVE FUNCTIONS TO SEPERATE FILE AND WRITE INIT FUNCTION
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -126,6 +128,7 @@ const changeLanguage = () => {
     artworkYear = allData[activeArtwork]["details"]["year"];
     help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
     io.emit('LanguageChange', activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help, medialink);
+    showDidYouKnows();
   }
 }
 
@@ -138,6 +141,14 @@ const showDisplayIdle = () => {
   io.emit('Idle', what, artworkTitle, artworkYear, help);
 }
 
+const showDidYouKnows = () => {
+  const randomNumber = Math.floor(Math.random() * Object.keys(didYouKnow[activeLanguage]).length+1);
+  const extrainfo = didYouKnow[activeLanguage][randomNumber];
+  io.emit('didyouknow', extrainfo);
+}
+
+const startDidYouKnows = setInterval(showDidYouKnows, 10000);
+
 board.on('ready', () => {
   io.emit('Refresh', 'reload');
 
@@ -145,7 +156,7 @@ board.on('ready', () => {
   let artwork = document.querySelector('.artwork');
   let circles = document.querySelectorAll('.indicator');
 
-  startDidYouKnows();
+  showDidYouKnows();
   showDisplayIdle();
 
   let detailSelector = new five.Sensor({
@@ -243,12 +254,6 @@ board.on('ready', () => {
   });
 })
 
-const startAnimation = () => {
-  console.log('starting');
-  // document.querySelector('.video--macro').style.opacity = '1';
-  // document.querySelector('.video--macro').stop();
-}
-
 const generateIndicators = allData => {
   const $container = document.querySelector('.indicators');
   document.createElement('div');
@@ -308,12 +313,4 @@ const zoomOut = () => {
   artworkYear = allData[activeArtwork]["details"]["year"];
   help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
   io.emit('Idle', what, artworkTitle, artworkYear, help);
-}
-
-const startDidYouKnows = () => {
-  timerdidyouknow = setInterval(() => {
-    let randomNumber = Math.floor(Math.random() * Object.keys(didYouKnow[activeLanguage]).length+1);
-    let extrainfo = didYouKnow[activeLanguage][randomNumber];
-    io.emit('didyouknow', extrainfo);
-  }, 10000);
 }
