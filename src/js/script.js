@@ -1,42 +1,45 @@
 const port = 3000;
-// const util = require('util');
 const five = require('johnny-five');
 const board = new five.Board();
 const Readable = require('stream').Readable;
-// const mediumZoom = require('medium-zoom');
 const server = require('express')();
 const express = require('express');
-const Typed = require('typed.js');
 const ip = require('ip');
 const ipAddress = ip.address();
 const http = require('http').Server(server);
-const io = require('socket.io')(http);
 const path = require('path');
 const connectionMessage = require('./lib/connectionMessage');
 const changeMode = require('./lib/changeMode');
-let didYouKnow = [];
-let allData = [];
-const activeArtwork = "virgin_annunciate";
-let artworkTitle = "";
-const languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
-let activeLanguage = languages[1];
-let title = "";
-let info = "";
-let isZoomedIn = false;
-let zoomIsActive = false;
+const helperZoom = require('./lib/helperZoom');
+const helperIndicators = require('./lib/helperIndicators');
+const helperShowText = require('./lib/helperShowText');
+const helperLanguage = require('./lib/helperLanguage');
+
+global.io = require('socket.io')(http);
+global.didYouKnow = [];
+global.allData = [];
+global.activeArtwork = "virgin_annunciate";
+global.artworkTitle = "";
+global.languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
+global.activeLanguage = languages[1];
+global.selectedLanguage = 0;
+global.previousLanguage = '';
+global.selectedDetail = 0;
+global.title = "";
+global.info = "";
+global.isZoomedIn = false;
+global.zoomTimer;
+global.detailTitle = "";
+global.detailInfo = "";
+global.artworkYear = 1302;
+global.help = "Press the button";
+global.what = "what what what?¿";
+global.connectDiv = document.querySelector('.connect');
+global.medialink = '';
+
 const $artwork = document.querySelector('.artwork');
-let zoomTimer;
-let detailTitle = "";
-let detailInfo = "";
-let artworkYear = 1302;
-let help = "Press the button";
-let what = "what what what?¿";
-const connectDiv = document.querySelector('.connect');
-let previousLanguage = '';
-let medialink = '';
 $artwork.src = `assets/${activeArtwork}_macro_after.png`;
 changeMode.macro(activeArtwork, $artwork);
-// let timerdidyouknow;
 
 // TODO MOVE FUNCTIONS TO SEPERATE FILE AND WRITE INIT FUNCTION
 
@@ -50,7 +53,7 @@ fetch('./assets/json/artworks.json', {
 .then(results => {
   allData = results;
   console.log(allData);
-  generateIndicators(allData);
+  helperIndicators.generate();
 }).catch((e => console.log(e)));
 
 fetch('./assets/json/didyouknows.json', {
@@ -106,69 +109,28 @@ process.__defineGetter__('stdin', () => {
   return process.__stdin;
 }); {};
 
-const freq = 50;
-const freqLanguage = 50;
-let selectedDetail = 0;
-let selectedLanguage = 0;
-
-const changeLanguage = () => {
-  if(activeLanguage !== previousLanguage) {
-    previousLanguage = activeLanguage;
-    console.log(activeLanguage);
-    detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-    detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
-    activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
-    // medialink = allData[activeArtwork]["details"][activeLanguage][selectedDetail].media;
-
-    medialink = `/assets/img/${activeArtwork}_${selectedDetail}.png`;
-    console.log(selectedLanguage);
-
-    what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
-    artworkTitle = allData[activeArtwork]["title"][activeLanguage];
-    artworkYear = allData[activeArtwork]["details"]["year"];
-    help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
-    io.emit('LanguageChange', activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help, medialink);
-    showDidYouKnows();
-  }
-}
-
-const showDisplayIdle = () => {
-  console.log(allData[activeArtwork]["idle_text"]);
-  what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
-  artworkTitle = allData[activeArtwork]["title"][activeLanguage];
-  artworkYear = allData[activeArtwork]["details"]["year"];
-  help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
-  io.emit('Idle', what, artworkTitle, artworkYear, help);
-}
-
-const showDidYouKnows = () => {
-  // console.log('didYouKnow[activeLanguage]', didYouKnow[activeLanguage]);
-  const randomNumber = Math.floor(Math.random() * Object.keys(didYouKnow[activeLanguage]).length+1);
-  const extrainfo = didYouKnow[activeLanguage][randomNumber];
-  io.emit('didyouknow', extrainfo);
-}
-
-const startDidYouKnows = setInterval(showDidYouKnows, 10000);
+const startDidYouKnows = setInterval(() => {
+  helperShowText.didYouKnows(io);
+}, 10000);
 
 board.on('ready', () => {
   io.emit('Refresh', 'reload');
 
   document.getElementById('board-status').src = './assets/ready.png';
-  let artwork = document.querySelector('.artwork');
-  let circles = document.querySelectorAll('.indicator');
+  const $circles = document.querySelectorAll('.indicator');
 
-  showDidYouKnows();
-  showDisplayIdle();
+  helperShowText.didYouKnows(io);
+  helperShowText.idle();
 
   let detailSelector = new five.Sensor({
     pin: 'A1',
-    freq: freq,
+    freq: 50,
     threshold: 5
   });
 
   let languageSelector = new five.Sensor({
     pin: 'A2',
-    freq: freqLanguage,
+    freq: 50,
     threshold: 5
   });
 
@@ -199,12 +161,11 @@ board.on('ready', () => {
   confirmButton.on("press", () => {
     console.log("BUTTON confirm pressed");
 
-    if (!isZoomedIn && !zoomIsActive) {
-      zoomIn();
-      zoomTimer = setInterval(() => { zoomOut(); }, 30000);
-      // io.emit('Zoom', detailTitle, info, activeArtworkTranslate);
+    if (!isZoomedIn) {
+      helperZoom.into($artwork, io);
+      zoomTimer = setInterval(() => { helperZoom.out($artwork, io); }, 30000);
     } else {
-      zoomOut();
+      helperZoom.out($artwork, io);
     }
     detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
     detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
@@ -214,10 +175,8 @@ board.on('ready', () => {
 
   languageSelector.on("change", function() {
     selectedLanguage = this.scaleTo(0, languages.length - 1);
-    console.log(languages[selectedLanguage]);
     activeLanguage = languages[selectedLanguage];
-    console.log(activeLanguage);
-    changeLanguage();
+    helperLanguage.change();
   });
 
   detailSelector.on("change", function() {
@@ -225,7 +184,7 @@ board.on('ready', () => {
     console.log('detail selector');
     console.log(selectedDetail);
     let i = 0;
-    circles.forEach(circle => {
+    $circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';
       console.log('done');
       circle.animate([
@@ -240,10 +199,10 @@ board.on('ready', () => {
       i++
     });
 
-    if(circles[selectedDetail]) {
-      circles[selectedDetail].className = 'indicator indicator_active';
+    if($circles[selectedDetail]) {
+      $circles[selectedDetail].className = 'indicator indicator_active';
       console.log(allData[activeArtwork]['coordinates'][selectedDetail].xi);
-      circles[selectedDetail].animate([
+      $circles[selectedDetail].animate([
         { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(0deg)` },
         { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(360deg)` }
       ], {
@@ -252,66 +211,10 @@ board.on('ready', () => {
         easing: 'cubic-bezier(0.42, 0, 0.58, 1)'
       });
     }
+
+    if (isZoomedIn) {
+      helperZoom.clear($artwork);
+      helperZoom.apply($artwork);
+    }
   });
 })
-
-const generateIndicators = allData => {
-  const $container = document.querySelector('.indicators');
-  document.createElement('div');
-  const details = allData[activeArtwork]["numdetails"];
-
-  for(let i = 0 ; i < details; i ++) {
-    let $indicator = document.createElement('div');
-    $indicator.classList.add('indicator');
-    $container.appendChild($indicator);
-    $indicator.style.transform = `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} )`;
-  }
-}
-
-const zoomIn = () => {
-  console.log('zooming in');
-  isZoomedIn = true;
-  $artwork.style.transform = `scale(${allData[activeArtwork]['coordinates'][selectedDetail].s})`;
-  $artwork.style.transform += `translate(${allData[activeArtwork]['coordinates'][selectedDetail].x + ',' + allData[activeArtwork]['coordinates'][selectedDetail].y})`;
-
-  console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
-  title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
-  info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
-  activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
-  // medialink = allData[activeArtwork]["details"][activeLanguage][selectedDetail].media;
-  medialink = `/assets/img/${activeArtwork}_${selectedDetail}.png`;
-  console.log(selectedLanguage);
-  activeLanguage = languages[selectedLanguage];
-    document.querySelectorAll('.indicator').forEach($indicator => {
-      $indicator.style.opacity = '0';
-
-    })
-    // new Typed('.indicator--information', {
-    //   strings: [allData[activeArtwork]["details"][activeLanguage][selectedDetail].title],
-    //   typeSpeed: 10,
-    //   backSpeed: 0,
-    //   smartBackspace: true,
-    //   fadeOut: true,
-    //   loop: false
-    //   });
-  console.log(title, info, activeArtworkTranslate);
-  io.emit('Zoom', title, info, activeArtworkTranslate, medialink);
-}
-
-const zoomOut = () => {
-  console.log('Zoooming out');
-  clearInterval(zoomTimer);
-  isZoomedIn = false;
-  $artwork.style.transform = `scale(1)`;
-  $artwork.style.transform += `translate(0)`;
-  document.querySelectorAll('.indicator').forEach($indicator => {
-    $indicator.style.opacity = '1';
-  })
-  document.querySelector('.indicator--information').innerText = '';
-
-  what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
-  artworkTitle = allData[activeArtwork]["title"][activeLanguage];
-  artworkYear = allData[activeArtwork]["details"]["year"];
-  help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
-  io.emit('Idle', what, artworkTitle, artworkYear, help);
-}
