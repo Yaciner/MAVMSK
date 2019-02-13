@@ -36,10 +36,10 @@ global.help = "Press the button";
 global.what = "what what what?¿";
 global.connectDiv = document.querySelector('.connect');
 global.medialink = '';
-gloabal.mode = '';
+global.mode = 'macro';
 
 const $artwork = document.querySelector('.artwork');
-$artwork.src = `assets/${activeArtwork}_macro_after.png`;
+$artwork.src = `assets/img/${activeArtwork}/full/macro_after.png`;
 changeMode.macro(activeArtwork, $artwork);
 
 // TODO MOVE FUNCTIONS TO SEPERATE FILE AND WRITE INIT FUNCTION

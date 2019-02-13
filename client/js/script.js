@@ -16,6 +16,7 @@ const changeDisplayDetail = (detailTitle, detailInfo, artwork, medialink) => {
   $detailTitle.textContent = detailTitle;
   $detailInfo.textContent = detailInfo;
   $detailImage.src = medialink;
+  console.log(medialink);
 }
 
 const changeDidYouKnow = extrainfo => {

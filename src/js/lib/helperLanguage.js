@@ -7,8 +7,8 @@ const change = () => {
     detailTitle = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
     detailInfo = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
     activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
-
-    medialink = `/assets/img/${activeArtwork}/details/${mode}_${selectedDetail}.png`;
+    console.log(mode);
+    medialink = `assets/img/${activeArtwork}/details/${mode}_${selectedDetail}.png`;
     console.log(selectedLanguage);
 
     what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
