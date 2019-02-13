@@ -1,71 +1,71 @@
 {
   "english": {
-      "0": "The restoration of the Ghent Altarpiece started back in 2012 and was open every week for visitors.",
-      "1": "this is another did you know",
-      "2": "and another",
-      "3": "dupes of",
-      "4": "anotehr dpp",
-      "5": "mofsjeoerez",
+      "0": "The restoration of the Ghent Altarpiece started back in 2012.",
+      "1": "In 1934 two panels of the Altarpiece were stolen, only one was has been retrieved, the other is still missing.",
+      "2": "Joost Vijd is the client of the Ghent Altarpiece and a panel was dedicated to him.",
+      "3": "Jan Van Eyck had a masterful mastery of oil painting and is considered the father of oil painting.",
+      "4": "The Museum of Fine Arts in Ghent is the oldest museum in Belgium.",
+      "5": "Jan Van Eyck signed his paintings, which was unusual at that time.",
       "6": "X-radiography can detect traces of minerals and other elements within a painting. These traces can be clues to when the painting was executed and where.",
       "7": "Technical examination such as x-ray can reveal the extend of old damages on the painting now concealed by a past restoration.",
       "8": "The technique of x-radiography was applied to the examination of paintings shortly after the discovery of x-rays by Wilhelm Röntgen in 1895."
   },
   "nederlands": {
-      "0": "NL ned.",
-      "1": "NL ned",
-      "2": "NL nedr",
-      "3": "NL dupes of",
-      "4": "NL anotehr dpp",
-      "5": "NL mofsjeoerez",
-      "6": "NL X-radiography can detect traces of minerals and other elements within a painting. These traces can be clues to when the painting was executed and where.",
-      "7": "NL Technical examination such as x-ray can reveal the extend of old damages on the painting now concealed by a past restoration.",
-      "8": "NL The technique of x-radiography was applied to the examination of paintings shortly after the discovery of x-rays by Wilhelm Röntgen in 1895."
+      "0": "De restauratie van het Lam Gods begon in 2012.",
+      "1": "In 1934 werden twee panelen van het altaarstuk gestolen, slechts één is teruggevonden, de andere ontbreekt nog steeds.",
+      "2": "Joost Vijd is de opdrachtgever van het Lam Gods en er werd ook een paneel aan hem toegewijd.",
+      "3": "Jan Van Eyck had een meesterlijke beheersing van de olieverftechniek en wordt beschouwd als de vader van het olieverfschilderen.",
+      "4": "Het Museum voor Schone Kunsten te Gent is het oudste museum van België.",
+      "5": "Jan Van Eyck signeerde zijn schilderijen, wat ongebruikelijk was in die tijd.",
+      "6": "X-radiografie kan sporen van mineralen en andere elementen binnen een schilderij detecteren. Deze sporen kunnen aanwijzingen zijn voor wanneer het schilderij werd uitgevoerd en waar.",
+      "7": "Technisch onderzoek zoals röntgenonderzoek kan de omvang van oude beschadigingen op het schilderij zichtbaar maken dat nu verborgen is door een eerdere restauratie.",
+      "8": "De techniek van röntgenfotografie werd toegepast op het onderzoek van schilderijen kort na de ontdekking van röntgenstralen door Wilhelm Röntgen in 1895."
   },
 
   "francais": {
-    "0": "FR The restoration of the Ghent Altarpiece started back in 2012 and was open every week for visitors.",
-    "1": "FR this is another did you know",
-    "2": "FR and another",
-    "3": "FR dupes of",
-    "4": "FR anotehr dpp",
-    "5": "FR mofsjeoerez",
-    "6": "FR X-radiography can detect traces of minerals and other elements within a painting. These traces can be clues to when the painting was executed and where.",
-    "7": "FR Technical examination such as x-ray can reveal the extend of old damages on the painting now concealed by a past restoration.",
-    "8": "FR The technique of x-radiography was applied to the examination of paintings shortly after the discovery of x-rays by Wilhelm Röntgen in 1895."
+    "0": "La restauration de L'Agneau Mystique a commencé en 2012.",
+    "1": "En 1934, deux panneaux du retable ont été volés, un seul a été récupéré, l'autre est toujours porté disparu.",
+    "2": "Joost Vijd est le client de l'Agneau de Dieu et un panel lui a également été dédié.",
+    "3": "Jan Van Eyck possédait une maîtrise remarquable de la peinture à l'huile et est considéré comme le père de la peinture à l'huile.",
+    "4": "Le musée des beaux-arts de Gand est le plus ancien musée de Belgique.",
+    "5": "Jan Van Eyck a signé ses peintures, ce qui était inhabituel à cette époque.",
+    "6": "La radiographie peut détecter des traces de minéraux et d'autres éléments dans une peinture. Ces traces peuvent être des indices permettant de savoir quand et où le tableau a été exécuté.",
+    "7": "Un examen technique, tel qu'une radiographie, peut révéler l'étendue d'anciens dégâts sur le tableau qui est maintenant dissimulé par une restauration passée.",
+    "8": "La technique de radiographie a été appliquée à l'examen de peintures peu après la découverte des rayons X par Wilhelm Röntgen en 1895."
   },
 
-  "espanol": {
-    "0": "ES The restoration of the Ghent Altarpiece started back in 2012 and was open every week for visitors.",
-    "1": "ES this is another did you know",
-    "2": "ES and another",
-    "3": "ES dupes of",
-    "4": "ES anotehr dpp",
-    "5": "ES mofsjeoerez",
-    "6": "ES X-radiography can detect traces of minerals and other elements within a painting. These traces can be clues to when the painting was executed and where.",
-    "7": "ES Technical examination such as x-ray can reveal the extend of old damages on the painting now concealed by a past restoration.",
-    "8": "ES The technique of x-radiography was applied to the examination of paintings shortly after the discovery of x-rays by Wilhelm Röntgen in 1895."
+  "espagnol": {
+    "0": "La restauración del Políptico de Gante comenzó en 2012.",
+    "1": "En 1934, se robaron dos paneles del retablo, solo se recuperó uno y el otro sigue desaparecido.",
+    "2": "Joost Vijd es el cliente del Cordero de Dios y también se le dedicó un panel.",
+    "3": "Jan Van Eyck tenía un dominio magistral de la pintura al óleo y es considerado el padre de la pintura al óleo.",
+    "4": "El Museo de Bellas Artes de Gante es el museo más antiguo de Bélgica.",
+    "5": "Jan Van Eyck firmó sus pinturas, lo cual era inusual en ese momento.",
+    "6": "La radiografía X puede detectar rastros de minerales y otros elementos dentro de una pintura. Estas huellas pueden ser pistas sobre cuándo se ejecutó la pintura y dónde.",
+    "7": "El examen técnico, como los rayos X, puede revelar la extensión de los antiguos daños en la pintura ahora ocultos por una restauración pasada.",
+    "8": "La técnica de radiografía x se aplicó al examen de pinturas poco después del descubrimiento de las radiografías por Wilhelm Röntgen en 1895."
   },
 
   "deutsche": {
-    "0": "DE The restoration of the Ghent Altarpiece started back in 2012 and was open every week for visitors.",
-    "1": "DE this is another did you know",
-    "2": "DE and another",
-    "3": "DE dupes of",
-    "4": "DE anotehr dpp",
-    "5": "DE mofsjeoerez",
-    "6": "DE X-radiography can detect traces of minerals and other elements within a painting. These traces can be clues to when the painting was executed and where.",
-    "7": "DE Technical examination such as x-ray can reveal the extend of old damages on the painting now concealed by a past restoration.",
-    "8": "DE The technique of x-radiography was applied to the examination of paintings shortly after the discovery of x-rays by Wilhelm Röntgen in 1895."
+    "0": "Die Restaurierung des Genter Altar begann bereits 2012.",
+    "1": "1934 wurden zwei Tafeln des Altarbildes gestohlen, von denen nur eines gefunden wurde, das andere fehlt noch.",
+    "2": "Joost Vijd ist die Tochter des Genter Altar und hat eine Reihe von Fenstern auf dem Saum.",
+    "3": "Jan Van Eyck beherrschte das Ölgemälde meisterhaft und gilt als Vater des Ölgemäldes.",
+    "4": "Das Museum der Schönen Künste in Gent ist das älteste Museum in Belgien.",
+    "5": "Jan Van Eyck signierte seine zu dieser Zeit ungewöhnlichen Gemälde.",
+    "6": "Die Röntgenaufnahme kann Spuren von Mineralien und anderen Elementen in einem Gemälde erkennen. Diese Spuren können Hinweise darauf geben, wann und wo das Gemälde ausgeführt wurde.",
+    "7": "Technische Untersuchungen wie Röntgenaufnahmen können das Ausmaß alter Schäden auf dem Gemälde zeigen, das durch eine Restaurierung der Vergangenheit verborgen wurde.",
+    "8": "Die Technik der Röntgenographie wurde auf die Untersuchung von Gemälden kurz nach der Entdeckung der Röntgenstrahlen durch Wilhelm Röntgen im Jahr 1895 angewendet."
   },
   "italiano": {
-    "0": "IT The restoration of the Ghent Altarpiece started back in 2012 and was open every week for visitors.",
-    "1": "IT this is another did you know",
-    "2": "IT and another",
-    "3": "IT dupes of",
-    "4": "IT anotehr dpp",
-    "5": "IT mofsjeoerez",
-    "6": "IT X-radiography can detect traces of minerals and other elements within a painting. These traces can be clues to when the painting was executed and where.",
-    "7": "IT Technical examination such as x-ray can reveal the extend of old damages on the painting now concealed by a past restoration.",
-    "8": "IT The technique of x-radiography was applied to the examination of paintings shortly after the discovery of x-rays by Wilhelm Röntgen in 1895."
+    "0": "Il restauro della pala Polittico dell'Agnello Mistico è iniziato nel 2012.",
+    "1": "Nel 1934 furono rubati due pannelli della Pala d'altare, solo uno fu recuperato, l'altro è ancora mancante.",
+    "2": "Joost Vijd è il cliente del Polittico dell'Agnello Mistico e un pannello è stato anche dedicato a lui.",
+    "3": "Jan Van Eyck aveva una padronanza magistrale della pittura ad olio ed è considerato il padre della pittura ad olio.",
+    "4": "Il Museum of Fine Arts di Gand è il più antico museo del Belgio.",
+    "5": "Jan Van Eyck firmò i suoi dipinti, cosa insolita in quel periodo.",
+    "6": "La radiografia X può rilevare tracce di minerali e altri elementi all'interno di un dipinto. Queste tracce possono essere indizi su quando il dipinto è stato eseguito e dove.",
+    "7": "L'esame tecnico come la radiografia può rivelare l'estensione dei vecchi danni sul dipinto ora nascosto da un restauro passato.",
+    "8": "La tecnica della radiografia x è stata applicata all'esame dei dipinti poco dopo la scoperta dei raggi X da Wilhelm Röntgen nel 1895."
   }
 }
