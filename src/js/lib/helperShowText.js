@@ -11,6 +11,7 @@ const didYouKnows = () => {
   console.log('didYouKnow', didYouKnow);
   console.log('didYouKnow[activeLanguage]', didYouKnow[activeLanguage]);
   const randomNumber = Math.floor(Math.random() * Object.keys(didYouKnow[activeLanguage]).length);
+  console.log(randomNumber);
   const extrainfo = didYouKnow[activeLanguage][randomNumber];
   io.emit('didyouknow', extrainfo);
 }
