@@ -16,9 +16,10 @@ const helperShowText = require('./lib/helperShowText');
 const helperLanguage = require('./lib/helperLanguage');
 
 global.io = require('socket.io')(http);
+global.fs = require('fs')
 global.didYouKnow = [];
 global.allData = [];
-global.activeArtwork = "virgin_annunciate";
+global.activeArtwork = "giovanni_arnolfini";
 global.artworkTitle = "";
 global.languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
 global.activeLanguage = languages[1];
@@ -37,7 +38,6 @@ global.what = "what what what?¿";
 global.connectDiv = document.querySelector('.connect');
 global.medialink = '';
 global.mode = 'macro';
-
 
 const $artwork = document.querySelector('.artwork');
 $artwork.src = `assets/img/${activeArtwork}/full/macro_after.png`;
@@ -146,19 +146,19 @@ board.on('ready', () => {
     console.log('BUTTON macro pressed');
     // startAnimation();
     changeMode.macro(activeArtwork, $artwork);
-    io.emit('MacroButton', 'Macro pressed');
+    // io.emit('MacroButton', 'Macro pressed');
   });
 
   infraredButton.on("press", () => {
     console.log('BUTTON infrared pressed');
     changeMode.infra(activeArtwork, $artwork);
-    io.emit('InfraredButton', 'Infrared pressed');
+    // io.emit('InfraredButton', 'Infrared pressed');
   });
 
   xrayButton.on("press", () => {
     console.log('BUTTON xray pressed');
     changeMode.xray(activeArtwork, $artwork);
-    io.emit('XrayButton', 'xRay pressed');
+    // io.emit('XrayButton', 'xRay pressed');
   });
 
   confirmButton.on("press", () => {

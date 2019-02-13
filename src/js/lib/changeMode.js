@@ -6,17 +6,36 @@ const macro = (activeArtwork, $artwork) => {
 }
 
 const xray = (activeArtwork, $artwork) => {
-  $artwork.src = `assets/img/${activeArtwork}/full/xray_after.png`;
-  mode = 'xray';
-  medialink = `assets/img/${activeArtwork}/details/${mode}_${selectedDetail}.png`;
-  io.emit('ModeChanged', medialink);
+  const path = `assets/img/${activeArtwork}/full/xray_after.png`;
+
+  fs.access(path, fs.F_OK, (err) => {
+    if (err) {
+      alert('no such file');
+      return
+    }
+
+    $artwork.src = path;
+    mode = 'xray';
+    medialink = `assets/img/${activeArtwork}/details/${mode}_${selectedDetail}.png`;
+    io.emit('ModeChanged', medialink);
+  })
 }
 
 const infra = (activeArtwork, $artwork) => {
-  $artwork.src = `assets/img/${activeArtwork}/full/infra_after.png`;
+
+  const path = `assets/img/${activeArtwork}/full/infra_after.png`;
+
+  fs.access(path, fs.F_OK, (err) => {
+    if (err) {
+      alert('no such file');
+      return
+    }
+
+  $artwork.src = path;
   mode = 'infra';
   medialink = `assets/img/${activeArtwork}/details/${mode}_${selectedDetail}.png`;
   io.emit('ModeChanged', medialink);
+  })
 }
 
 module.exports = { macro, xray, infra };

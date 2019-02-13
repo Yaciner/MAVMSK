@@ -1,38 +1,38 @@
 {
-  "GiovanniArnolfini": {
+  "giovanni_arnolfini": {
     "idle_text": {
       "english": {
-        "what": "Now looking at",
+        "what": "You're now looking at",
         "help": "Press the zoom button to explore a detail."
       },
       "nederlands": {
-        "what": "Now looking at NL",
-        "help": "Press the zoom button to explore a detail. NL"
+        "what": "U bekijkt nu",
+        "help": "Druk op de zoomknop om een detail te verkennen."
       },
       "francais": {
-        "what": "Now looking at FR",
-        "help": "Press the zoom button to explore a detail. FR"
+        "what": "Vous regardez",
+        "help": "Appuyez sur le bouton de zoom pour explorer un détail."
       },
       "espanol": {
-        "what": "Now looking at ES",
-        "help": "Press the zoom button to explore a detail. ES"
+        "what": "Estás viendo la obra ",
+        "help": "Presiona el botón de zoom para explorar un detalle."
       },
       "deutsche": {
-        "what": "Now looking at DE",
-        "help": "Press the zoom button to explore a detail. DE"
+        "what": "Sie sehen das",
+        "help": "Drücken Sie die Zoomtaste, um ein Detail zu untersuchen."
       },
       "italiano": {
-        "what": "Now looking at IT",
-        "help": "Press the zoom button to explore a detail. IT"
+        "what": "Stai visualizzando ",
+        "help": "Premi il pulsante dello zoom per esplorare un dettaglio."
       }
     },
     "title": {
       "english": "The Arnolfini Portrait",
-      "nederlands": "The Arnolfini Portrait NL",
-      "francais": "The Arnolfini Portrait FR",
-      "espanol": "The Arnolfini Portrait ES",
-      "deutsche": "The Arnolfini Portrait DE",
-      "italiano": "The Arnolfini Portrait IT"
+      "nederlands": "Portret van Giovanni Arnolfini en zijn vrouw",
+      "francais": "Les Époux Arnolfini",
+      "espanol": "Retrato de Giovanni Arnolfini y su esposa",
+      "deutsche": "Arnolfini-Hochzeit",
+      "italiano": "Ritratto dei coniugi Arnolfini"
     },
     "numdetails": 6,
     "details": {
