@@ -10,7 +10,7 @@ const idle = () => {
 const didYouKnows = () => {
   console.log('didYouKnow', didYouKnow);
   console.log('didYouKnow[activeLanguage]', didYouKnow[activeLanguage]);
-  const randomNumber = Math.floor(Math.random() * Object.keys(didYouKnow[activeLanguage]).length+1);
+  const randomNumber = Math.floor(Math.random() * Object.keys(didYouKnow[activeLanguage]).length);
   const extrainfo = didYouKnow[activeLanguage][randomNumber];
   io.emit('didyouknow', extrainfo);
 }
