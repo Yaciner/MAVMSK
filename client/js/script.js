@@ -11,7 +11,6 @@ const $didYouKnow = document.querySelector('.didyouknow');
 let idle = true;
 
 const changeDisplayDetail = (detailTitle, detailInfo, artwork, medialink) => {
-  console.log('WTF');
   console.log(detailTitle, detailInfo, artwork);
   $detailTitle.textContent = detailTitle;
   $detailInfo.textContent = detailInfo;
@@ -91,6 +90,9 @@ const playAnimationDetail = () => {
     changeDidYouKnow(extrainfo);
   });
 
+  socket.on('ModeChanged', (medialink) => {
+    $detailImage.src = medialink;
+  });
 
   socket.on('LanguageChange', (activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help, medialink) => {
 

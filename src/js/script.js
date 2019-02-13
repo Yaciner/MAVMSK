@@ -36,10 +36,11 @@ global.help = "Press the button";
 global.what = "what what what?¿";
 global.connectDiv = document.querySelector('.connect');
 global.medialink = '';
-global.mode = '';
+global.mode = 'macro';
+
 
 const $artwork = document.querySelector('.artwork');
-$artwork.src = `assets/${activeArtwork}_macro_after.png`;
+$artwork.src = `assets/img/${activeArtwork}/full/macro_after.png`;
 changeMode.macro(activeArtwork, $artwork);
 
 // TODO MOVE FUNCTIONS TO SEPERATE FILE AND WRITE INIT FUNCTION
@@ -183,8 +184,6 @@ board.on('ready', () => {
 
   detailSelector.on("change", function() {
     selectedDetail = this.scaleTo(0, allData[activeArtwork]['numdetails']);
-    console.log('detail selector');
-    console.log(selectedDetail);
     let i = 0;
     $circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';

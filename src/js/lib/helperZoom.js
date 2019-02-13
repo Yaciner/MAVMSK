@@ -17,7 +17,7 @@ const into = ($artwork, io) => {
   title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
   info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
   activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
-  medialink = `/assets/img/${activeArtwork}_${selectedDetail}.png`;
+  medialink = `assets/img/${activeArtwork}/details/${mode}_${selectedDetail}.png`;
   console.log(selectedLanguage);
   activeLanguage = languages[selectedLanguage];
     document.querySelectorAll('.indicator').forEach($indicator => {
@@ -29,7 +29,6 @@ const into = ($artwork, io) => {
 }
 
 const out = ($artwork, io) => {
-  console.log('Zoooming out');
   clearInterval(zoomTimer);
   isZoomedIn = false;
   clear($artwork);
