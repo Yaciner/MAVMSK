@@ -46,7 +46,7 @@ const animationLoader = bodymovin.loadAnimation({
   path: '../assets/json/data.json', // Required
   renderer: 'svg', // Required
   loop: false, // Optional
-  autoplay: false, // Optional
+  autoplay: false // Optional
 });
 
 const playAnimationDetail = () => {

@@ -18,17 +18,17 @@
       </div>
       <p id="help" class="help">Press the zoom button to explore a detail. NL</p>
     </div>
+    <div id="detail-display" class="detail-display" style="display: none">
+      <img id="detail-image" class="detail-image" src="" alt="detail image">
+      <h1 id="detail-title" class="detail-title">Loading</h1>
+      <p id="detail-info" class="detail-info">Loading, please wait.</p>
+    </div>
     <div class="didyouknow_container">
       <div class="icon_container" >
         <img class="tip-icon" src="assets/svg/tip-icon.svg" alt="tip logo" />
         <p class="icon-label">Did you know?</p>
       </div>
       <p class="didyouknow">When loaded, "did you knows" will be displayed.</p>
-    </div>
-    <div id="detail-display" class="detail-display" style="display: none">
-      <img id="detail-image" class="detail-image" src="" alt="detail image">
-      <h1 id="detail-title" class="detail-title">Loading</h1>
-      <p id="detail-info" class="detail-info">Loading, please wait.</p>
     </div>
 
     <script src="/socket.io/socket.io.js"></script>
