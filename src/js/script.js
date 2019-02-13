@@ -36,6 +36,7 @@ global.help = "Press the button";
 global.what = "what what what?¿";
 global.connectDiv = document.querySelector('.connect');
 global.medialink = '';
+gloabal.mode = '';
 
 const $artwork = document.querySelector('.artwork');
 $artwork.src = `assets/${activeArtwork}_macro_after.png`;
@@ -108,6 +109,7 @@ process.__defineGetter__('stdin', () => {
   process.__stdin = new MyStream();
   return process.__stdin;
 }); {};
+
 
 const startDidYouKnows = setInterval(() => {
   helperShowText.didYouKnows(io);
