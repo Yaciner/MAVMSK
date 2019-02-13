@@ -36,7 +36,7 @@ global.help = "Press the button";
 global.what = "what what what?¿";
 global.connectDiv = document.querySelector('.connect');
 global.medialink = '';
-gloabal.mode = '';
+global.mode = '';
 
 const $artwork = document.querySelector('.artwork');
 $artwork.src = `assets/${activeArtwork}_macro_after.png`;
