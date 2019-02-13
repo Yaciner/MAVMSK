@@ -38,6 +38,7 @@ global.connectDiv = document.querySelector('.connect');
 global.medialink = '';
 global.mode = 'macro';
 
+
 const $artwork = document.querySelector('.artwork');
 $artwork.src = `assets/img/${activeArtwork}/full/macro_after.png`;
 changeMode.macro(activeArtwork, $artwork);
