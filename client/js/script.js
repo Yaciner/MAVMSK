@@ -11,7 +11,6 @@ const $didYouKnow = document.querySelector('.didyouknow');
 let idle = true;
 
 const changeDisplayDetail = (detailTitle, detailInfo, artwork, medialink) => {
-  console.log(detailTitle, detailInfo, artwork);
   $detailTitle.textContent = detailTitle;
   $detailInfo.textContent = detailInfo;
   $detailImage.src = medialink;
@@ -20,6 +19,42 @@ const changeDisplayDetail = (detailTitle, detailInfo, artwork, medialink) => {
 const changeDidYouKnow = extrainfo => {
   $didYouKnow.innerText = extrainfo;
   console.log($didYouKnow);
+}
+
+const changeDataAnimation = () => {
+  const $container_anim = document.querySelector('.liquid_anim');
+  bodymovin.loadAnimation({
+    container: $container_anim, // Required
+    path: '../assets/json/change_anim.json', // Required
+    renderer: 'svg'
+  });
+  var fc = $container_anim.firstChild;
+
+  while( fc ) {
+      $container_anim.removeChild(fc);
+      fc = $container_anim.firstChild;
+  }
+}
+
+const changeDataAnimation_1 = () => {
+  // $document.querySelector(`.detail-image`).classList.add('move-right-fade-out');
+  // setInterval(() => {
+  //   document.querySelector(`.detail-image`).classList.add('move-right-fade-in');
+  // }, 1000);
+
+  document.querySelector(`.detail-image`).classList.add('move-to-right-out');
+  // $detailDisplay.classList.add('move-to-right-in');
+  // $detailDisplay.classList.remove('move-to-right-out');
+  setInterval(() => {
+      document.querySelector(`.detail-image`).classList.remove('move-to-right-out');
+      document.querySelector(`.detail-image`).classList.add('move-to-right-in');
+      clearInterval();
+  }, 500)
+
+  setInterval(() => {
+      document.querySelector(`.detail-image`).classList.remove('move-to-right-in');
+      clearInterval();
+  }, 500)
 }
 
 const changeDisplayIdle = (what, artworkTitle, artworkYear, help) => {
@@ -49,8 +84,6 @@ const animationLoader = bodymovin.loadAnimation({
 });
 
 const playAnimationDetail = () => {
-  console.log('play animation');
-  // animationLoader.play();
   animationLoader.goToAndPlay(0);
   $idle.classList.remove('move-to-right-in');
   $idle.classList.add('move-to-right-out');
@@ -91,6 +124,8 @@ const playAnimationDetail = () => {
   });
 
   socket.on('ModeChanged', (medialink) => {
+    // changeDataAnimation();
+    changeDataAnimation_1();
     $detailImage.src = medialink;
   });
 

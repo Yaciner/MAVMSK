@@ -85,6 +85,14 @@ h1 {
   animation: moveToRightOut .7s cubic-bezier(.09, 1.01, .65, .95);
 }
 
+.move-right-fade-out {
+  animation: moveRightFadeOut .4s cubic-bezier(.09, 1.01, .65, .95);
+}
+
+.move-right-fade-in {
+  animation: moveRightFadeIn .4s cubic-bezier(.09, 1.01, .65, .95);
+}
+
 .msk-logo {
   width: 10rem;
   height: auto;
@@ -96,6 +104,7 @@ h1 {
 .detail-image {
   max-height: 30rem;
   width: auto;
+
 }
 
 .didyouknow {
@@ -104,14 +113,6 @@ h1 {
 }
 
 .didyouknow_container {
-  /* position:absolute; */
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 80vw; */
-  /* margin-top: 30vh; */
-
   position: absolute;
   display: flex;
   justify-content: center;
@@ -149,6 +150,13 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.liquid_anim {
+  position: fixed;
+  height: 50vh;
+  width: 100vw;
+  top: 5rem;
+}
+
 @keyframes moveToRightIn {
 
   0% {
@@ -157,6 +165,30 @@ h1 {
 
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes moveRightFadeOut {
+
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+}
+
+@keyframes moveRightFadeIn {
+
+  0% {
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
