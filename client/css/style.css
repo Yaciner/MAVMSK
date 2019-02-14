@@ -9,7 +9,8 @@ body {
 }
 
 p {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 .idle {
@@ -24,7 +25,7 @@ p {
 
 h1 {
   display: inline-block;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 
@@ -65,7 +66,7 @@ h1 {
 }
 
 .detail-info {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
 }
 
 .lottie {
@@ -93,7 +94,7 @@ h1 {
   left: -2px;
 }
 
-.language{
+.language {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -105,12 +106,12 @@ h1 {
   right: 15px;
 }
 
-.language-flag{
+.language-flag {
   width: 8rem;
   height: auto;
 }
 
-.language-text{
+.language-text {
   height: auto;
   font-size: 2rem;
   text-align: center;
@@ -119,7 +120,7 @@ h1 {
 }
 
 .detail-image {
-  max-height: 25vh;
+  max-height: 35vh;
   width: auto;
 }
 
