@@ -7,7 +7,7 @@ De installatie fysiek is gericht op één kunstwerk, maar het is zodanig geprogr
 
 
 ## De installatieschets:
-![schets](https://user-images.githubusercontent.com/11157335/52770723-26450180-3034-11e9-82ff-573ecb49b362.jpg)
+![schets|100x100](https://user-images.githubusercontent.com/11157335/52770723-26450180-3034-11e9-82ff-573ecb49b362.jpg)
 
 
 ## De vereisten:
