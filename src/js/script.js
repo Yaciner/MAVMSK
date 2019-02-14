@@ -8,18 +8,19 @@ const ip = require('ip');
 const ipAddress = ip.address();
 const http = require('http').Server(server);
 const path = require('path');
-const connectionMessage = require('./lib/connectionMessage');
+const notificationMessage = require('./lib/notificationMessage');
 const changeMode = require('./lib/changeMode');
 const helperZoom = require('./lib/helperZoom');
 const helperIndicators = require('./lib/helperIndicators');
 const helperShowText = require('./lib/helperShowText');
 const helperLanguage = require('./lib/helperLanguage');
+const artworks = ["virgin_annunciate", "giovanni_arnolfini"];
 
 global.io = require('socket.io')(http);
 global.fs = require('fs')
 global.didYouKnow = [];
 global.allData = [];
-global.activeArtwork = "virgin_annunciate";
+global.activeArtwork = artworks[1];
 global.artworkTitle = "";
 global.languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
 global.activeLanguage = languages[1];
@@ -35,15 +36,25 @@ global.detailInfo = "";
 global.artworkYear = 1302;
 global.help = "Press the button";
 global.what = "what what what?¿";
-global.connectDiv = document.querySelector('.connect');
+global.notificationDiv = document.querySelector('.notification');
 global.medialink = '';
 global.mode = 'macro';
+global.errors = {
+  "english": "Mode not available for this artwork.",
+  "nederlands": "Mode niet beschikbaar voor dit kunstwerk.",
+  "francais": "Ce mode n'est pas disponible pour ce tableau.",
+  "espanol": "Modo no disponible para esta obra de arte.",
+  "deutsche": "Modus ist für dieses Kunstwerk nicht verfügbar.",
+  "italiano": "Modalità non disponibile per questa illustrazione."
+}
+
+console.log('errors[activeLanguage]', errors[activeLanguage]);
 
 const $artwork = document.querySelector('.artwork');
 $artwork.src = `assets/img/${activeArtwork}/full/macro_after.png`;
 changeMode.macro(activeArtwork, $artwork);
 
-// TODO MOVE FUNCTIONS TO SEPERATE FILE AND WRITE INIT FUNCTION
+console.log('https://github.com/Yaciner/MAVMSK/tree/master');
 
 fetch('./assets/json/artworks.json', {
   headers : {
@@ -81,17 +92,17 @@ io.on('connection', (socket) => {
   artworkYear = allData[activeArtwork]["details"]["year"];
   help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
   io.emit('Idle', what, artworkTitle, artworkYear, help);
-  connectionMessage.hide(connectDiv);
+  notificationMessage.hideConnect(notificationDiv);
 
   socket.on('disconnect', (reason) => {
     console.log('reason', reason);
-    connectionMessage.show(connectDiv, ipAddress, port);
+    notificationMessage.showConnect(notificationDiv, ipAddress, port);
   });
 });
 
 http.listen(port, () => {
   console.log(`listening on ${ipAddress}:${port}`);
-  connectionMessage.show(connectDiv, ipAddress, port);
+  notificationMessage.showConnect(notificationDiv, ipAddress, port);
 });
 
 class MyStream extends Readable {

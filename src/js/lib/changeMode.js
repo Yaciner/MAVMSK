@@ -1,3 +1,5 @@
+const notificationMessage = require('./notificationMessage');
+
 const macro = (activeArtwork, $artwork) => {
   $artwork.src = `assets/img/${activeArtwork}/full/macro_after.png`;
   mode = 'macro';
@@ -11,6 +13,12 @@ const xray = (activeArtwork, $artwork) => {
   fs.access(path, fs.F_OK, (err) => {
     if (err) {
       console.log(err + 'THIS ERROR CAN BE REMOVED. JUST NEEDS TO BE A UX FRIENDLY NOTICE');
+      notificationMessage.showModeError(notificationDiv);
+      setTimeout(() => {
+        console.log('wtf');
+        notificationMessage.hideModeError(notificationDiv);
+      }, 1000);
+      // notificationMessage.hideModeError(notificationDiv);
       return
     }
 
@@ -28,13 +36,18 @@ const infra = (activeArtwork, $artwork) => {
   fs.access(path, fs.F_OK, (err) => {
     if (err) {
       console.log(err + 'THIS ERROR CAN BE REMOVED. JUST NEEDS TO BE A UX FRIENDLY NOTICE');
+      notificationMessage.showModeError(notificationDiv);
+      // notificationMessage.hideModeError(notificationDiv);
+      setTimeout(() => {
+        notificationMessage.hideModeError(notificationDiv);
+      }, 1000);
       return
     }
 
-  $artwork.src = `assets/img/${activeArtwork}/full/infra_after.png`;
-  mode = 'infra';
-  medialink = `assets/img/${activeArtwork}/details/${mode}_${selectedDetail}.png`;
-  io.emit('ModeChanged', medialink);
+    $artwork.src = `assets/img/${activeArtwork}/full/infra_after.png`;
+    mode = 'infra';
+    medialink = `assets/img/${activeArtwork}/details/${mode}_${selectedDetail}.png`;
+    io.emit('ModeChanged', medialink);
   })
 }
 

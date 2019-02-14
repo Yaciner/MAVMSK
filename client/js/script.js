@@ -10,7 +10,7 @@ const $detailImage = document.querySelector('#detail-image');
 const $didYouKnow = document.querySelector('.didyouknow');
 let idle = true;
 
-console.log('https://github.com/Yaciner/MAVMSK/tree/development');
+console.log('https://github.com/Yaciner/MAVMSK/tree/master');
 
 const changeDisplayDetail = (detailTitle, detailInfo, artwork, medialink) => {
   $detailTitle.textContent = detailTitle;
@@ -47,11 +47,11 @@ const changeLanguageFlag = activeLanguage => {
 }
 
 const animationLoader = bodymovin.loadAnimation({
-  container: document.getElementById('lottie'), // Required
-  path: '../assets/json/data.json', // Required
-  renderer: 'svg', // Required
-  loop: false, // Optional
-  autoplay: false // Optional
+  container: document.getElementById('lottie'),
+  path: '../assets/json/data.json',
+  renderer: 'svg',
+  loop: false,
+  autoplay: false
 });
 
 const playAnimationDetail = () => {
@@ -71,7 +71,6 @@ const playAnimationDetail = () => {
   const socket = io();
 
   socket.on('Zoom', (detailTitle, detailInfo, activeArtworkTranslate, medialink) => {
-    //hier kunnen we de ANIMATIE triggeren --> aangezien we er van uit gaan dat deze 1 maal gebeurd (Eventueel kunnen we hier ook een timer zetten?)
     changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate, medialink);
     playAnimationDetail();
     idle = false;
@@ -105,4 +104,3 @@ const playAnimationDetail = () => {
   });
 
 })();
-// TODO show idle text on window load.
