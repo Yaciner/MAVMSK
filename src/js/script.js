@@ -213,7 +213,8 @@ board.on('ready', () => {
 
     if (isZoomedIn) {
       helperZoom.clear($artwork);
-      helperZoom.apply($artwork);
+      // helperZoom.apply($artwork);
+      helperZoom.into($artwork, io);
     }
   });
 })

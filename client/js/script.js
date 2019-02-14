@@ -39,12 +39,12 @@ const changeDisplayIdle = (what, artworkTitle, artworkYear, help) => {
   }, 450);
 }
 
-const changeLanguageFlag = activeLanguage => {
-  const $flagImg = document.querySelector(`.language-flag`);
-  const $flagText = document.querySelector(`.language-text`);
-  $flagImg.src = `/assets/img/languages/${activeLanguage}.png`;
-  $flagText.innerText = activeLanguage;
-}
+// const changeLanguageFlag = activeLanguage => {
+//   const $flagImg = document.querySelector(`.language-flag`);
+//   const $flagText = document.querySelector(`.language-text`);
+//   $flagImg.src = `/assets/img/languages/${activeLanguage}.png`;
+//   $flagText.innerText = activeLanguage;
+// }
 
 const animationLoader = bodymovin.loadAnimation({
   container: document.getElementById('lottie'),
