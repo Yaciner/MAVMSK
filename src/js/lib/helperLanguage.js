@@ -16,7 +16,7 @@ const change = () => {
     artworkYear = allData[activeArtwork]["details"]["year"];
     help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
     console.log(medialink);
-    io.emit('LanguageChange', activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help, medialink);
+    io.emit('LanguageChange', activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help, medialink, activeLanguage);
     helperShowText.didYouKnows(io)
   }
 }

@@ -40,6 +40,13 @@ const changeDisplayIdle = (what, artworkTitle, artworkYear, help) => {
   }, 450);
 }
 
+const changeLanguageFlag = activeLanguage => {
+  const $flagImg = document.querySelector(`.language-flag`);
+  const $flagText = document.querySelector(`.language-text`);
+  $flagImg.src = `/assets/img/languages/${activeLanguage}.png`;
+  $flagText.innerText = activeLanguage;
+}
+
 const animationLoader = bodymovin.loadAnimation({
   container: document.getElementById('lottie'), // Required
   path: '../assets/json/data.json', // Required
@@ -94,8 +101,8 @@ const playAnimationDetail = () => {
     $detailImage.src = medialink;
   });
 
-  socket.on('LanguageChange', (activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help, medialink) => {
-
+  socket.on('LanguageChange', (activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help, medialink, activeLanguage) => {
+    changeLanguageFlag(activeLanguage);
     if (idle) {
       changeDisplayIdle(what, artworkTitle, artworkYear, help);
     } else {
