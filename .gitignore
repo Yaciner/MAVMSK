@@ -50,5 +50,6 @@ TODO.md
 css/main.css
 *-min.*
 node_modules
+package-lock.json
 *key.js
 dist
