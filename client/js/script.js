@@ -9,6 +9,7 @@ const $detailDisplay = document.querySelector('#detail-display');
 const $detailImage = document.querySelector('#detail-image');
 const $didYouKnow = document.querySelector('.didyouknow');
 let idle = true;
+let isZoomedIn = false;
 
 console.log('https://github.com/Yaciner/MAVMSK/tree/master');
 
@@ -72,7 +73,10 @@ const playAnimationDetail = () => {
 
   socket.on('Zoom', (detailTitle, detailInfo, activeArtworkTranslate, medialink) => {
     changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate, medialink);
-    playAnimationDetail();
+    if (!isZoomedIn) {
+      isZoomedIn = true;
+      playAnimationDetail();
+    }
     idle = false;
   });
 
@@ -94,6 +98,7 @@ const playAnimationDetail = () => {
   });
 
   socket.on('Idle', (what, artworkTitle, artworkYear, help) => {
+    isZoomedIn = false;
     changeDisplayIdle(what, artworkTitle, artworkYear, help);
     idle = true;
   });

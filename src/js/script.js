@@ -164,7 +164,7 @@ board.on('ready', () => {
   confirmButton.on("press", () => {
     if (!isZoomedIn) {
       helperZoom.into($artwork, io);
-      zoomTimer = setInterval(() => { helperZoom.out($artwork, io); }, 30000);
+      zoomTimer = setInterval(() => { helperZoom.out($artwork, io); }, 60000);
     } else {
       helperZoom.out($artwork, io);
     }
