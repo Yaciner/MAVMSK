@@ -23,7 +23,7 @@ global.allData = [];
 global.activeArtwork = artworks[1];
 global.artworkTitle = "";
 global.languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
-global.activeLanguage = languages[1];
+global.activeLanguage = languages[0];
 global.selectedLanguage = 0;
 global.previousLanguage = '';
 global.selectedDetail = 0;
@@ -47,8 +47,6 @@ global.errors = {
   "deutsche": "Modus ist für dieses Kunstwerk nicht verfügbar.",
   "italiano": "Modalità non disponibile per questa illustrazione."
 }
-
-console.log('errors[activeLanguage]', errors[activeLanguage]);
 
 const $artwork = document.querySelector('.artwork');
 $artwork.src = `assets/img/${activeArtwork}/full/macro_after.png`;
@@ -183,7 +181,7 @@ board.on('ready', () => {
   });
 
   detailSelector.on("change", function() {
-    selectedDetail = this.scaleTo(0, allData[activeArtwork]['numdetails']);
+    selectedDetail = this.scaleTo(0, allData[activeArtwork]['numdetails']-1);
     let i = 0;
     $circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';
