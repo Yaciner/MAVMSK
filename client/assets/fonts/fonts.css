@@ -1,0 +1,13 @@
+@font-face {
+  font-family: Asul;
+  src: url(Asul-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Asul;
+  src: url(Asul-Bold.woff) format('woff');
+  font-weight: bold;
+  font-style: bold;
+}

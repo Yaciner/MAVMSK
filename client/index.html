@@ -9,6 +9,22 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png">
   <link rel="mask-icon" type="image/png" href="/assets/img/favicon.png">
+  <script>
+    WebFontConfig = {
+      custom: {
+        families: ['Asul'],
+        urls: ['/assets/fonts/fonts.css']
+      }
+    };
+
+     (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = '/js/webfont.js';
+        console.log('wf', wf);
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+     })(document);
+  </script>
 </head>
   <body>
     <img class="msk-logo" src="/assets/svg/msk-logo.svg" alt="msk logo" />
