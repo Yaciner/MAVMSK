@@ -89,7 +89,7 @@ const playAnimationDetail = () => {
   });
 
   socket.on('LanguageChange', (activeArtworkTranslate, detailTitle, detailInfo, what, artworkTitle, artworkYear, help, medialink, activeLanguage) => {
-    changeLanguageFlag(activeLanguage);
+    // changeLanguageFlag(activeLanguage);
     if (idle) {
       changeDisplayIdle(what, artworkTitle, artworkYear, help);
     } else {

@@ -126,7 +126,7 @@ const startDidYouKnows = setInterval(() => {
 board.on('ready', () => {
   io.emit('Refresh', 'reload');
 
-  document.getElementById('board-status').src = './assets/ready.png';
+  // document.getElementById('board-status').src = './assets/ready.png';
   const $circles = document.querySelectorAll('.indicator');
 
   helperShowText.didYouKnows(io);
@@ -135,19 +135,19 @@ board.on('ready', () => {
   let detailSelector = new five.Sensor({
     pin: 'A1',
     freq: 50,
-    threshold: 5
+    threshold: 61
   });
 
   let languageSelector = new five.Sensor({
     pin: 'A2',
-    freq: 50,
-    threshold: 5
+    freq: 200,
+    threshold: 200
   });
 
-  let confirmButton = new five.Button(2);
-  let macroButton = new five.Button(4);
-  let infraredButton = new five.Button(7);
-  let xrayButton = new five.Button(12);
+  let confirmButton = new five.Button(7);
+  let macroButton = new five.Button(12);
+  let infraredButton = new five.Button(4);
+  let xrayButton = new five.Button(2);
 
   macroButton.on("press", () => {
     changeMode.macro(activeArtwork, $artwork);
@@ -177,6 +177,7 @@ board.on('ready', () => {
   languageSelector.on("change", function() {
     selectedLanguage = this.scaleTo(0, languages.length - 1);
     activeLanguage = languages[selectedLanguage];
+    console.log('activeLanguage', activeLanguage);
     helperLanguage.change();
   });
 
