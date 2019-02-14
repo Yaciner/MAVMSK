@@ -15,7 +15,6 @@ const xray = (activeArtwork, $artwork) => {
       console.log(err + 'THIS ERROR CAN BE REMOVED. JUST NEEDS TO BE A UX FRIENDLY NOTICE');
       notificationMessage.showModeError(notificationDiv);
       setTimeout(() => {
-        console.log('wtf');
         notificationMessage.hideModeError(notificationDiv);
       }, 1000);
       // notificationMessage.hideModeError(notificationDiv);
