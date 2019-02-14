@@ -1,38 +1,38 @@
 {
-  "GiovanniArnolfini": {
+  "giovanni_arnolfini": {
     "idle_text": {
       "english": {
-        "what": "Now looking at",
+        "what": "You're now looking at",
         "help": "Press the zoom button to explore a detail."
       },
       "nederlands": {
-        "what": "Now looking at NL",
-        "help": "Press the zoom button to explore a detail. NL"
+        "what": "U bekijkt nu",
+        "help": "Druk op de zoomknop om een detail te verkennen."
       },
       "francais": {
-        "what": "Now looking at FR",
-        "help": "Press the zoom button to explore a detail. FR"
+        "what": "Vous regardez",
+        "help": "Appuyez sur le bouton de zoom pour explorer un détail."
       },
       "espanol": {
-        "what": "Now looking at ES",
-        "help": "Press the zoom button to explore a detail. ES"
+        "what": "Estás viendo la obra ",
+        "help": "Presiona el botón de zoom para explorar un detalle."
       },
       "deutsche": {
-        "what": "Now looking at DE",
-        "help": "Press the zoom button to explore a detail. DE"
+        "what": "Sie sehen das",
+        "help": "Drücken Sie die Zoomtaste, um ein Detail zu untersuchen."
       },
       "italiano": {
-        "what": "Now looking at IT",
-        "help": "Press the zoom button to explore a detail. IT"
+        "what": "Stai visualizzando ",
+        "help": "Premi il pulsante dello zoom per esplorare un dettaglio."
       }
     },
     "title": {
       "english": "The Arnolfini Portrait",
-      "nederlands": "The Arnolfini Portrait NL",
-      "francais": "The Arnolfini Portrait FR",
-      "espanol": "The Arnolfini Portrait ES",
-      "deutsche": "The Arnolfini Portrait DE",
-      "italiano": "The Arnolfini Portrait IT"
+      "nederlands": "Portret van Giovanni Arnolfini en zijn vrouw",
+      "francais": "Les Époux Arnolfini",
+      "espanol": "Retrato de Giovanni Arnolfini y su esposa",
+      "deutsche": "Arnolfini-Hochzeit",
+      "italiano": "Ritratto dei coniugi Arnolfini"
     },
     "numdetails": 6,
     "details": {
@@ -40,7 +40,7 @@
       "english": {
         "0" : {
           "title": "Giovanni Arnolfini",
-          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
+          "info" : "Giovanni di Nicolao Arnolfini was a merchant from Lucca,in Italy, who spent most of his life in Flanders. Probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
         },
         "1" : {
           "title": "The signature",
@@ -52,7 +52,7 @@
         },
         "3" : {
           "title": "The convex mirror",
-          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage."
         },
         "4" : {
           "title": "Joining of hands",
@@ -66,131 +66,131 @@
       "nederlands": {
         "0" : {
           "title": "Giovanni Arnolfini",
-          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
+          "info" : "Giovanni di Nicolao Arnolfini was een koopman uit Lucca, in Italië, die het grootste deel van zijn leven in Vlaanderen doorbracht, waarschijnlijk altijd gevestigd in Brugge, een rijke handelsstad en een van de belangrijkste steden aan de Bourgondische rechtbank."
         },
         "1" : {
-          "title": "The signature",
-          "info" : "Due to the artist’s inclusion, and of his large signature on the wall, the theory has been presented that the work was the equivalent of a marriage contract: the union has evidently been witnessed by the visual inclusion of a third figure, who has also helpfully signed the image in large, obvious script above the mirror to prove his presence."
+          "title": "De handtekening",
+          "info" : "Vanwege de insluiting van de kunstenaar en zijn grote handtekening op de muur, is de theorie gepresenteerd dat het werk het equivalent was van een huwelijkscontract: de vakbond is kennelijk getuige geweest van de visuele opname van een derde figuur, die ook behulpzaam is ondertekende de afbeelding in groot, voor de hand liggend script boven de spiegel om zijn aanwezigheid te bewijzen."
         },
         "2" : {
           "title": "Giovanna Cenami",
-          "info" : "The picture represents Giovanna Cenami, the wife of Giovanni Arnolfini."
+          "info" : "Op de foto is Giovanna Cenami te zien, de vrouw van Giovanni Arnolfini."
         },
         "3" : {
-          "title": "The convex mirror",
-          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+          "title": "De spiegel",
+          "info" : "De spiegel is het brandpunt van de hele compositie, er is vaak opgemerkt dat er twee kleine figuurtjes in weerspiegeld worden weergegeven, hun beeld vastgelegd terwijl ze de drempel van de kamer oversteken, zij zijn de schilder zelf en een jonge man, misschien aankomen om op te treden als getuigen van het huwelijk."
         },
         "4" : {
-          "title": "Joining of hands",
-          "info" : "The central motif of the painting, the so-called 'joining of hands', has long been recognized as a special gesture with a specific meaning. It has been the subject of debate for decades. There are several descriptions like 'mutually clasped hands', 'the woman is holding the man's left hand', 'hands reaching out towards each other etc."
+          "title": "Samenbrenging van de handen",
+          "info" : "Het centrale motief van het schilderij, het zogenaamde 'verbinden van handen', is al lang erkend als een speciaal gebaar met een specifieke betekenis. Het is al decennia het onderwerp van debat. Er zijn verschillende beschrijvingen zoals 'elkaar in de hand gevouwen handen', 'de vrouw houdt de linkerhand van de man vast', 'handen reikend naar elkaar enz."
         },
         "5" : {
-          "title": "Sandals",
-          "info" : "The clogs and outdoor sandals which the couple have removed might be typical wedding presents, or represent the taking of shoes in a sacred precincts."
+          "title": "Sandalen",
+          "info" : "hij klompen en outdoor sandalen die het paar heeft verwijderd, kunnen typische huwelijkscadeaus zijn, of staan voor het nemen van schoenen in een heilige wijk."
         }
       },
       "francais": {
         "0" : {
           "title": "Giovanni Arnolfini",
-          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
+          "info" : "Giovanni di Nicolao Arnolfini était un commerçant de Lucca, en Italie, qui avait passé la majeure partie de sa vie en Flandre. Il est probablement toujours basé à Bruges, une riche ville commerçante et l’une des principales villes du tribunal bourguignon."
         },
         "1" : {
-          "title": "The signature",
-          "info" : "Due to the artist’s inclusion, and of his large signature on the wall, the theory has been presented that the work was the equivalent of a marriage contract: the union has evidently been witnessed by the visual inclusion of a third figure, who has also helpfully signed the image in large, obvious script above the mirror to prove his presence."
+          "title": "La signature",
+          "info" : "En raison de l'inclusion de l'artiste et de sa grande signature au mur, il a été présenté à la théorie que l'œuvre était l'équivalent d'un contrat de mariage: l'union a évidemment été témoin de l'inclusion visuelle d'un troisième personnage, qui a également aidé utilement signé l'image en gros, script évident au-dessus du miroir pour prouver sa présence."
         },
         "2" : {
           "title": "Giovanna Cenami",
-          "info" : "The picture represents Giovanna Cenami, the wife of Giovanni Arnolfini."
+          "info" : "La photo représente Giovanna Cenami, l'épouse de Giovanni Arnolfini."
         },
         "3" : {
-          "title": "The convex mirror",
-          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+          "title": "Le miroir convexe",
+          "info" : "Le miroir est le point central de toute la composition. On a souvent remarqué que deux minuscules personnages se reflétaient dedans, leur image étant capturée lorsqu'ils franchissent le seuil de la pièce. Ils sont le peintre lui-même et un jeune homme, arrivant peut-être pour témoigner du mariage."
         },
         "4" : {
-          "title": "Joining of hands",
-          "info" : "The central motif of the painting, the so-called 'joining of hands', has long been recognized as a special gesture with a specific meaning. It has been the subject of debate for decades. There are several descriptions like 'mutually clasped hands', 'the woman is holding the man's left hand', 'hands reaching out towards each other etc."
+          "title": "Jointure des mains",
+          "info" : "Le motif central du tableau, appelé «jonction des mains», a longtemps été reconnu comme un geste spécial ayant une signification particulière. Cela fait l'objet de débats depuis des décennies. Il existe plusieurs descriptions telles que «mains jointes», «la femme tient la main gauche de l'homme», «les mains tendues l'une vers l'autre, etc."
         },
         "5" : {
-          "title": "Sandals",
-          "info" : "The clogs and outdoor sandals which the couple have removed might be typical wedding presents, or represent the taking of shoes in a sacred precincts."
+          "title": "Des sandales",
+          "info" : "Les sabots et les sandales d'extérieur que le couple a enlevés peuvent être des cadeaux de mariage typiques ou représenter la prise de chaussures dans une enceinte sacrée."
         }
       },
       "espanol": {
         "0" : {
           "title": "Giovanni Arnolfini",
-          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
+          "info" : "Giovanni di Nicolao Arnolfini era un comerciante de Lucca, en Italia, que pasó la mayor parte de su vida en Flandes. Probablemente, con sede en Brujas, una ciudad comercial adinerada y una de las principales ciudades de la corte de Borgoña."
         },
         "1" : {
-          "title": "The signature",
-          "info" : "Due to the artist’s inclusion, and of his large signature on the wall, the theory has been presented that the work was the equivalent of a marriage contract: the union has evidently been witnessed by the visual inclusion of a third figure, who has also helpfully signed the image in large, obvious script above the mirror to prove his presence."
+          "title": "La firma",
+          "info" : "Debido a la inclusión del artista, y de su gran firma en la pared, se ha presentado la teoría de que la obra era el equivalente de un contrato matrimonial: la unión ha sido atestiguada evidentemente por la inclusión visual de una tercera figura, que también ha ayudado Firmó la imagen en un guión grande y obvio sobre el espejo para demostrar su presencia."
         },
         "2" : {
           "title": "Giovanna Cenami",
-          "info" : "The picture represents Giovanna Cenami, the wife of Giovanni Arnolfini."
+          "info" : "La imagen representa a Giovanna Cenami, la esposa de Giovanni Arnolfini."
         },
         "3" : {
-          "title": "The convex mirror",
-          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+          "title": "El espejo convexo",
+          "info" : "El espejo es el punto focal de toda la composición. A menudo se ha observado que dos pequeñas figuras pueden verse reflejadas en él, su imagen capturada al cruzar el umbral de la habitación. Ellos son el pintor mismo y un joven, tal vez llegando a ser testigos del matrimonio."
         },
         "4" : {
-          "title": "Joining of hands",
-          "info" : "The central motif of the painting, the so-called 'joining of hands', has long been recognized as a special gesture with a specific meaning. It has been the subject of debate for decades. There are several descriptions like 'mutually clasped hands', 'the woman is holding the man's left hand', 'hands reaching out towards each other etc."
+          "title": "Unión de manos",
+          "info" : "El motivo central de la pintura, la llamada 'unión de manos', ha sido reconocido como un gesto especial con un significado específico. Ha sido objeto de debate durante décadas. Hay varias descripciones como 'manos mutuamente juntas', 'la mujer sostiene la mano izquierda del hombre', 'las manos extendiéndose una hacia la otra, etc."
         },
         "5" : {
-          "title": "Sandals",
-          "info" : "The clogs and outdoor sandals which the couple have removed might be typical wedding presents, or represent the taking of shoes in a sacred precincts."
+          "title": "Sandalias",
+          "info" : "Los zuecos y las sandalias exteriores que la pareja se ha quitado pueden ser típicos regalos de boda, o representar la toma de zapatos en un recinto sagrado."
         }
       },
       "deutsche": {
         "0" : {
           "title": "Giovanni Arnolfini",
-          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
+          "info" : "Giovanni di Nicolao Arnolfini war ein Kaufmann aus Lucca in Italien, der den Großteil seines Lebens in Flandern verbrachte. Er war wahrscheinlich immer in Brügge, einer wohlhabenden Handelsstadt und einer der Hauptstädte des Burgunder Hofes, angesiedelt."
         },
         "1" : {
-          "title": "The signature",
-          "info" : "Due to the artist’s inclusion, and of his large signature on the wall, the theory has been presented that the work was the equivalent of a marriage contract: the union has evidently been witnessed by the visual inclusion of a third figure, who has also helpfully signed the image in large, obvious script above the mirror to prove his presence."
+          "title": "Die Unterschrift",
+          "info" : "Aufgrund der Einbeziehung des Künstlers und seiner großen Signatur an der Wand wurde die Theorie präsentiert, dass das Werk einem Ehevertrag entsprach: Die Gewerkschaft wurde offenbar durch die visuelle Einbeziehung einer dritten Figur gesehen, die auch hilfreich war signierte das Bild in großer, offensichtlicher Schrift über dem Spiegel, um seine Anwesenheit zu beweisen."
         },
         "2" : {
           "title": "Giovanna Cenami",
-          "info" : "The picture represents Giovanna Cenami, the wife of Giovanni Arnolfini."
+          "info" : "Das Bild zeigt Giovanna Cenami, die Frau von Giovanni Arnolfini."
         },
         "3" : {
-          "title": "The convex mirror",
-          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+          "title": "Der konvexe Spiegel",
+          "info" : "Der Spiegel ist der Schwerpunkt der gesamten Komposition. Es wurde oft bemerkt, dass zwei winzige Figuren darin reflektiert werden, deren Bild beim Überschreiten der Schwelle des Raums erfasst wird. Sie sind der Maler selbst und ein junger Mann, der vielleicht als Zeugen der Ehe auftaucht."
         },
         "4" : {
-          "title": "Joining of hands",
-          "info" : "The central motif of the painting, the so-called 'joining of hands', has long been recognized as a special gesture with a specific meaning. It has been the subject of debate for decades. There are several descriptions like 'mutually clasped hands', 'the woman is holding the man's left hand', 'hands reaching out towards each other etc."
+          "title": "Zusammenfügen der Hände",
+          "info" : "Das zentrale Motiv des Gemäldes, das sogenannte 'Verbinden von Händen', wurde lange als besondere Geste mit einer bestimmten Bedeutung erkannt. Es ist seit Jahrzehnten Gegenstand der Debatte. Es gibt mehrere Beschreibungen wie 'gegenseitig gefaltete Hände', 'die Frau hält die linke Hand des Mannes', 'Hände, die sich gegenseitig ausstrecken usw."
         },
         "5" : {
-          "title": "Sandals",
-          "info" : "The clogs and outdoor sandals which the couple have removed might be typical wedding presents, or represent the taking of shoes in a sacred precincts."
+          "title": "Sandalen",
+          "info" : "Die Clogs und Outdoor-Sandalen, die das Paar entfernt hat, können typische Hochzeitsgeschenke sein oder das Mitnehmen von Schuhen in einer heiligen Umgebung darstellen."
         }
       },
       "italiano": {
         "0" : {
           "title": "Giovanni Arnolfini",
-          "info" : "Giovanni di Nicolao Arnolfini (c. 1400 – after 1452) was a merchant from Lucca, a city in Tuscany, Italy, who spent most of his life in Flanders, then part of the Duchy of Burgundy, probably always based in Bruges, a wealthy trading city and one of the main towns of the Burgundian court."
+          "info" : "Giovanni di Nicolao Arnolfini era un mercante lucchese, in Italia, che passò la maggior parte della sua vita nelle Fiandre, probabilmente con sede a Bruges, una ricca città commerciale e una delle principali città della corte borgognona."
         },
         "1" : {
-          "title": "The signature",
-          "info" : "Due to the artist’s inclusion, and of his large signature on the wall, the theory has been presented that the work was the equivalent of a marriage contract: the union has evidently been witnessed by the visual inclusion of a third figure, who has also helpfully signed the image in large, obvious script above the mirror to prove his presence."
+          "title": "La firma",
+          "info" : "A causa dell'inclusione dell'artista, e della sua grande firma sul muro, è stata presentata la teoria che il lavoro era l'equivalente di un contratto di matrimonio: l'unione è stata evidentemente testimoniata dall'inclusione visiva di una terza figura, che ha anche aiutato firmò l'immagine con un copione grande e ovvio sopra lo specchio per dimostrare la sua presenza."
         },
         "2" : {
           "title": "Giovanna Cenami",
-          "info" : "The picture represents Giovanna Cenami, the wife of Giovanni Arnolfini."
+          "info" : "L'immagine rappresenta Giovanna Cenami, la moglie di Giovanni Arnolfini."
         },
         "3" : {
-          "title": "The convex mirror",
-          "info" : "The mirror is the focal point of the whole composition. It has often been noted that two tiny figures can be seen reflected in it, their image captured as they cross the threshold of the room. They are the painter himself and a young man, perhaps arriving to act as witnesses to the marriage. The essential point, however, is the fact that the convex mirror is able to absorb and reflect in a single image both the floor and the ceiling of the room, as well as the sky and the garden outside, both of which are otherwise barely visible through the side window. The mirror thus acts as a sort of hole in the texture of space. It sucks the entire visual world into itself, transforming it into a representation."
+          "title": "Lo specchio convesso",
+          "info" : "Lo specchio è il punto focale dell'intera composizione. È stato spesso notato che in esso si possono vedere due piccole figure, la cui immagine viene catturata mentre attraversano la soglia della stanza. Sono il pittore stesso e un giovane, forse arrivando ad agire come testimoni del matrimonio."
         },
         "4" : {
-          "title": "Joining of hands",
-          "info" : "The central motif of the painting, the so-called 'joining of hands', has long been recognized as a special gesture with a specific meaning. It has been the subject of debate for decades. There are several descriptions like 'mutually clasped hands', 'the woman is holding the man's left hand', 'hands reaching out towards each other etc."
+          "title": "Congiunzione delle mani",
+          "info" : "Il motivo centrale del dipinto, la cosiddetta 'unione delle mani', è stato a lungo riconosciuto come un gesto speciale con un significato specifico. È stato oggetto di dibattito per decenni. Ci sono diverse descrizioni come mani giunte reciprocamente, la donna tiene la mano sinistra dell'uomo, mani che si protendono l'una verso l'altra ecc."
         },
         "5" : {
-          "title": "Sandals",
-          "info" : "The clogs and outdoor sandals which the couple have removed might be typical wedding presents, or represent the taking of shoes in a sacred precincts."
+          "title": "Sandali",
+          "info" : "zoccoli e sandali da esterno che la coppia ha rimosso potrebbero essere tipici regali di nozze o rappresentare la presa di scarpe in un recinto sacro."
         }
       }
     },
@@ -415,6 +415,277 @@
         "y":"-110px",
         "yi": "57vh",
         "s":"7"
+      }
+    }
+  },
+  "adoration_of_the_lamb": {
+    "idle_text": {
+      "english": {
+        "what": "You're now looking at",
+        "help": "Press the zoom button to explore a detail."
+      },
+      "nederlands": {
+        "what": "U bekijkt nu",
+        "help": "Druk op de zoomknop om een detail te verkennen."
+      },
+      "francais": {
+        "what": "Vous regardez",
+        "help": "Appuyez sur le bouton de zoom pour explorer un détail."
+      },
+      "espanol": {
+        "what": "Estás viendo la obra ",
+        "help": "Presiona el botón de zoom para explorar un detalle."
+      },
+      "deutsche": {
+        "what": "Sie sehen das",
+        "help": "Drücken Sie die Zoomtaste, um ein Detail zu untersuchen."
+      },
+      "italiano": {
+        "what": "Stai visualizzando ",
+        "help": "Premi il pulsante dello zoom per esplorare un dettaglio."
+      }
+    },
+    "title": {
+      "english" : "Adoration Of The mystic Lamb",
+      "nederlands" : "De Aanbidding van het Lam Gods",
+      "francais" : "L 'Agneau Mystique",
+      "espanol" : "Políptico de Gante",
+      "deutsche" : "Die Anbetung des Lammes Gottes",
+      "italiano" : "Polittico dell'Agnello Mistico"
+    },
+    "numdetails": 7,
+    "details": {
+      "year": 1432,
+      "english": {
+        "0" : {
+          "title": "The confessors of the faith",
+          "info" : "The confessors of the faith, in order of hierarchy. They are carrying palms but are not dressed in red (which shows they did not die a martyr’s death): popes, cardinals, bishops, priests and maybe some lay people as well."
+        },
+        "1" : {
+          "title": "The Mystic Lamb",
+          "info" : "The Mystic Lamb is the Lamb of God—the sacrificial lamb—a symbol of Christ and Christ’s death. The lamb on the altar is equivalent to the crucifixion of Christ, made explicit by the juxtaposition of the lamb with the cross held by the angel. "
+        },
+        "2" : {
+          "title": "Chalice",
+          "info" : "The Lamb bleeds from a wound in his side, and this stream of blood flows directly into a chalice set on the altar cloth (the full inscription on the altar cloth reads, Ecce Agnus Dei, qui tollis peccata mundi, miserere nobis, which translates, Here is the Lamb of God, who takes away the sins of the world."
+        },
+        "3" : {
+          "title": "The female saints carrying the palm of victory",
+          "info" : "The group in the background on the right shows the women saints (both martyred and not), carrying the palm of victory and wearing flowers in their hair, along with other anonymous women (both religious and not). Among the saints we can recognize Agnes with her lamb, Barbara with the tower, Dorothy with the basket of flowers and Ursula with the arrow."
+        },
+        "4" : {
+          "title": "The heavenly Jerusalem in Gothic style",
+          "info" : "Thus the city in the background of Van Eyck’s landscape can be interpreted as symbolizing the heavenly Jerusalem, the city of the living God. The buildings are therefore imaginary (even though two of them are recognizable: the tower of the Utrecht cathedral, to the left of the Lamb, and the dark tower of St. Nicholas’ church in Ghent."
+        },
+        "5" : {
+          "title": "The Christian martyrs",
+          "info" : "Clustered around the fountain are yet more distinct processional groups worshipping the Lamb. These are commonly identified as patriarchs and prophets from the Old Testament and male and female saints and church figures."
+        },
+        "6" : {
+          "title": "The fountain",
+          "info" : "Inscribed on the fountain, in Latin, we see a verse from the Book of Revelation, 'Then the angel showed me the river of the water of life, clear as crystal, proceeding from the throne of God and of the Lamb. In the symbolic context of the Lamb, the fountain is therefore the wellspring of eternal life and salvation."
+        }
+      },
+      "nederlands": {
+        "0" : {
+          "title": "De belijders van het geloof",
+          "info" : "Je ziet de biechtvaders van het geloof, in volgorde van hiërarchie. Ze dragen palmen, maar zijn niet in het rood gekleed (wat laat zien dat ze niet de martelaarsdood stierven): pausen, kardinalen, bisschoppen, priesters en misschien ook andere leden."
+        },
+        "1" : {
+          "title": "Het Lam",
+          "info" : "Het lam bloedt uit een wond in zijn zij en deze stroom bloed stroomt rechtstreeks in een kelk die op het altaar is gelegd (de volledige inscriptie op het altaarkleed luidt: Ecce Agnus Dei, qui tollis peccata mundi, miserere nobis, wat vertaalt, Hier is het Lam van God, die de zonden van de wereld wegneemt."
+        },
+        "2" : {
+          "title": "De kelk",
+          "info" : "De Annunciatie vertegenwoordigt het bijbelverhaal waarin Aartsengel Gabriël (ander paneel) de Maagd Maria aankondigt dat zij is gekozen als de moeder van Jezus."
+        },
+        "3" : {
+          "title": "De vrouwlijke heiligen",
+          "info" : "De vrouwelijke heiligen (zowel gemarteld als niet), die de palm van de overwinning draagt en bloemen draagt, samen met andere anonieme vrouwen (zowel religieus als niet). Onder de heiligen kunnen we Agnes herkennen met haar lam, Barbara met de toren, Dorothy met de mand met bloemen en Ursula met de pijl."
+        },
+        "4" : {
+          "title": "Jeruzalem in gotische stijl",
+          "info" : "Zo kan de stad op de achtergrond van het landschap van Van Eyck worden geïnterpreteerd als symbool voor het hemelse Jeruzalem, de stad van de levende God. De gebouwen zijn daarom denkbeeldig (ook al zijn er twee herkenbaar: de toren van de Utrechtse kathedraal, links van het lam en de donkere toren van de Sint-Niklaaskerk in Gent."
+        },
+        "5" : {
+          "title": "De martelaren",
+          "info" : "Rond de fontein zijn er nog meer verschillende processiegroepen die het Lam aanbidden. Deze worden algemeen geïdentificeerd als patriarchen en profeten uit het Oude Testament en mannelijke en vrouwelijke heiligen en kerkfiguren."
+        },
+        "6" : {
+          "title": "De fontein",
+          "info" : "De geschriften bij het fontein, in het Latijn, zien we een vers uit het boek Openbaring: 'Toen liet de engel me de rivier zien van het water des levens, helder als kristal, voortkomend van de troon van God en van het Lam. In de symbolische context van het Lam is de bron daarom de bron van eeuwig leven en heil."
+        }
+      },
+      "francais": {
+        "0" : {
+          "title": "Les confesseurs de la foi",
+          "info" : "Le groupe émergeant de la brousse à l'arrière-plan, à gauche, sont les confesseurs de la foi, par ordre de hiérarchie. Ils portent des palmiers mais ne sont pas vêtus de rouge (ce qui montre qu’ils ne sont pas morts comme un martyr): papes, cardinaux, évêques, prêtres et peut-être aussi des laïcs."
+        },
+        "1" : {
+          "title": "L'Agneau Mystique",
+          "info" : "e Agneau mystique est l’agneau de Dieu - l’agneau sacrificiel - un symbole du Christ et de sa mort. L'agneau sur l'autel équivaut à la crucifixion du Christ, rendue explicite par la juxtaposition de l'agneau avec la croix tenue par l'ange."
+        },
+        "2" : {
+          "title": "Le calice",
+          "info" : "L'Agneau saigne d'une blessure à son côté et ce flux de sang coule directement dans un calice posé sur la toile de l'autel (l'inscription complète sur la toile de l'autel indique: Ecce Agnus Dei, qui tollis peccata mundi, miserere nobis, qui traduit Voici l'Agneau de Dieu, qui enlève les péchés du monde."
+        },
+        "3" : {
+          "title": "Les femmes saints",
+          "info" : "Les femmes saintes (martyrisées ou non), portant la palme de la victoire et portant des fleurs dans les cheveux, ainsi que d'autres femmes anonymes (religieuses ou non). Parmi les saints, nous pouvons reconnaître Agnès avec son agneau, Barbara avec la tour, Dorothy avec le panier de fleurs et Ursula avec la flèche."
+        },
+        "4" : {
+          "title": "Jérusalem en style gothique",
+          "info" : "Ainsi, la ville à l’arrière-plan du paysage de Van Eyck peut être interprétée comme symbolisant la Jérusalem céleste, la ville du Dieu vivant. Les bâtiments sont donc imaginaires (même si deux d’entre eux sont reconnaissables: la tour de la cathédrale d’Utrecht, à gauche de l’Agneau, et la sombre tour de l’église Saint-Nicolas de Gand."
+        },
+        "5" : {
+          "title": "Les martyrs",
+          "info" : "Regroupés autour de la fontaine, des groupes processionnels plus distincts vénèrent l'Agneau. Ceux-ci sont communément identifiés en tant que patriarches et prophètes de l'Ancien Testament et en tant que saints et figures d'église masculins et féminins."
+        },
+        "6" : {
+          "title": "La fontaine",
+          "info" : "Sur la fontaine, en latin, est inscrit un verset du livre de l'Apocalypse: «L'ange me montra le fleuve de l'eau de la vie, limpide comme du cristal, qui partait du trône de Dieu et de l'agneau. Dans le contexte symbolique de l'Agneau, la fontaine est donc la source de la vie et du salut éternels."
+        }
+      },
+      "espanol": {
+        "0" : {
+          "title": "Los confesores de la fe.",
+          "info" : "El grupo que emerge de la selva en el fondo de la izquierda son los confesores de la fe, en orden jerárquico. Llevan palmas pero no están vestidos de rojo (lo que demuestra que no murieron la muerte de un mártir): papas, cardenales, obispos, sacerdotes y quizás algunos laicos también."
+        },
+        "1" : {
+          "title": "El cordero místico",
+          "info" : "El Cordero místico es el Cordero de Dios, el cordero del sacrificio, un símbolo de Cristo y la muerte de Cristo. El cordero en el altar es equivalente a la crucifixión de Cristo, explicitada por la yuxtaposición del cordero con la cruz que sostiene el ángel."
+        },
+        "2" : {
+          "title": "El cáliz",
+          "info" : "El Cordero sangra por una herida en su costado, y esta corriente de sangre fluye directamente hacia un cáliz colocado sobre la tela del altar (la inscripción completa en la tela del altar dice: Ecce Agnus Dei, qui tollis peccata mundi, miserere nobis, que se traduce, Aquí está el Cordero de Dios, que quita los pecados del mundo."
+        },
+        "3" : {
+          "title": "Las satas",
+          "info" : "El grupo en el fondo a la derecha muestra a las mujeres santas (tanto martirizadas como no), portando la palma de la victoria y llevando flores en el cabello, junto con otras mujeres anónimas (religiosas y no). Entre los santos podemos reconocer a Agnes con su cordero, a Barbara con la torre, a Dorothy con el cesto de flores ya Ursula con la flecha."
+        },
+        "4" : {
+          "title": "Jérusalem en estilo gótico",
+          "info" : "Así, la ciudad en el fondo del paisaje de Van Eyck se puede interpretar como un símbolo de la Jerusalén celestial, la ciudad del Dios vivo. Por lo tanto, los edificios son imaginarios (aunque dos de ellos son reconocibles: la torre de la catedral de Utrecht, a la izquierda del Cordero, y la torre oscura de la iglesia de San Nicolás en Gante."
+        },
+        "5" : {
+          "title": "Los mártires",
+          "info" : "Agrupados alrededor de la fuente hay grupos procesionales más distintos que adoran al Cordero. Estos son comúnmente identificados como patriarcas y profetas del Antiguo Testamento y como santos y figuras de iglesias de hombres y mujeres."
+        },
+        "6" : {
+          "title": "La fuente",
+          "info" : "Inscrito en la fuente, en latín, vemos un verso del Libro de la Revelación: 'Entonces el ángel me mostró el río del agua de la vida, claro como el cristal, que procede del trono de Dios y del Cordero. En el contexto simbólico del Cordero, la fuente es, por lo tanto, la fuente de la vida eterna y la salvación."
+        }
+      },
+      "deutsche": {
+        "0" : {
+          "title": "Die Bekenner des Glaubens",
+          "info" : "Die Gruppe, die im Hintergrund links aus dem Busch hervortritt, sind die Beichtväter des Glaubens in der Hierarchie. Sie tragen Palmen, sind aber nicht rot gekleidet (was bedeutet, dass sie nicht den Märtyrertod gestorben sind): Päpste, Kardinäle, Bischöfe, Priester und möglicherweise auch einige Laien."
+        },
+        "1" : {
+          "title": "Das mystische Lamm",
+          "info" : "Das mystische Lamm ist das Lamm Gottes - das Opferlamm - ein Symbol für den Tod Christi und Christi. Das Lamm auf dem Altar ist gleichbedeutend mit der Kreuzigung Christi, die durch die Nebeneinanderstellung des Lammes mit dem Kreuz des Engels deutlich gemacht wird."
+        },
+        "2" : {
+          "title": "Der Kelch",
+          "info" : "Das Lamm blutet aus einer Wunde an seiner Seite, und dieser Blutstrom fließt direkt in einen Kelch, der auf dem Altartuch steht (die vollständige Inschrift auf dem Altartuch lautet: Ecce Agnus Dei, qui tollis peccata mundi, miserere nobis, was übersetzt: Hier ist das Lamm Gottes, das die Sünden der Welt wegnimmt."
+        },
+        "3" : {
+          "title": "Die weiblichen Heiligen",
+          "info" : "Die Gruppe im Hintergrund rechts zeigt die Heiligen der Frauen (sowohl Märtyrer als auch Nichtmärtyrer), die die Handfläche des Sieges tragen und Blumen im Haar tragen, zusammen mit anderen anonymen Frauen (sowohl religiöse als auch nicht). Unter den Heiligen können wir Agnes mit ihrem Lamm erkennen, Barbara mit dem Turm, Dorothy mit dem Blumenkorb und Ursula mit dem Pfeil."
+        },
+        "4" : {
+          "title": "Jerusalem im gotischen Stil",
+          "info" : "So kann die Stadt im Hintergrund der Landschaft von Van Eyck als Symbol für das himmlische Jerusalem, die Stadt des lebendigen Gottes, interpretiert werden. Die Gebäude sind daher imaginär (obwohl zwei von ihnen erkennbar sind: der Turm des Utrechter Doms links vom Lamm und der dunkle Turm der St.-Nikolaus-Kirche in Gent."
+        },
+        "5" : {
+          "title": "Die Märtyrer",
+          "info" : "Um den Brunnen gruppiert sind noch deutlichere Prozessionsgruppen, die das Lamm verehren. Diese werden häufig als Patriarchen und Propheten aus dem Alten Testament und als männliche und weibliche Heilige und Kirchenfiguren bezeichnet."
+        },
+        "6" : {
+          "title": "Der Brunnen",
+          "info" : "In lateinischer Schrift auf dem Brunnen sehen wir einen Vers aus dem Buch der Offenbarung: „Dann zeigte mir der Engel den Fluss des Lebenswassers, klar wie Kristall, vom Thron Gottes und des Lammes ausgehend. Im symbolischen Kontext des Lamms ist der Brunnen daher die Quelle des ewigen Lebens und der Erlösung."
+        }
+      },
+      "italiano": {
+        "0" : {
+          "title": "I confessori della fede",
+          "info" : "Die Gruppe, die im Hintergrund links aus dem Busch hervortritt, sind die Beichtväter des Glaubens in der Hierarchie. Sie tragen Palmen, sind aber nicht rot gekleidet (was bedeutet, dass sie nicht den Märtyrertod gestorben sind): Päpste, Kardinäle, Bischöfe, Priester und möglicherweise auch einige Laien."
+        },
+        "1" : {
+          "title": "L'agnello mistico",
+          "info" : "l'Agnello Mistico è l'Agnello di Dio - l'agnello sacrificale - un simbolo di Cristo e la morte di Cristo. L'agnello sull'altare è equivalente alla crocifissione di Cristo, reso esplicito dalla giustapposizione dell'agnello con la croce tenuta dall'angelo."
+        },
+        "2" : {
+          "title": "Il calice",
+          "info" : "L'Agnello sanguina da una ferita al suo fianco, e questa corrente di sangue scorre direttamente in un calice posto sulla tovaglia dell'altare (l'iscrizione completa sulla tovaglia dell'altare recita, Ecce Agnus Dei, qui tollis peccata mundi, miserere nobis, che traduce, Ecco l'Agnello di Dio, che toglie i peccati del mondo."
+        },
+        "3" : {
+          "title": "Le donne santi",
+          "info" : "Il gruppo sullo sfondo a destra mostra le donne santi (sia martirizzate che non), portando il palmo della vittoria e indossando fiori nei capelli, insieme ad altre donne anonime (sia religiose che non). Tra i santi possiamo riconoscere Agnese con il suo agnello, Barbara con la torre, Dorothy con il cesto di fiori e Ursula con la freccia."
+        },
+        "4" : {
+          "title": "Gerusalemme in stile gotico",
+          "info" : "Così la città sullo sfondo del paesaggio di Van Eyck può essere interpretata come un simbolo della Gerusalemme celeste, la città del Dio vivente. Gli edifici sono quindi immaginari (anche se due di essi sono riconoscibili: la torre della cattedrale di Utrecht, a sinistra dell'Agnello, e la torre oscura della chiesa di San Nicola a Gand."
+        },
+        "5" : {
+          "title": "I martiri",
+          "info" : "Raggruppati attorno alla fontana ci sono ancora gruppi distinti di processioni che adorano l'Agnello. Questi sono comunemente identificati come patriarchi e profeti dell'Antico Testamento e santi maschili e femminili e figure della chiesa."
+        },
+        "6" : {
+          "title": "La fontana",
+          "info" : "Inscritto sulla fontana, in latino, vediamo un versetto del Libro dell'Apocalisse: Allora l'angelo mi mostrò il fiume dell'acqua della vita, chiara come cristallo, che procede dal trono di Dio e dell'Agnello. Nel contesto simbolico dell'Agnello, la fonte è quindi la sorgente della vita eterna e della salvezza."
+        }
+      }
+    },
+    "coordinates": {
+      "0": {
+        "x":"0px",
+        "xi":"50vw",
+        "y":"460px",
+        "yi": "15vh",
+        "s":"4"
+      },
+      "1": {
+        "x":"-26px",
+        "xi":"50.8vw",
+        "y":"150px",
+        "yi": "37vh",
+        "s":"10"
+      },
+      "2": {
+        "x":"-40px",
+        "xi":"51vw",
+        "y":"5px",
+        "yi": "43vh",
+        "s":"5"
+      },
+      "3": {
+        "x":"-220px",
+        "xi":"61vw",
+        "y":"-110px",
+        "yi": "57vh",
+        "s":"7"
+      },
+      "4": {
+        "x":"0px",
+        "xi":"50vw",
+        "y":"460px",
+        "yi": "15vh",
+        "s":"4"
+      },
+      "5": {
+        "x":"-26px",
+        "xi":"50.8vw",
+        "y":"150px",
+        "yi": "37vh",
+        "s":"10"
+      },
+      "6": {
+        "x":"-40px",
+        "xi":"51vw",
+        "y":"5px",
+        "yi": "43vh",
+        "s":"5"
       }
     }
   }
