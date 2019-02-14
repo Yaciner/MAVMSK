@@ -48,7 +48,7 @@ const changeDisplayIdle = (what, artworkTitle, artworkYear, help) => {
 
 const animationLoader = bodymovin.loadAnimation({
   container: document.getElementById('lottie'),
-  path: '../assets/json/data.json',
+  path: '../assets/json/animation.json',
   renderer: 'svg',
   loop: false,
   autoplay: false
