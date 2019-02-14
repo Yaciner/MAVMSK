@@ -19,7 +19,7 @@ global.io = require('socket.io')(http);
 global.fs = require('fs')
 global.didYouKnow = [];
 global.allData = [];
-global.activeArtwork = "virgin_annunciate";
+global.activeArtwork = "";
 global.artworkTitle = "";
 global.languages = ["english", "nederlands", "francais", "espanol", "deutsche", "italiano"];
 global.activeLanguage = languages[1];
@@ -38,10 +38,9 @@ global.what = "what what what?¿";
 global.connectDiv = document.querySelector('.connect');
 global.medialink = '';
 global.mode = 'macro';
-
-const $artwork = document.querySelector('.artwork');
-$artwork.src = `assets/img/${activeArtwork}/full/macro_after.png`;
-changeMode.macro(activeArtwork, $artwork);
+global.artworkNames = [];
+global.defaultArtwork = 0;
+global.$artwork;
 
 // TODO MOVE FUNCTIONS TO SEPERATE FILE AND WRITE INIT FUNCTION
 
@@ -54,7 +53,8 @@ fetch('./assets/json/artworks.json', {
 .then(response => response.json())
 .then(results => {
   allData = results;
-  console.log(allData);
+  artworkNames = Object.keys(allData);
+  generateInitialArtwork();
   helperIndicators.generate();
 }).catch((e => console.log(e)));
 
@@ -75,6 +75,33 @@ server.get('/', (req, res) => {
   console.log('req', req);
   res.sendFile('index.html');
 });
+
+
+document.onkeydown = (e) => {
+    switch (e.keyCode) {
+        case 37:
+        console.log('pressed');
+            defaultArtwork -= 1;
+            activeArtwork = artworkNames[defaultArtwork];
+            generateInitialArtwork();
+            break;
+        case 39:
+        console.log('pressed');
+          defaultArtwork += 1;
+          activeArtwork = artworkNames[defaultArtwork];
+          generateInitialArtwork();
+          break;
+    }
+};
+
+const generateInitialArtwork = () => {
+  activeArtwork = artworkNames[defaultArtwork];
+  console.log(activeArtwork);
+  $artwork = document.querySelector('.artwork');
+  $artwork.src = `assets/img/${activeArtwork}/full/macro_after.png`;
+  changeMode.macro(activeArtwork, $artwork);
+  helperIndicators.generate();
+};
 
 io.on('connection', (socket) => {
   what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
