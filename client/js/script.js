@@ -11,7 +11,6 @@ const $didYouKnow = document.querySelector('.didyouknow');
 let idle = true;
 
 const changeDisplayDetail = (detailTitle, detailInfo, artwork, medialink) => {
-  console.log(detailTitle, detailInfo, artwork);
   $detailTitle.textContent = detailTitle;
   $detailInfo.textContent = detailInfo;
   $detailImage.src = medialink;
@@ -19,11 +18,9 @@ const changeDisplayDetail = (detailTitle, detailInfo, artwork, medialink) => {
 
 const changeDidYouKnow = extrainfo => {
   $didYouKnow.innerText = extrainfo;
-  console.log($didYouKnow);
 }
 
 const changeDisplayIdle = (what, artworkTitle, artworkYear, help) => {
-  console.log('changeDisplayIdle');
   $what.textContent = what;
   $artworkTitle.textContent = artworkTitle;
   $artworkYear.textContent = ', ' + artworkYear;
@@ -56,8 +53,6 @@ const animationLoader = bodymovin.loadAnimation({
 });
 
 const playAnimationDetail = () => {
-  console.log('play animation');
-  // animationLoader.play();
   animationLoader.goToAndPlay(0);
   $idle.classList.remove('move-to-right-in');
   $idle.classList.add('move-to-right-out');
@@ -75,22 +70,9 @@ const playAnimationDetail = () => {
 
   socket.on('Zoom', (detailTitle, detailInfo, activeArtworkTranslate, medialink) => {
     //hier kunnen we de ANIMATIE triggeren --> aangezien we er van uit gaan dat deze 1 maal gebeurd (Eventueel kunnen we hier ook een timer zetten?)
-    console.log('zoom');
     changeDisplayDetail(detailTitle, detailInfo, activeArtworkTranslate, medialink);
     playAnimationDetail();
     idle = false;
-  });
-
-  socket.on('InfraredButton', (msg) => {
-    console.log(msg);
-  });
-
-  socket.on('XrayButton', (msg) => {
-    console.log(msg);
-  });
-
-  socket.on('MacroButton', (msg) => {
-    console.log(msg);
   });
 
   socket.on('didyouknow', (extrainfo) => {
@@ -110,12 +92,7 @@ const playAnimationDetail = () => {
     }
   });
 
-  socket.on('potentiometer turn', (msg) => {
-    console.log(msg);
-  });
-
   socket.on('Idle', (what, artworkTitle, artworkYear, help) => {
-    console.log('idle');
     changeDisplayIdle(what, artworkTitle, artworkYear, help);
     idle = true;
   });

@@ -10,8 +10,7 @@ const xray = (activeArtwork, $artwork) => {
 
   fs.access(path, fs.F_OK, (err) => {
     if (err) {
-      alert('no such file');
-      console.log(err);
+      console.log(err + 'THIS ERROR CAN BE REMOVED. JUST NEEDS TO BE A UX FRIENDLY NOTICE');
       return
     }
 
@@ -28,8 +27,7 @@ const infra = (activeArtwork, $artwork) => {
 
   fs.access(path, fs.F_OK, (err) => {
     if (err) {
-      console.log(err);
-      alert('no such file');
+      console.log(err + 'THIS ERROR CAN BE REMOVED. JUST NEEDS TO BE A UX FRIENDLY NOTICE');
       return
     }
 

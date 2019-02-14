@@ -1,7 +1,6 @@
 const bodymovin = require('lottie-web');
 
 const animationActive = () => {
-  console.log('animate');
   bodymovin.loadAnimation({
      container: document.querySelector(`.indicator_active`),
      renderer: `svg`,
@@ -12,7 +11,6 @@ const animationActive = () => {
 }
 
 const animationIdle = (number) => {
-  console.log(`animating ${number}`);
   bodymovin.loadAnimation({
      container: document.querySelector(`.indicator_idle${number}`),
      renderer: `svg`,
@@ -23,7 +21,6 @@ const animationIdle = (number) => {
 }
 
 const animationDestroy = (div) => {
-  console.log(`destroy ${div}`);
   bodymovin.destroy(div);
 }
 

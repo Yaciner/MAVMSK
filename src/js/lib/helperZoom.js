@@ -9,22 +9,18 @@ const apply = ($artwork) => {
 }
 
 const into = ($artwork, io) => {
-  console.log('zooming in');
   isZoomedIn = true;
   apply($artwork);
 
-  console.log(allData[activeArtwork]["details"][activeLanguage][selectedDetail].title);
   title = allData[activeArtwork]["details"][activeLanguage][selectedDetail].title;
   info = allData[activeArtwork]["details"][activeLanguage][selectedDetail].info;
   activeArtworkTranslate = allData[activeArtwork]['title'][activeLanguage];
   medialink = `assets/img/${activeArtwork}/details/${mode}_${selectedDetail}.png`;
-  console.log(selectedLanguage);
   activeLanguage = languages[selectedLanguage];
     document.querySelectorAll('.indicator').forEach($indicator => {
       $indicator.style.opacity = '0';
 
     })
-  console.log(title, info, activeArtworkTranslate);
   io.emit('Zoom', title, info, activeArtworkTranslate, medialink);
 }
 

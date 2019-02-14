@@ -54,7 +54,6 @@ fetch('./assets/json/artworks.json', {
 .then(response => response.json())
 .then(results => {
   allData = results;
-  console.log(allData);
   helperIndicators.generate();
 }).catch((e => console.log(e)));
 
@@ -79,7 +78,6 @@ server.get('/', (req, res) => {
 io.on('connection', (socket) => {
   what = allData[activeArtwork]["idle_text"][activeLanguage]["what"];
   artworkTitle = allData[activeArtwork]["title"][activeLanguage];
-  console.log('artworkTitle', artworkTitle);
   artworkYear = allData[activeArtwork]["details"]["year"];
   help = allData[activeArtwork]["idle_text"][activeLanguage]["help"];
   io.emit('Idle', what, artworkTitle, artworkYear, help);
@@ -143,27 +141,18 @@ board.on('ready', () => {
   let xrayButton = new five.Button(12);
 
   macroButton.on("press", () => {
-    console.log('BUTTON macro pressed');
-    // startAnimation();
     changeMode.macro(activeArtwork, $artwork);
-    // io.emit('MacroButton', 'Macro pressed');
   });
 
   infraredButton.on("press", () => {
-    console.log('BUTTON infrared pressed');
     changeMode.infra(activeArtwork, $artwork);
-    // io.emit('InfraredButton', 'Infrared pressed');
   });
 
   xrayButton.on("press", () => {
-    console.log('BUTTON xray pressed');
     changeMode.xray(activeArtwork, $artwork);
-    // io.emit('XrayButton', 'xRay pressed');
   });
 
   confirmButton.on("press", () => {
-    console.log("BUTTON confirm pressed");
-
     if (!isZoomedIn) {
       helperZoom.into($artwork, io);
       zoomTimer = setInterval(() => { helperZoom.out($artwork, io); }, 30000);
@@ -187,7 +176,6 @@ board.on('ready', () => {
     let i = 0;
     $circles.forEach(circle => {
       circle.className = 'indicator indicator_idle';
-      console.log('done');
       circle.animate([
         { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(1)` },
                 { transform: `translate(${allData[activeArtwork]['coordinates'][i].xi} , ${allData[activeArtwork]['coordinates'][i].yi} ) scale(.8)` },
@@ -202,7 +190,6 @@ board.on('ready', () => {
 
     if($circles[selectedDetail]) {
       $circles[selectedDetail].className = 'indicator indicator_active';
-      console.log(allData[activeArtwork]['coordinates'][selectedDetail].xi);
       $circles[selectedDetail].animate([
         { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(0deg)` },
         { transform: `translate(${allData[activeArtwork]['coordinates'][selectedDetail].xi} , ${allData[activeArtwork]['coordinates'][selectedDetail].yi} ) rotate(360deg)` }
