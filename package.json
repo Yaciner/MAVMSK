@@ -28,7 +28,6 @@
     "medium-zoom": "^1.0.2",
     "socket.io": "^2.2.0",
     "stylelint-config-devine": "^2.0.2",
-    "typed.js": "^2.0.10",
     "url": "^0.11.0"
   },
   "devDependencies": {

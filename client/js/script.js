@@ -10,6 +10,8 @@ const $detailImage = document.querySelector('#detail-image');
 const $didYouKnow = document.querySelector('.didyouknow');
 let idle = true;
 
+console.log('https://github.com/Yaciner/MAVMSK/tree/development');
+
 const changeDisplayDetail = (detailTitle, detailInfo, artwork, medialink) => {
   $detailTitle.textContent = detailTitle;
   $detailInfo.textContent = detailInfo;
